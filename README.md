@@ -15,4 +15,11 @@ TODO:
 ### Kobo data to a11yjson standard
 'kobo-a11yjson' has some code on converting kobo data to a11yjson.
 It uses the typescript interfces provided by SozialHelden.
-The [SozialHelden transformer](https://github.com/sozialhelden/a11yjson/blob/main/src/transformers/transformKoboToA11y.ts) might come in handy here
+The [SozialHelden transformer](https://github.com/sozialhelden/a11yjson/blob/main/src/transformers/transformKoboToA11y.ts) might come in handy here.
+
+It looks like the Kobo data nests groups using the "/" symbol so I'll try to use that to arrive at specific a11yjson interfaces.
+
+I think I'll event. create a sort of utils/helpers file with useful functions like finding values in nested objects, cleaning values etc. The main file will just have a piece of code loading the data, a chain of calling cleaning functions, and an export function which saves the data to a json file.
+
+## Resources
+- [a11yjson interface](https://github.com/sozialhelden/a11yjson/blob/main/docs/3-interfaces.md)
