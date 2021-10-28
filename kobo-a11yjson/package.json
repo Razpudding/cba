@@ -11,5 +11,8 @@
   "devDependencies": {
     "@sozialhelden/a11yjson": "^11.0.0",
     "@types/node": "^16.11.6"
+  },
+  "dependencies": {
+    "csv-parser": "^3.0.0"
   }
 }
