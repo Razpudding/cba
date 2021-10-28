@@ -11,3 +11,8 @@ In the package there is a file called typedoc-output.json which has, among other
 TODO:
 - Find out if there isn't a more direct way
 - Automate the process a bit more by having the code grab the file, run the extraction logic and then output the result
+
+### Kobo data to a11yjson standard
+'kobo-a11yjson' has some code on converting kobo data to a11yjson.
+It uses the typescript interfces provided by SozialHelden.
+The [SozialHelden transformer](https://github.com/sozialhelden/a11yjson/blob/main/src/transformers/transformKoboToA11y.ts) might come in handy here
