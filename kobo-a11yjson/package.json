@@ -1,0 +1,14 @@
+{
+  "name": "kobo-a11yjson",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Laurens",
+  "license": "ISC",
+  "devDependencies": {
+    "@sozialhelden/a11yjson": "^11.0.0"
+  }
+}
