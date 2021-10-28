@@ -9,6 +9,7 @@
   "author": "Laurens",
   "license": "ISC",
   "devDependencies": {
-    "@sozialhelden/a11yjson": "^11.0.0"
+    "@sozialhelden/a11yjson": "^11.0.0",
+    "@types/node": "^16.11.6"
   }
 }

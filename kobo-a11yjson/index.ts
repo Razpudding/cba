@@ -1,4 +1,6 @@
 console.log("hello typescript")
 import { Accessibility, PlaceInfo } from '@sozialhelden/a11yjson'
-const fs = require('fs')
+import { createReadStream, writeFile} from 'fs'
 let arr = new Array()
+
+createReadStream('speciesData/soorten_uitzonderingen.csv')
