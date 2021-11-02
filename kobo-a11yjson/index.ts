@@ -1,6 +1,7 @@
 import { Accessibility, PlaceInfo } from '@sozialhelden/a11yjson'
 import { createReadStream, writeFile} from 'fs'
 import csv from 'csv-parser'
+import { KoboResult } from './lib/transformKoboToA11y'
 
 const inputSrc = 'kobodata/Toegankelijkheidsscan_gebouwen_test.csv'
 const indexOfChosenResponse = 10
@@ -36,6 +37,9 @@ function processResults(results:object[]){
 	chosenItem = removeEmptyFields(chosenItem)
 	console.log(chosenItem)
 	let a11yObjects:PlaceInfo[] = [chosenItem].map(convertToA11y)
+
+	//TODO make this test succeed :D
+	// let a11yTest:KoboResult = chosenItem
 }
 
 /**

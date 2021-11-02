@@ -36,15 +36,27 @@ function processResults(results) {
     chosenItem = removeEmptyFields(chosenItem);
     console.log(chosenItem);
     let a11yObjects = [chosenItem].map(convertToA11y);
+    //TODO make this test succeed :D
+    // let a11yTest:KoboResult = chosenItem
 }
 /**
 * @todo for some reason ts wont allow me to type obj as object because then obj[prop]
 * throws an error
 */
 function convertToA11y(obj) {
-    for (const prop in obj) {
-        convertQuestion(obj[prop]);
+    for (const question in obj) {
+        convertQuestion(question, obj[question]);
     }
+    // let k: keyof typeof obj;
+    // for (const [key, value] of Object.entries(obj)) {
+    // 	convertQuestion(key, value)
+    // }
+    // for (const [key, value] of Object.entries(obj)) {
+    //   console.log(`${key}: ${value}`);
+    // }
+    // for (const prop in obj){
+    // 	convertQuestion(obj[prop])
+    // }
     return {
         properties: {
             category: '',
@@ -55,8 +67,11 @@ function convertToA11y(obj) {
         }
     };
 }
-function convertQuestion(question) {
-    console.log(question);
+function convertQuestion(key, value) {
+    // console.log(key)
+    if (key.startsWith('PlaceInfo')) {
+        console.log(`${key}`);
+    }
 }
 /**
  * Deletes properties from an object where the value for the prop is null/undefined/''
