@@ -1,7 +1,7 @@
 import { Accessibility, PlaceInfo } from '@sozialhelden/a11yjson'
 import { createReadStream, writeFile} from 'fs'
 import csv from 'csv-parser'
-import { KoboResult } from './lib/transformKoboToA11y'
+import { KoboResult, KoboResultCBA } from './lib/transformKoboToA11y'
 
 const inputSrc = 'kobodata/Toegankelijkheidsscan_gebouwen_test.csv'
 const indexOfChosenResponse = 10
@@ -34,12 +34,13 @@ function processResults(results:object[]){
 	//console.log(results.length)
 	let chosenItem:object = results[indexOfChosenResponse]
 	//NOTE: this is just for testing purposes, empty fields could mean a field is not true in the data
-	chosenItem = removeEmptyFields(chosenItem)
+	let CBAItem:KoboResultCBA = removeEmptyFields(chosenItem)
 	console.log(chosenItem)
-	let a11yObjects:PlaceInfo[] = [chosenItem].map(convertToA11y)
 
-	//TODO make this test succeed :D
 	// let a11yTest:KoboResult = chosenItem
+
+	//Create a11yObjects from the parsed data
+	// let a11yObjects:PlaceInfo[] = [chosenItem].map(convertToA11y)
 }
 
 /**
@@ -68,10 +69,12 @@ function convertToA11y(obj:any):PlaceInfo{
 		geometry: {
 			coordinates: [0,0],
 			type: "Point",
-		}
+		},
+
 	}
 }
 
+//A function that will call the right transformation logic for each question
 function convertQuestion(key:string, value:string){
 	// console.log(key)
 	if (key.startsWith('PlaceInfo')){
@@ -86,7 +89,7 @@ function convertQuestion(key:string, value:string){
  * @todo for some reason ts wont allow me to type item as object because then item[prop]
  * throws an error
  */
-function removeEmptyFields(item:any):object{
+function removeEmptyFields(item:any):KoboResultCBA{
 	for (const prop in item){
 		if (item[prop] == '' || item[prop] == null || item[prop] == undefined){
 			delete item[prop]

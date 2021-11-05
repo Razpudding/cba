@@ -19,6 +19,15 @@ export type KoboAttachment = {
 type YesNoResult = 'true' | 'false' | 'undefined';
 type YesNoPartiallyResult = 'true' | 'partially' | 'false' | 'undefined';
 
+
+//TODO: Write own object based on output data column headers of kobo survey data
+export type KoboResultCBA = {
+  _id: number,
+  _uuid: string,
+  start: string,
+  vaart: number
+}
+
 export type KoboResult = {
   _id: number;
   _uuid: string;

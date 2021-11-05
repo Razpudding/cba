@@ -16,3 +16,6 @@ I think I'll event. create a sort of utils/helpers file with useful functions li
 My current strategy is to transform the Kobo data to PlaceInfo objects. Each object will have all of the kobo fields nested in it. Anything relevant to a11yjson will be transformed to properly match the relevant interface. The rest of the kobo data I'll probably yeet to a custom additional info interface nested in PlaceInfo.
 
 The plan is to loop over questions in each kobo row/entry. If the key of the question starts with a known a11y interface, the key will be matched in a switch case and the value handled appropriately (a nested property will be created on an empty a11yjson object). If the key has a sub-interface after the "/", it will match another switch to find the nested interface.
+
+### Questions
+I was hoping TS would help me find missing props or extra props in my parsed objects but it doesn't do that. It relies on my typing so if I say a function returns an object of type X but I parse data that results in the object not having the required prop Y, TS wont throw an error. So how do I make it work for me?
