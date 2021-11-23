@@ -3,9 +3,10 @@ import { createReadStream, writeFile} from 'fs'
 import csv from 'csv-parser'
 import { KoboResult, KoboResultCBA } from './lib/transformKoboToA11y'
 
-const inputSrc = 'kobodata/Toegankelijkheidsscan_gebouwen_test.csv'
-const indexOfChosenResponse = 10
-let results:object[] = []
+const inputSrc = 'kobodata/Testformulier_A11yJSON_-_all_versions_-_False_-_2021-11-23-11-30-02.csv'
+//'kobodata/Toegankelijkheidsscan_gebouwen_test.csv'
+const indexOfChosenResponse = 1
+let results:KoboResultCBA[] = []
 
 loadSurveyData(inputSrc)
 
@@ -18,7 +19,7 @@ loadSurveyData(inputSrc)
  */
 function loadSurveyData(src:string):void{
 	createReadStream(src)
-	  .pipe(csv())
+	  .pipe(csv({ separator: ';' }))
 	  .on('data', (data) => results.push(data))
 	  .on('end', () => {
 	  	processResults(results)
@@ -30,18 +31,43 @@ function loadSurveyData(src:string):void{
  * @param results survey results
  * @returns nothing for now
  */
-function processResults(results:object[]){
+function processResults(results:KoboResultCBA[]){
 	//console.log(results.length)
-	let chosenItem:object = results[indexOfChosenResponse]
+	let chosenItem = results[indexOfChosenResponse]
 	//NOTE: this is just for testing purposes, empty fields could mean a field is not true in the data
-	let CBAItem:KoboResultCBA = removeEmptyFields(chosenItem)
+	// let CBAItem:KoboResultCBA = removeEmptyFields(chosenItem)
 	console.log(chosenItem)
+	let placeInfoStarter:PlaceInfo = {
+		formatVersion: '11.0.0',
+		geometry: {
+			coordinates: [0,0],
+			type: "Point",
+		},
+		properties: {
+			category: '',
 
-	// let a11yTest:KoboResult = chosenItem
+		}
+	}
+	if (chosenItem['Survey/Survey_Type'] === 'basic'){
+		return transformBasicToA11y(chosenItem, placeInfoStarter)
+	} else {
+		return transformCompleteToA11y(chosenItem, placeInfoStarter)
+	}
+	
 
-	//Create a11yObjects from the parsed data
 	// let a11yObjects:PlaceInfo[] = [chosenItem].map(convertToA11y)
 }
+
+function transformBasicToA11y(input:KoboResultCBA, base:PlaceInfo){
+	return base
+}
+
+function transformCompleteToA11y(input:KoboResultCBA, base:PlaceInfo){
+	let result = base
+	result.properties.accessibility.ground.distanceToDroppedCurb = input['PlaceInfo/Explanation']
+	return base
+}
+
 
 /**
 * @todo for some reason ts wont allow me to type obj as object because then obj[prop]
