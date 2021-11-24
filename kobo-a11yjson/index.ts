@@ -1,12 +1,12 @@
 import { Accessibility, PlaceInfo } from '@sozialhelden/a11yjson'
 import { createReadStream, writeFile} from 'fs'
 import csv from 'csv-parser'
-import { KoboResult, KoboResultCBA } from './lib/transformKoboToA11y'
+import { KoboResult, KoboKey, parseYesNo, parseValue, parseFloatUnit } from './lib/transformKoboToA11y'
 
 const inputSrc = 'kobodata/Testformulier_A11yJSON_-_all_versions_-_False_-_2021-11-23-11-30-02.csv'
 //'kobodata/Toegankelijkheidsscan_gebouwen_test.csv'
 const indexOfChosenResponse = 1
-let results:KoboResultCBA[] = []
+let results:KoboResult[] = []
 
 loadSurveyData(inputSrc)
 
@@ -31,11 +31,11 @@ function loadSurveyData(src:string):void{
  * @param results survey results
  * @returns nothing for now
  */
-function processResults(results:KoboResultCBA[]){
+function processResults(results:KoboResult[]){
 	//console.log(results.length)
 	let chosenItem = results[indexOfChosenResponse]
 	//NOTE: this is just for testing purposes, empty fields could mean a field is not true in the data
-	// let CBAItem:KoboResultCBA = removeEmptyFields(chosenItem)
+	// let CBAItem:KoboResult = removeEmptyFields(chosenItem)
 	console.log(chosenItem)
 	let placeInfoStarter:PlaceInfo = {
 		formatVersion: '11.0.0',
@@ -45,6 +45,7 @@ function processResults(results:KoboResultCBA[]){
 		},
 		properties: {
 			category: '',
+			accessibility: {}
 
 		}
 	}
@@ -58,14 +59,61 @@ function processResults(results:KoboResultCBA[]){
 	// let a11yObjects:PlaceInfo[] = [chosenItem].map(convertToA11y)
 }
 
-function transformBasicToA11y(input:KoboResultCBA, base:PlaceInfo){
+function transformBasicToA11y(input:KoboResult, base:PlaceInfo){
 	return base
 }
 
-function transformCompleteToA11y(input:KoboResultCBA, base:PlaceInfo){
+function transformCompleteToA11y(input:KoboResult, base:PlaceInfo){
 	let result = base
-	result.properties.accessibility.ground.distanceToDroppedCurb = input['PlaceInfo/Explanation']
-	return base
+	//TODO: Construct each interface separately
+	result.properties.accessibility!.parking = constructParking(input)
+	// result.properties.accessibility!.ground!.distanceToDroppedCurb = input['PlaceInfo/Explanation']
+	console.log("current result", result)
+	return result
+}
+
+function constructParking(input:KoboResult){
+	return {
+		count: parseInt(input['Parking/count'], 10),
+		forWheelchairUsers: parseYesNo(input, 'Parking/forWheelchairUsers') ? {
+			count: parseValue(input, 'Parking/WheelchairParking/count_001', 'int') as number,
+			//location
+			// distanceToEntrance: {
+			// 	unit: 'mt',
+			// 	value: parseFloatUnit(input, 'Parking/WheelchairParking/count_001', 'mt') as number
+			// },
+
+			//   'Parking/WheelchairParking/count_001': '12',
+			//   'Parking/WheelchairParking/location': '',
+			//   'Parking/WheelchairParking/distance': '22',
+			//   'Parking/WheelchairParking/hasDedicatedSignage': 'true',
+			//   'Parking/WheelchairParking/length': '4',
+			//   'Parking/WheelchairParking/width': '',
+			//   'Parking/WheelchairParking/type': 'parking_at_right_angles',
+			//   'Parking/WheelchairParking/isLocatedInside': 'true',
+			//   'Parking/WheelchairParking/maxVehicleHeight': '123',
+			//   'Parking/WheelchairParking/neededParkingPermits': '',
+			//   'Parking/WheelchairParking/paymentBySpace': 'true',
+			//   'Parking/WheelchairParking/paymentByZone': 'false',
+		} : null
+	}
+	// 'Parking/count': '123',
+	//   'Parking/forWheelchairUsers': 'true',
+	//   'Parking/WheelchairParking/count_001': '12',
+	//   'Parking/WheelchairParking/location': '',
+	//   'Parking/WheelchairParking/distance': '22',
+	//   'Parking/WheelchairParking/hasDedicatedSignage': 'true',
+	//   'Parking/WheelchairParking/length': '4',
+	//   'Parking/WheelchairParking/width': '',
+	//   'Parking/WheelchairParking/type': 'parking_at_right_angles',
+	//   'Parking/WheelchairParking/isLocatedInside': 'true',
+	//   'Parking/WheelchairParking/maxVehicleHeight': '123',
+	//   'Parking/WheelchairParking/neededParkingPermits': '',
+	//   'Parking/WheelchairParking/paymentBySpace': 'true',
+	//   'Parking/WheelchairParking/paymentByZone': 'false',
+	//   'Parking/KissAndRide': 'true',
+	//   'Parking/notes': '',
+
 }
 
 
@@ -115,7 +163,7 @@ function convertQuestion(key:string, value:string){
  * @todo for some reason ts wont allow me to type item as object because then item[prop]
  * throws an error
  */
-function removeEmptyFields(item:any):KoboResultCBA{
+function removeEmptyFields(item:any):KoboResult{
 	for (const prop in item){
 		if (item[prop] == '' || item[prop] == null || item[prop] == undefined){
 			delete item[prop]

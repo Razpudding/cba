@@ -10,12 +10,15 @@ It looks like the Kobo data nests groups using the "/" symbol so I'll try to use
 I think I'll event. create a sort of utils/helpers file with useful functions like finding values in nested objects, cleaning values etc. The main file will just have a piece of code loading the data, a chain of calling cleaning functions, and an export function which saves the data to a json file.
 
 - I changed the input csv headers a bit to reflect the way interfaces are nestedmin a11yjson 
+- Updated the lib file means rebuilding it by hand before the imported js is updated!
 
 ## Data conversion
 
 My current strategy is to transform the Kobo data to PlaceInfo objects. Each object will have all of the kobo fields nested in it. Anything relevant to a11yjson will be transformed to properly match the relevant interface. The rest of the kobo data I'll probably yeet to a custom additional info interface nested in PlaceInfo.
 
 The plan is to loop over questions in each kobo row/entry. If the key of the question starts with a known a11y interface, the key will be matched in a switch case and the value handled appropriately (a nested property will be created on an empty a11yjson object). If the key has a sub-interface after the "/", it will match another switch to find the nested interface.
+
+Use the [a11yjson validation](https://github.com/sozialhelden/a11yjson/blob/0c36f52c7d55c7eaffceaa7caf47cca85c9a9dba/docs/0-usage.md#validating-a11yjson-objects-at-runtime)
 
 ### Kobo data example
 This flat json structure
