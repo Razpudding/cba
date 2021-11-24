@@ -11,6 +11,11 @@ I think I'll event. create a sort of utils/helpers file with useful functions li
 
 - I changed the input csv headers a bit to reflect the way interfaces are nestedmin a11yjson 
 - Updated the lib file means rebuilding it by hand before the imported js is updated!
+- What to do with empty values? Parse them beforehand? Do they mean the thing isn't there or it it's just not filled out?
+
+## TODO
+- Currently using parseInt but should use parseIntUnit because parseInt can return NaN when an empty string is passed for instance. parseIntUnit however returns something weird using lodash which causes type errors...
+- Strings are not localizedstring yet. Can't figure out the format but it should look something like this `"nl": <string>input['Parking/WheelchairParking/neededParkingPermits']`
 
 ## Data conversion
 

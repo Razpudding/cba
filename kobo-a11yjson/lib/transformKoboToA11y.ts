@@ -46,6 +46,8 @@ export type KoboResult = {
   'Parking/WheelchairParking/neededParkingPermits': string,
   'Parking/WheelchairParking/paymentBySpace': YesNoResult,
   'Parking/WheelchairParking/paymentByZone': YesNoResult,
+  'Parking/KissAndRide': YesNoResult,
+  'Parking/notes': string,
 }
 
 // make keys typesafe to prevent typos
@@ -55,7 +57,10 @@ type FieldTypes = 'yesno' | 'float' | 'int';
 
 export const parseValue = (data: KoboResult, field: KoboKey, type: FieldTypes) => {
   const rawValue = data[field];
-  if (rawValue === null || typeof rawValue === 'undefined') {
+  if(rawValue === null){
+    console.log("Found a null value for", field)
+  }
+  if (typeof rawValue === 'undefined') {
     return rawValue;
   }
 
@@ -82,7 +87,10 @@ export const parseValue = (data: KoboResult, field: KoboKey, type: FieldTypes) =
 };
 
 export const parseYesNo = (data: KoboResult, field: KoboKey) => {
-  return parseValue(data, field, 'yesno');
+  if (data[field] === 'true') {
+    return true;
+  }
+  return data[field] === 'false' ? false : undefined;
 };
 
 const parseHasWithDefault = (

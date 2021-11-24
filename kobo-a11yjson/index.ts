@@ -1,7 +1,7 @@
-import { Accessibility, PlaceInfo } from '@sozialhelden/a11yjson'
+import { Accessibility, PlaceInfo, PlaceInfoSchema, Parking } from '@sozialhelden/a11yjson'
 import { createReadStream, writeFile} from 'fs'
 import csv from 'csv-parser'
-import { KoboResult, KoboKey, parseYesNo, parseValue, parseFloatUnit } from './lib/transformKoboToA11y'
+import { KoboResult, KoboKey, parseYesNo, parseValue, parseFloatUnit} from './lib/transformKoboToA11y'
 
 const inputSrc = 'kobodata/Testformulier_A11yJSON_-_all_versions_-_False_-_2021-11-23-11-30-02.csv'
 //'kobodata/Toegankelijkheidsscan_gebouwen_test.csv'
@@ -66,56 +66,64 @@ function transformBasicToA11y(input:KoboResult, base:PlaceInfo){
 function transformCompleteToA11y(input:KoboResult, base:PlaceInfo){
 	let result = base
 	//TODO: Construct each interface separately
-	result.properties.accessibility!.parking = constructParking(input)
+	const parkingInterface:Parking = constructParking(input)
+	console.log("current parking", parkingInterface)
+	result.properties.accessibility!.parking = parkingInterface
 	// result.properties.accessibility!.ground!.distanceToDroppedCurb = input['PlaceInfo/Explanation']
 	console.log("current result", result)
+
+	validatePlaceInfo(result)
 	return result
 }
 
 function constructParking(input:KoboResult){
 	return {
-		count: parseInt(input['Parking/count'], 10),
+		count: notEmpty(input['Parking/count']) ? parseInt(input['Parking/count']): undefined,
 		forWheelchairUsers: parseYesNo(input, 'Parking/forWheelchairUsers') ? {
 			count: parseValue(input, 'Parking/WheelchairParking/count_001', 'int') as number,
 			//location
-			// distanceToEntrance: {
-			// 	unit: 'mt',
-			// 	value: parseFloatUnit(input, 'Parking/WheelchairParking/count_001', 'mt') as number
-			// },
-
-			//   'Parking/WheelchairParking/count_001': '12',
-			//   'Parking/WheelchairParking/location': '',
-			//   'Parking/WheelchairParking/distance': '22',
-			//   'Parking/WheelchairParking/hasDedicatedSignage': 'true',
-			//   'Parking/WheelchairParking/length': '4',
-			//   'Parking/WheelchairParking/width': '',
-			//   'Parking/WheelchairParking/type': 'parking_at_right_angles',
-			//   'Parking/WheelchairParking/isLocatedInside': 'true',
-			//   'Parking/WheelchairParking/maxVehicleHeight': '123',
-			//   'Parking/WheelchairParking/neededParkingPermits': '',
-			//   'Parking/WheelchairParking/paymentBySpace': 'true',
-			//   'Parking/WheelchairParking/paymentByZone': 'false',
-		} : null
+			distanceToEntrance: notEmpty(input['Parking/WheelchairParking/maxVehicleHeight']) ? {
+				unit: 'meter',
+				value: parseValue(input, 'Parking/WheelchairParking/count_001', 'int') as number
+			}: undefined,
+			hasDedicatedSignage: parseYesNo(input, 'Parking/WheelchairParking/hasDedicatedSignage'),
+			length: notEmpty(input['Parking/WheelchairParking/length']) ? {
+				unit: 'meter',
+				value: parseValue(input, 'Parking/WheelchairParking/length', 'int') as number
+			}: undefined,
+			width: notEmpty(input['Parking/WheelchairParking/width']) ? {
+				unit: 'meter',
+				value: parseInt(input['Parking/WheelchairParking/width'], 10)
+			}: undefined,
+			orientation: <string>input['Parking/WheelchairParking/type'],
+			isLocatedInside: parseYesNo(input, 'Parking/WheelchairParking/isLocatedInside'),
+			maxVehicleHeight: notEmpty(input['Parking/WheelchairParking/maxVehicleHeight']) ? {
+				unit: 'cm',
+				value: parseValue(input, 'Parking/WheelchairParking/maxVehicleHeight', 'int') as number
+			}: undefined,
+			neededParkingPermits: <string>input['Parking/WheelchairParking/neededParkingPermits'],
+			paymentBySpace: parseYesNo(input, 'Parking/WheelchairParking/paymentBySpace'),
+			paymentByZone: parseYesNo(input, 'Parking/WheelchairParking/paymentByZone'),
+		} : null,
+		kissAndRide: parseYesNo(input, 'Parking/KissAndRide'),
+		notes: <string>input['Parking/notes'],
 	}
-	// 'Parking/count': '123',
-	//   'Parking/forWheelchairUsers': 'true',
-	//   'Parking/WheelchairParking/count_001': '12',
-	//   'Parking/WheelchairParking/location': '',
-	//   'Parking/WheelchairParking/distance': '22',
-	//   'Parking/WheelchairParking/hasDedicatedSignage': 'true',
-	//   'Parking/WheelchairParking/length': '4',
-	//   'Parking/WheelchairParking/width': '',
-	//   'Parking/WheelchairParking/type': 'parking_at_right_angles',
-	//   'Parking/WheelchairParking/isLocatedInside': 'true',
-	//   'Parking/WheelchairParking/maxVehicleHeight': '123',
-	//   'Parking/WheelchairParking/neededParkingPermits': '',
-	//   'Parking/WheelchairParking/paymentBySpace': 'true',
-	//   'Parking/WheelchairParking/paymentByZone': 'false',
-	//   'Parking/KissAndRide': 'true',
-	//   'Parking/notes': '',
-
 }
 
+function validatePlaceInfo(input:PlaceInfo){
+	const validationContext = PlaceInfoSchema.newContext()
+	// const sanitizedGeoJSONFeature = ParkingSchema.clean(parkingInterface);
+	validationContext.validate(input)
+	if (!validationContext.isValid()) {
+	  const errors = validationContext.validationErrors();
+	  // `errors` is a JSON object with detailled validation infos about each field in the input object.
+	  console.log(errors);
+	}
+}
+
+function notEmpty(value:string){
+	return value !== ''
+}
 
 /**
 * @todo for some reason ts wont allow me to type obj as object because then obj[prop]
@@ -171,44 +179,3 @@ function removeEmptyFields(item:any):KoboResult{
 	}
 	return item
 }
-
-//Structure of a11yjson object
-/* A PlaceInfo object with other interfaces nested
-{
-  geometry: {
-    type: 'Point',
-    coordinates: [0, 0]
-  },
-  properties: {
-    name: 'An inaccessible place in the middle of an ocean',
-    accessibility: {
-      accessibleWith: {
-        wheelchair: false
-      },
-      hasInductionLoop: true,
-      isQuiet: false,
-      media: undefined,
-      entrances: [
-      {
-        door: {
-          doorOpensToOutside: true,
-          hasErgonomicDoorHandle: false
-        },
-        hasFixedRamp: false
-      }],  
-    },
-    category: "school"
-  },
-}
-
-
-
-
-
-
-
-
-
-
-
-*/
