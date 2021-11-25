@@ -1,26 +1,9 @@
 import { unset, set, setWith, entries, pickBy, includes, get } from 'lodash';
 
-// import {
-//   flatStepHeight,
-//   wheelChairWashBasin,
-//   evaluateWheelmapA11y,
-//   evaluateToiletWheelmapA11y
-// } from './WheelmapA11yRuleset';
-
-export type KoboAttachment = {
-  mimetype: string;
-  download_url: string;
-  filename: string;
-  instance: number;
-  id: number;
-  xform: number;
-};
-
 type YesNoResult = 'true' | 'false' | 'undefined';
 type YesNoPartiallyResult = 'true' | 'partially' | 'false' | 'undefined';
 
-
-//TODO: Write own object based on output data column headers of kobo survey data
+//Detailed typing of a result from Kobo
 export type KoboResult = {
   _id: number;
   _uuid: string;

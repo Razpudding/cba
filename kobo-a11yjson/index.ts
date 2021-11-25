@@ -1,10 +1,9 @@
-import { Accessibility, PlaceInfo, PlaceInfoSchema, Parking } from '@sozialhelden/a11yjson'
+import * as a11y from '@sozialhelden/a11yjson'
 import { createReadStream, writeFile} from 'fs'
 import csv from 'csv-parser'
 import { KoboResult, KoboKey, parseYesNo, parseValue, parseFloatUnit} from './lib/transformKoboToA11y'
 
 const inputSrc = 'kobodata/Testformulier_A11yJSON_-_all_versions_-_False_-_2021-11-23-11-30-02.csv'
-//'kobodata/Toegankelijkheidsscan_gebouwen_test.csv'
 const indexOfChosenResponse = 1
 let results:KoboResult[] = []
 
@@ -33,11 +32,8 @@ function loadSurveyData(src:string):void{
  */
 function processResults(results:KoboResult[]){
 	//console.log(results.length)
-	let chosenItem = results[indexOfChosenResponse]
-	//NOTE: this is just for testing purposes, empty fields could mean a field is not true in the data
-	// let CBAItem:KoboResult = removeEmptyFields(chosenItem)
-	console.log(chosenItem)
-	let placeInfoStarter:PlaceInfo = {
+	// let chosenItem = results[indexOfChosenResponse]
+	let placeInfoStarter:a11y.PlaceInfo = {
 		formatVersion: '11.0.0',
 		geometry: {
 			coordinates: [0,0],
@@ -49,33 +45,39 @@ function processResults(results:KoboResult[]){
 
 		}
 	}
-	if (chosenItem['Survey/Survey_Type'] === 'basic'){
-		return transformBasicToA11y(chosenItem, placeInfoStarter)
-	} else {
-		return transformCompleteToA11y(chosenItem, placeInfoStarter)
-	}
-	
-
-	// let a11yObjects:PlaceInfo[] = [chosenItem].map(convertToA11y)
+	const a11yResults:a11y.PlaceInfo[] = results.map(result => {
+		if (result['Survey/Survey_Type'] === 'basic'){
+			console.log("Processing basic survey")
+			return transformBasicToA11y(result, placeInfoStarter)
+		} else if (result['Survey/Survey_Type'] === 'extended'){
+			console.log("Processing extended survey")
+			return transformCompleteToA11y(result, placeInfoStarter)
+		}
+		else {
+			console.log("Error: survey type not valid", result['Survey/Survey_Type'])
+			return placeInfoStarter
+		}
+	})
+	console.log(a11yResults)
 }
 
-function transformBasicToA11y(input:KoboResult, base:PlaceInfo){
+function transformBasicToA11y(input:KoboResult, base:a11y.PlaceInfo){
 	return base
 }
 
-function transformCompleteToA11y(input:KoboResult, base:PlaceInfo){
+function transformCompleteToA11y(input:KoboResult, base:a11y.PlaceInfo){
 	let result = base
 	//TODO: Construct each interface separately
-	const parkingInterface:Parking = constructParking(input)
+	const parkingInterface:a11y.Parking = constructParking(input)
 	console.log("current parking", parkingInterface)
 	result.properties.accessibility!.parking = parkingInterface
-	// result.properties.accessibility!.ground!.distanceToDroppedCurb = input['PlaceInfo/Explanation']
 	console.log("current result", result)
 
-	validatePlaceInfo(result)
+	validateAgainstSchema(result,  a11y.PlaceInfoSchema.newContext())
 	return result
 }
 
+//Constructs the Parking interface
 function constructParking(input:KoboResult){
 	return {
 		count: notEmpty(input['Parking/count']) ? parseInt(input['Parking/count']): undefined,
@@ -110,8 +112,9 @@ function constructParking(input:KoboResult){
 	}
 }
 
-function validatePlaceInfo(input:PlaceInfo){
-	const validationContext = PlaceInfoSchema.newContext()
+//Checks if the produced data is valid for a certain a11y schema
+function validatePlaceInfo(input:a11y.PlaceInfo){
+	const validationContext = a11y.PlaceInfoSchema.newContext()
 	// const sanitizedGeoJSONFeature = ParkingSchema.clean(parkingInterface);
 	validationContext.validate(input)
 	if (!validationContext.isValid()) {
@@ -121,47 +124,21 @@ function validatePlaceInfo(input:PlaceInfo){
 	}
 }
 
+//Checks if the produced data is valid for a certain a11y schema
+//Logs any validation errors
+function validateAgainstSchema(input:object, validationContext:any){
+	validationContext.validate(input)
+	if (!validationContext.isValid()) {
+	  const errors = validationContext.validationErrors();
+	  // `errors` is a JSON object with detailled validation infos about each field in the input object.
+	  console.log(errors);
+	}
+}
+
+//Helper function to check if a value isn't an empty string
+//TODO move this to a helper module
 function notEmpty(value:string){
 	return value !== ''
-}
-
-/**
-* @todo for some reason ts wont allow me to type obj as object because then obj[prop]
-* throws an error
-*/
-function convertToA11y(obj:any):PlaceInfo{
-	for (const question in obj){
-		convertQuestion(question, obj[question])
-	}
-
-	// let k: keyof typeof obj;
-	// for (const [key, value] of Object.entries(obj)) {
-	// 	convertQuestion(key, value)
-	// }
-	// for (const [key, value] of Object.entries(obj)) {
-	//   console.log(`${key}: ${value}`);
-	// }
-	// for (const prop in obj){
-	// 	convertQuestion(obj[prop])
-	// }
-	return {
-		properties: {
-			category: '',
-		},
-		geometry: {
-			coordinates: [0,0],
-			type: "Point",
-		},
-
-	}
-}
-
-//A function that will call the right transformation logic for each question
-function convertQuestion(key:string, value:string){
-	// console.log(key)
-	if (key.startsWith('PlaceInfo')){
-		console.log(`${key}`)
-	}
 }
 
 /**
