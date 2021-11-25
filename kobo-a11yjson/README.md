@@ -21,9 +21,8 @@ I think I'll event. create a sort of utils/helpers file with useful functions li
   + Or some of the fields will need to be optional
 - Refactor the transformer and index file
 - Maybe change fieldTypes to proper TS types so the parsevalue function can infer export type better
-- Write resulting a11yjson to file
-- Support array of results
 - Make repo public
+- Fix bug: a11yresults has a double result, possibly because the base object isnt copied but mutated itself
 
 ## Data conversion
 

@@ -3,8 +3,14 @@ import { createReadStream, writeFile} from 'fs'
 import csv from 'csv-parser'
 import { KoboResult, KoboKey, parseYesNo, parseValue, parseFloatUnit} from './lib/transformKoboToA11y'
 
+const settings = {
+	outputFileName: 'output/a11yjson'
+}
+
 const inputSrc = 'kobodata/Testformulier_A11yJSON_-_all_versions_-_False_-_2021-11-23-11-30-02.csv'
-const indexOfChosenResponse = 1
+
+
+
 let results:KoboResult[] = []
 
 loadSurveyData(inputSrc)
@@ -58,6 +64,7 @@ function processResults(results:KoboResult[]){
 			return placeInfoStarter
 		}
 	})
+	// writeDataFile(a11yResults)
 	console.log(a11yResults)
 }
 
@@ -155,4 +162,22 @@ function removeEmptyFields(item:any):KoboResult{
 		}
 	}
 	return item
+}
+
+//Write the data to a json file
+function writeDataFile(data:object[], fileIndex = 0)
+{
+	writeFile(settings.outputFileName + "_" + fileIndex +".json",
+				JSON.stringify(data, null, 4),
+				{ encoding:'utf8', flag:'wx' },
+				function (err) {
+	    //Check if filename already exists, if it does, increase the number at the end by 1
+	    if (err && err.code == "EEXIST") {	
+	    	writeDataFile(data, ++fileIndex)
+	    } else if(err){
+	        return console.log(err)
+	    } else {
+	    	console.log("The file was saved!", (settings.outputFileName +"_"+ fileIndex +".json"))
+	    }
+	})
 }
