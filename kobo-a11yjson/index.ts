@@ -5,13 +5,12 @@ import csv from 'csv-parser'
 import { KoboResult, KoboKey, parseYesNo, parseValue, parseFloatUnit} from './lib/transformKoboToA11y'
 
 const settings = {
-	outputFileName: 'output/a11yjson'
+	outputFileName: 'output/a11yjson',
+	printResults: false,
+	validate: true
 }
 
 const inputSrc = 'kobodata/Testformulier_A11yJSON_-_all_versions_-_False_-_2021-11-23-11-30-02.csv'
-
-
-
 let results:KoboResult[] = []
 
 loadSurveyData(inputSrc)
@@ -21,7 +20,6 @@ loadSurveyData(inputSrc)
  * @param src path to the csv file to load
  * @returns nothing for now
  * @todo Remove side-effect and use promises instead
- * @todo check if type can be csvfile 🤔
  */
 function loadSurveyData(src:string):void{
 	createReadStream(src)
@@ -39,7 +37,6 @@ function loadSurveyData(src:string):void{
  */
 function processResults(results:KoboResult[]){
 	//console.log(results.length)
-	// let chosenItem = results[indexOfChosenResponse]
 	let placeInfoStarter:a11y.PlaceInfo = {
 		formatVersion: '11.0.0',
 		geometry: {
@@ -52,12 +49,12 @@ function processResults(results:KoboResult[]){
 
 		}
 	}
-	const a11yResults:a11y.PlaceInfo[] = results.map(result => {
+	const a11yResults:a11y.PlaceInfo[] = results.map((result, i) => {
 		if (result['Survey/Survey_Type'] === 'basic'){
-			console.log("Processing basic survey", result)
+			console.log("Processing basic survey", i)
 			return transformToA11y(result, placeInfoStarter)
 		} else if (result['Survey/Survey_Type'] === 'extended'){
-			console.log("Processing extended survey", result)
+			console.log("Processing extended survey", i)
 			return transformToA11y(result, placeInfoStarter)
 		}
 		else {
@@ -65,19 +62,21 @@ function processResults(results:KoboResult[]){
 			return placeInfoStarter
 		}
 	})
-	writeDataFile(a11yResults)
-	console.log(a11yResults)
+
+	if (settings.validate){
+		//Run a11yjson validation on each of the produced results
+		a11yResults.forEach((result, i) => validateAgainstSchema(result, i, a11y.PlaceInfoSchema.newContext()))
+	}
+	
+	if (settings.printResults) writeDataFile(a11yResults)
+	// console.log(a11yResults)
 }
 
+//Transform a KoboResult to an a11y PlaceInfo interface with nested data
 function transformToA11y(input:KoboResult, base:a11y.PlaceInfo){
 	let result = cloneDeep(base)
-	//TODO: Construct each interface separately
 	const parkingInterface:a11y.Parking = constructParking(input)
-	console.log("current parking", parkingInterface)
 	result.properties.accessibility!.parking = parkingInterface
-	console.log("current result", result)
-
-	validateAgainstSchema(result,  a11y.PlaceInfoSchema.newContext())
 	return result
 }
 
@@ -118,25 +117,13 @@ function constructParking(input:KoboResult){
 }
 
 //Checks if the produced data is valid for a certain a11y schema
-function validatePlaceInfo(input:a11y.PlaceInfo){
-	const validationContext = a11y.PlaceInfoSchema.newContext()
-	// const sanitizedGeoJSONFeature = ParkingSchema.clean(parkingInterface);
-	validationContext.validate(input)
-	if (!validationContext.isValid()) {
-	  const errors = validationContext.validationErrors();
-	  // `errors` is a JSON object with detailled validation infos about each field in the input object.
-	  console.log(errors);
-	}
-}
-
-//Checks if the produced data is valid for a certain a11y schema
 //Logs any validation errors
-function validateAgainstSchema(input:object, validationContext:any){
+function validateAgainstSchema(input:object, index:number, validationContext:any){
 	validationContext.validate(input)
 	if (!validationContext.isValid()) {
 	  const errors = validationContext.validationErrors();
 	  // `errors` is a JSON object with detailled validation infos about each field in the input object.
-	  console.log(errors);
+	  console.log("Error(s) for result number", index, errors);
 	}
 }
 
