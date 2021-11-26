@@ -10,7 +10,7 @@ const settings = {
 	validate: true
 }
 
-const inputSrc = 'kobodata/Testformulier_A11yJSON_-_all_versions_-_False_-_2021-11-23-11-30-02.csv'
+const inputSrc = 'kobodata/Testformulier_A11yJSON_-_all_versions_-_False_-_2021-11-26-15-59-37.csv'
 let results:KoboResult[] = []
 
 loadSurveyData(inputSrc)
@@ -36,7 +36,7 @@ function loadSurveyData(src:string):void{
  * @returns nothing for now
  */
 function processResults(results:KoboResult[]){
-	console.log(results[1])
+	console.log(results[0])
 	let placeInfoStarter:a11y.PlaceInfo = {
 		formatVersion: '11.0.0',
 		geometry: {
@@ -79,15 +79,19 @@ function transformToA11y(input:KoboResult, base:a11y.PlaceInfo){
 	a11yResult.properties.accessibility!.parking = parkingInterface
 
 	const entrancesInterface:a11y.Entrance[] = [constructEntrance(input)]
-	console.log(entrancesInterface)
+	// console.log(entrancesInterface)
 	a11yResult.properties.accessibility!.entrances = entrancesInterface
+
+	const groundInterface:a11y.Ground = constructGround(input)
+	// console.log(groundInterface)
+	a11yResult.properties.accessibility!.ground = groundInterface
 	return a11yResult
 }
 
 //Constructs a Parking interface
 function constructParking(input:KoboResult){
 	return {
-		count: notEmpty(input['Parking/count']) ? parseInt(input['Parking/count']): undefined,
+		count: notEmpty(input['Parking/count']) ? parseValue(input, input['Parking/count'], 'int') as number: undefined,
 		forWheelchairUsers: parseYesNo(input, 'Parking/forWheelchairUsers') ? {
 			count: parseValue(input, 'Parking/WheelchairParking/count_001', 'int') as number,
 			//location
@@ -166,6 +170,24 @@ function constructStairs(input:KoboResult, nesting:string){
 	}
 }
 
+//Constructs a Ground interface
+function constructGround(input:KoboResult){
+	return {
+		distanceToDroppedCurb: notEmpty(input['Ground/distanceToDroppedCurb']) ? {
+			unit: 'meter',
+			value: parseValue(input, 'Ground/distanceToDroppedCurb', 'int') as number
+		}: undefined,
+		evenPavement: parseYesNo(input, 'Ground/evenPavement'),
+		isLevel: parseYesNo(input, 'Ground/isLevel'),
+		sidewalkConditions: notEmpty(input['Ground/sidewalkConditions']) ? parseValue(input, input['Ground/sidewalkConditions'], 'int') as number: undefined,
+		slopeAngle: notEmpty(input['Ground/slopeAngle']) ? parseValue(input, input['Ground/slopeAngle'], 'int') as number: undefined,
+		turningSpace: notEmpty(input['Ground/turningSpace']) ? {
+			unit: 'cm',
+			value: parseValue(input, input['Ground/turningSpace'], 'int') as number
+		} : undefined,
+		notes: notEmpty(input['Parking/notes']) ? input['Parking/notes'] : undefined,
+	}
+}
 //Checks if the produced data is valid for a certain a11y schema
 //Logs any validation errors
 function validateAgainstSchema(input:object, index:number, validationContext:any){

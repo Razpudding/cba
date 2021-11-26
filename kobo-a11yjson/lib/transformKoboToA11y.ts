@@ -52,6 +52,14 @@ export type KoboResult = {
   'Entrances/door/DoorOpensToOutside': YesNoResult,
   'Entrances/door/turningSpaceInFront': string,
   'Entrances/hasIntercom': YesNoResult,
+  'Ground/distanceToDroppedCurb': string,
+  'Ground/evenPavement': YesNoResult,
+  'Ground/isLevel': YesNoResult,
+  'Ground/sidewalkConditions': string,
+  'Ground/slopeAngle': string,
+  'Ground/turningSpace': string,
+  'Ground/notes_001': string,
+  //The generic key below is necessary to allow dynamically looking up properties
   [key: string]: any,
 }
 
