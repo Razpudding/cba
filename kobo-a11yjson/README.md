@@ -18,6 +18,8 @@ I think I'll event. create a sort of utils/helpers file with useful functions li
 - Strings are not localizedstring yet. Can't figure out the format but it should look something like this `"nl": <string>input['Parking/WheelchairParking/neededParkingPermits']`
 - Maybe change fieldTypes to proper TS types so the parsevalue function can infer export type better
 - Make repo public
+- As some interfaces can be arbitrarily nested, it should be possible to construct them just by giving the construct[Interface] function a string indicated where the input data is nested. At the top level where the KoboResult is parsed, some fields should trigger the creation of an interface like 'Restroom/Entrance'. Right now the code is static and will fail with multiple different entrances.
+- Kobo adds an index to reused field names ('width_001'). That causes issues with function that look for a certain property in an arbitrarily nested piece of data. The index suffixes should be stripped safely when the data is parsed.
 
 ## Data conversion
 

@@ -31,6 +31,28 @@ export type KoboResult = {
   'Parking/WheelchairParking/paymentByZone': YesNoResult,
   'Parking/KissAndRide': YesNoResult,
   'Parking/notes': string,
+  'Entrances/count_002': string,
+  'Entrances/isMainEntrance': YesNoResult,
+  'Entrances/name': string
+  'Entrances/isLevel_001': YesNoResult,
+  'Entrances/hasFixedRamp': YesNoResult,
+  'Entrances/hasRemovableRamp': YesNoResult,
+  'Entrances/Ramp/Explanation_001': string,
+  'Entrances/hasElevator': YesNoResult,
+  'Entrances/ElevatorEquipmentId/Explanation_002': string,
+  'Entrances/hasStairs': YesNoResult,
+  'Entrances/Stairs/Explanation_003': string,
+  'Entrances/hasDoor': YesNoResult,
+  'Entrances/door/width_001': string,
+  'Entrances/door/isRevolving': YesNoResult,
+  'Entrances/door/isSliding': YesNoResult,
+  'Entrances/door/isAutomaticOrAlwaysOpen': YesNoResult,
+  'Entrances/door/isEasyToHoldOpen': YesNoResult,
+  'Entrances/door/hasErgonomicDoorHandle': YesNoResult,
+  'Entrances/door/DoorOpensToOutside': YesNoResult,
+  'Entrances/door/turningSpaceInFront': string,
+  'Entrances/hasIntercom': YesNoResult,
+  [key: string]: any,
 }
 
 // make keys typesafe to prevent typos
