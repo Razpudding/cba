@@ -16,19 +16,16 @@ I think I'll event. create a sort of utils/helpers file with useful functions li
 ## TODO
 - Currently using parseInt but should use parseIntUnit because parseInt can return NaN when an empty string is passed for instance. parseIntUnit however returns something weird using lodash which causes type errors...
 - Strings are not localizedstring yet. Can't figure out the format but it should look something like this `"nl": <string>input['Parking/WheelchairParking/neededParkingPermits']`
-- Build support for simple and complete versions of the survey
-  + Prob the simple will one will need its own KoboResult type
-  + Or some of the fields will need to be optional
-- Refactor the transformer and index file
 - Maybe change fieldTypes to proper TS types so the parsevalue function can infer export type better
 - Make repo public
-- Fix bug: a11yresults has a double result, possibly because the base object isnt copied but mutated itself
 
 ## Data conversion
 
 My current strategy is to transform the Kobo data to PlaceInfo objects. Each object will have all of the kobo fields nested in it. Anything relevant to a11yjson will be transformed to properly match the relevant interface. The rest of the kobo data I'll probably yeet to a custom additional info interface nested in PlaceInfo.
 
 The plan is to loop over questions in each kobo row/entry. If the key of the question starts with a known a11y interface, the key will be matched in a switch case and the value handled appropriately (a nested property will be created on an empty a11yjson object). If the key has a sub-interface after the "/", it will match another switch to find the nested interface.
+
+Surveys can be either 'basic' or 'extended'. Because a11yjson is fine with undefined values for properties I've decided to process basic surveys the same as extended ones, for now. Might be cleaner in the future to not even output these properties so there is no irrelevant data. Ont he other hand it's nice to have uniform data.
 
 Use the [a11yjson validation](https://github.com/sozialhelden/a11yjson/blob/0c36f52c7d55c7eaffceaa7caf47cca85c9a9dba/docs/0-usage.md#validating-a11yjson-objects-at-runtime)
 

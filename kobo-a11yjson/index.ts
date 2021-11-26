@@ -1,4 +1,5 @@
 import * as a11y from '@sozialhelden/a11yjson'
+import { cloneDeep } from 'lodash';
 import { createReadStream, writeFile} from 'fs'
 import csv from 'csv-parser'
 import { KoboResult, KoboKey, parseYesNo, parseValue, parseFloatUnit} from './lib/transformKoboToA11y'
@@ -53,27 +54,23 @@ function processResults(results:KoboResult[]){
 	}
 	const a11yResults:a11y.PlaceInfo[] = results.map(result => {
 		if (result['Survey/Survey_Type'] === 'basic'){
-			console.log("Processing basic survey")
-			return transformBasicToA11y(result, placeInfoStarter)
+			console.log("Processing basic survey", result)
+			return transformToA11y(result, placeInfoStarter)
 		} else if (result['Survey/Survey_Type'] === 'extended'){
-			console.log("Processing extended survey")
-			return transformCompleteToA11y(result, placeInfoStarter)
+			console.log("Processing extended survey", result)
+			return transformToA11y(result, placeInfoStarter)
 		}
 		else {
 			console.log("Error: survey type not valid", result['Survey/Survey_Type'])
 			return placeInfoStarter
 		}
 	})
-	// writeDataFile(a11yResults)
+	writeDataFile(a11yResults)
 	console.log(a11yResults)
 }
 
-function transformBasicToA11y(input:KoboResult, base:a11y.PlaceInfo){
-	return base
-}
-
-function transformCompleteToA11y(input:KoboResult, base:a11y.PlaceInfo){
-	let result = base
+function transformToA11y(input:KoboResult, base:a11y.PlaceInfo){
+	let result = cloneDeep(base)
 	//TODO: Construct each interface separately
 	const parkingInterface:a11y.Parking = constructParking(input)
 	console.log("current parking", parkingInterface)
@@ -110,12 +107,13 @@ function constructParking(input:KoboResult){
 				unit: 'cm',
 				value: parseValue(input, 'Parking/WheelchairParking/maxVehicleHeight', 'int') as number
 			}: undefined,
-			neededParkingPermits: <string>input['Parking/WheelchairParking/neededParkingPermits'],
+			neededParkingPermits: notEmpty(input['Parking/WheelchairParking/neededParkingPermits']) ? 
+				input['Parking/WheelchairParking/neededParkingPermits'] : undefined,
 			paymentBySpace: parseYesNo(input, 'Parking/WheelchairParking/paymentBySpace'),
 			paymentByZone: parseYesNo(input, 'Parking/WheelchairParking/paymentByZone'),
 		} : null,
 		kissAndRide: parseYesNo(input, 'Parking/KissAndRide'),
-		notes: <string>input['Parking/notes'],
+		notes: notEmpty(input['Parking/notes']) ? input['Parking/notes'] : undefined,
 	}
 }
 
