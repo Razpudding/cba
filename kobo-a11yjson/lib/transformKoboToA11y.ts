@@ -59,6 +59,18 @@ export type KoboResult = {
   'Ground/slopeAngle': string,
   'Ground/turningSpace': string,
   'Ground/notes_001': string,
+  'Floors/HasFloors': YesNoResult,
+  'Floors/count_003': string,
+  'Floors/elevator': YesNoResult,
+  'Floors/ElevatorEquipmentId_001/Explanation_004': string,
+  'Floors/escalator': YesNoResult,
+  'Floors/EscalatorEquipmentID/Explanation_005': string,
+  'Floors/fixedRamp': YesNoResult,
+  'Floors/Ramp_001/Explanation_006': string,
+  'Floors/Stairs_001': YesNoResult,
+  'Floors/Stairs_002/Explanation_007': string,
+  'Floors/notes_003': string,
+
   //The generic key below is necessary to allow dynamically looking up properties
   [key: string]: any,
 }
