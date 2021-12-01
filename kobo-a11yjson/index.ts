@@ -1,14 +1,17 @@
-import * as a11y from '@sozialhelden/a11yjson'
-import { Accessibility } from '@sozialhelden/a11yjson'
+//Import utility packages
 import { cloneDeep } from 'lodash';
 import { createReadStream, writeFile } from 'fs'
 import csv from 'csv-parser'
+import * as utils from './lib/utils'
+//Import typescript packages
+import * as a11y from '@sozialhelden/a11yjson'
+import { Accessibility } from '@sozialhelden/a11yjson'
 import { KoboResult, KoboKey, parseYesNo, parseValue, parseFloatUnit} from './lib/transformKoboToA11y'
 import { Floor } from './types/Floor'
 
 const settings = {
 	outputFileName: 'output/a11yjson',
-	printResults: true,
+	printResults: false,
 	validate: true
 }
 
@@ -40,6 +43,8 @@ function loadSurveyData(src:string):void{
 
 //Loads processes results and starts conversion to a11yjson
 function processResults(results:KoboResult[]){
+	//TODO: this should print an error because of survey_type but it doesnt
+	results = results.map(res => utils.cleanKeys(results) as KoboResult)
 	console.log(results[0])
 	let placeInfoStarter:PlaceInfoExtended = {
 		formatVersion: '11.0.0',
@@ -217,18 +222,19 @@ function constructGround(input:KoboResult){
 function constructFloor(input:KoboResult){
 	console.log("constructing floor")
 	return {
-		reachableByElevator: parseYesNo(input, 'Floors/HasFloors'),
-		// 'Floors/HasFloors': YesNoResult,
+		reachableByElevator: parseYesNo(input, 'Floors/elevator'),
+		elevatorExplanation: notEmpty(input['Floors/ElevatorEquipmentId_001/Explanation_004']) ? input['Floors/ElevatorEquipmentId_001/Explanation_004'] : undefined,
+		reachableByEscalator: parseYesNo(input, 'Floors/escalator'),
+		escalatorExplanation: notEmpty(input['Floors/EscalatorEquipmentID/Explanation_005']) ? input['Floors/EscalatorEquipmentID/Explanation_005'] : undefined,
+		hasFixedRamp: parseYesNo(input, 'Floors/fixedRamp'),
+		rampExplanation: notEmpty(input['Floors/Ramp_001/Explanation_006']) ? input['Floors/Ramp_001/Explanation_006'] : undefined,
+		stairs: parseYesNo(input, 'Floors/Stairs_001') ? constructStairs(input, 'Floors/Stairs_002') : undefined,
+		floorExplanation: notEmpty(input['Floors/notes_003']) ? input['Floors/notes_003'] : undefined,
+		//TODO: Process the floors as separate objects or as one, either way the count needs to be included somewhere
 		// 'Floors/count_003': string,
-		// 'Floors/elevator': YesNoResult,
-		// 'Floors/ElevatorEquipmentId_001/Explanation_004': string,
-		// 'Floors/escalator': YesNoResult,
-		// 'Floors/EscalatorEquipmentID/Explanation_005': string,
-		// 'Floors/fixedRamp': YesNoResult,
-		// 'Floors/Ramp_001/Explanation_006': string,
+		//TODO: Same goes for the stairs info
 		// 'Floors/Stairs_001': YesNoResult,
 		// 'Floors/Stairs_002/Explanation_007': string,
-		// 'Floors/notes_003': string,
 	}
 }
 
