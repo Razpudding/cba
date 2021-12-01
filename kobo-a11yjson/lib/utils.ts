@@ -8,3 +8,11 @@ export function cleanKeys(object:any){
 	})
 	return Object.assign({}, ...keyValues);
 }
+
+//If a value is an empty string, change it to undefined
+export function cleanValues(object:any){
+	for (const val in object){
+		object[val] = object[val] === '' ? undefined : object[val]
+	}
+	return object
+}

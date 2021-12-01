@@ -1,10 +1,13 @@
 "use strict";
 exports.__esModule = true;
-exports.parseYesNo = exports.parseValue = void 0;
+exports.parseIntUnit = exports.parseFloatUnit = exports.parseYesNo = exports.parseValue = void 0;
 var lodash_1 = require("lodash");
 var parseValue = function (data, field, type) {
     var rawValue = data[field];
-    if (rawValue === null || typeof rawValue === 'undefined') {
+    if (rawValue === null) {
+        console.log("Found a null value for", field);
+    }
+    if (typeof rawValue === 'undefined') {
         return rawValue;
     }
     if (typeof rawValue !== 'string') {
@@ -26,7 +29,10 @@ var parseValue = function (data, field, type) {
 };
 exports.parseValue = parseValue;
 var parseYesNo = function (data, field) {
-    return (0, exports.parseValue)(data, field, 'yesno');
+    if (data[field] === 'true') {
+        return true;
+    }
+    return data[field] === 'false' ? false : undefined;
 };
 exports.parseYesNo = parseYesNo;
 var parseHasWithDefault = function (data, field, existsValue, doesNotExistValue) {
@@ -68,6 +74,7 @@ var parseFloatUnit = function (data, field, unit, operator) {
     });
     return value && !isNaN(value) ? unitValue : undefined;
 };
+exports.parseFloatUnit = parseFloatUnit;
 var parseIntUnit = function (data, field, unit, operator) {
     var value = (0, exports.parseValue)(data, field, 'int');
     // remove undefined values
@@ -78,6 +85,7 @@ var parseIntUnit = function (data, field, unit, operator) {
     });
     return value && !isNaN(value) ? unitValue : undefined;
 };
+exports.parseIntUnit = parseIntUnit;
 var parseMultiSelect = function (data, field) {
     var rawValue = data[field];
     if (rawValue === null || typeof rawValue === 'undefined') {
