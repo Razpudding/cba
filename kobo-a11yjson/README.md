@@ -19,7 +19,6 @@ I think I'll event. create a sort of utils/helpers file with useful functions li
 - Maybe change fieldTypes to proper TS types so the parsevalue function can infer export type better
 - Make repo public
 - As some interfaces can be arbitrarily nested, it should be possible to construct them just by giving the construct[Interface] function a string indicated where the input data is nested. At the top level where the KoboResult is parsed, some fields should trigger the creation of an interface like 'Restroom/Entrance'. Right now the code is static and will fail with multiple different entrances.
-- Kobo adds an index to reused field names ('width_001'). That causes issues with function that look for a certain property in an arbitrarily nested piece of data. The index suffixes should be stripped safely when the data is parsed.
 - Consider refactoring by writing different helper functions like: getStringValue. Passing the value (input[key]) would auto return either the sting or undefined. This can save a lot of logic which is currently duplicated inline.
 - Preprocessing the survey data and replacing strings with undefined will save a lot of extra undefined checks but I'll need to test if all the functions still work as designed.
 - Parking permits should be an array so the survey needs ot be changed ot reflect that

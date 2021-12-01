@@ -44,8 +44,8 @@ function loadSurveyData(src:string):void{
 //Loads processes results and starts conversion to a11yjson
 function processResults(results:KoboResult[]){
 	//TODO: this should print an error because of survey_type but it doesnt
-	results = results.map(res => utils.cleanKeys(results) as KoboResult)
-	console.log(results[0])
+	results = results.map(res => utils.cleanKeys(res) as KoboResult)
+	console.log('ater clean', results[0])
 	let placeInfoStarter:PlaceInfoExtended = {
 		formatVersion: '11.0.0',
 		geometry: {
@@ -119,11 +119,11 @@ function constructParking(input:KoboResult){
 	return {
 		count: notEmpty(input['Parking/count']) ? parseValue(input, input['Parking/count'], 'int') as number: undefined,
 		forWheelchairUsers: parseYesNo(input, 'Parking/forWheelchairUsers') ? {
-			count: parseValue(input, 'Parking/WheelchairParking/count_001', 'int') as number,
+			count: parseValue(input, 'Parking/WheelchairParking/count', 'int') as number,
 			//location
 			distanceToEntrance: notEmpty(input['Parking/WheelchairParking/maxVehicleHeight']) ? {
 				unit: 'meter',
-				value: parseValue(input, 'Parking/WheelchairParking/count_001', 'int') as number
+				value: parseValue(input, 'Parking/WheelchairParking/count', 'int') as number
 			}: undefined,
 			hasDedicatedSignage: parseYesNo(input, 'Parking/WheelchairParking/hasDedicatedSignage'),
 			length: notEmpty(input['Parking/WheelchairParking/length']) ? {
@@ -156,15 +156,15 @@ function constructParking(input:KoboResult){
 //Constructs an Entrance interface
 function constructEntrance(input:KoboResult){
 	return {
-		// count: notEmpty(input['Entrances/count_002']) ? parseInt(input['Entrances/count_002']): undefined,
+		// count: notEmpty(input['Entrances/count']) ? parseInt(input['Entrances/count']): undefined,
 		isMainEntrance: parseYesNo(input, 'Entrances/isMainEntrance'),
 		name: notEmpty(input['Entrances/name']) ? input['Entrances/name'] : undefined,
-		isLevel: parseYesNo(input, 'Entrances/isLevel_001'),
+		isLevel: parseYesNo(input, 'Entrances/isLevel'),
 		hasFixedRamp:  parseYesNo(input, 'Entrances/hasFixedRamp'),
 		hasRemovableRamp:  parseYesNo(input, 'Entrances/hasRemovableRamp'),
-		rampExplanation: notEmpty(input['Entrances/Ramp/Explanation_001']) ? input['Entrances/Ramp/Explanation_001'] : undefined,
+		rampExplanation: notEmpty(input['Entrances/Ramp/Explanation']) ? input['Entrances/Ramp/Explanation'] : undefined,
 		hasElevator:  parseYesNo(input, 'Entrances/hasElevator'),
-		elevatorExplanation: notEmpty(input['Entrances/ElevatorEquipmentId/Explanation_002']) ? input['Entrances/ElevatorEquipmentId/Explanation_002'] : undefined,
+		elevatorExplanation: notEmpty(input['Entrances/ElevatorEquipmentId/Explanation']) ? input['Entrances/ElevatorEquipmentId/Explanation'] : undefined,
 		stairs: parseYesNo(input, 'Entrances/hasStairs') ? constructStairs(input, 'Entrances/Stairs/') : undefined,
 		door: parseYesNo(input, 'Entrances/hasDoor') ? constructDoor(input, 'Entrances/door/') : null,
 		hasIntercom: parseYesNo(input, 'Entrances/hasIntercom')
@@ -174,9 +174,9 @@ function constructEntrance(input:KoboResult){
 //Constructs a Door interface
 function constructDoor(input:KoboResult, nesting:string){
 	return {
-		width: notEmpty(input[nesting + 'width_001']) ? {
+		width: notEmpty(input[nesting + 'width']) ? {
 			unit: 'cm',
-			value: parseValue(input, nesting + 'width_001', 'int') as number
+			value: parseValue(input, nesting + 'width', 'int') as number
 		}: undefined,
 		isRevolving: parseYesNo(input, nesting + 'isRevolving'),
 		isSliding: parseYesNo(input, nesting + 'isSliding'),
@@ -195,7 +195,7 @@ function constructDoor(input:KoboResult, nesting:string){
 function constructStairs(input:KoboResult, nesting:string){
 	return {
 		// count: 8,
-		// explanation: notEmpty(input['Entrances/Stairs/Explanation_003']) ? input['Entrances/Stairs/Explanation_003'] : undefined,
+		// explanation: notEmpty(input['Entrances/Stairs/Explanation']) ? input['Entrances/Stairs/Explanation'] : undefined,
 	}
 }
 
@@ -223,18 +223,18 @@ function constructFloor(input:KoboResult){
 	console.log("constructing floor")
 	return {
 		reachableByElevator: parseYesNo(input, 'Floors/elevator'),
-		elevatorExplanation: notEmpty(input['Floors/ElevatorEquipmentId_001/Explanation_004']) ? input['Floors/ElevatorEquipmentId_001/Explanation_004'] : undefined,
+		elevatorExplanation: notEmpty(input['Floors/ElevatorEquipmentId/Explanation']) ? input['Floors/ElevatorEquipmentId/Explanation'] : undefined,
 		reachableByEscalator: parseYesNo(input, 'Floors/escalator'),
-		escalatorExplanation: notEmpty(input['Floors/EscalatorEquipmentID/Explanation_005']) ? input['Floors/EscalatorEquipmentID/Explanation_005'] : undefined,
+		escalatorExplanation: notEmpty(input['Floors/EscalatorEquipmentID/Explanation']) ? input['Floors/EscalatorEquipmentID/Explanation'] : undefined,
 		hasFixedRamp: parseYesNo(input, 'Floors/fixedRamp'),
-		rampExplanation: notEmpty(input['Floors/Ramp_001/Explanation_006']) ? input['Floors/Ramp_001/Explanation_006'] : undefined,
-		stairs: parseYesNo(input, 'Floors/Stairs_001') ? constructStairs(input, 'Floors/Stairs_002') : undefined,
-		floorExplanation: notEmpty(input['Floors/notes_003']) ? input['Floors/notes_003'] : undefined,
+		rampExplanation: notEmpty(input['Floors/Ramp/Explanation']) ? input['Floors/Ramp/Explanation'] : undefined,
+		stairs: parseYesNo(input, 'Floors/Stairs') ? constructStairs(input, 'Floors/Stairs') : undefined,
+		floorExplanation: notEmpty(input['Floors/notes']) ? input['Floors/notes'] : undefined,
 		//TODO: Process the floors as separate objects or as one, either way the count needs to be included somewhere
-		// 'Floors/count_003': string,
+		// 'Floors/count': string,
 		//TODO: Same goes for the stairs info
-		// 'Floors/Stairs_001': YesNoResult,
-		// 'Floors/Stairs_002/Explanation_007': string,
+		// 'Floors/Stairs': YesNoResult,
+		// 'Floors/Stairs/Explanation': string,
 	}
 }
 
