@@ -1,13 +1,13 @@
 //Import utility packages
-import { cloneDeep } from 'lodash';
+import { cloneDeep } from 'lodash'
 import { createReadStream, writeFile } from 'fs'
 import csv from 'csv-parser'
-import * as utils from './lib/utils'
+import * as utils from './utils'
 //Import typescript packages
 import * as a11y from '@sozialhelden/a11yjson'
 import { Accessibility } from '@sozialhelden/a11yjson'
-import { KoboResult, KoboKey, parseYesNo, parseValue, parseFloatUnit} from './lib/transformKoboToA11y'
-import { Floor } from './types/Floor'
+import { KoboResult, KoboKey, parseYesNo, parseValue, parseFloatUnit} from './transformKoboToA11y'
+import { Floor } from '../types/Floor'
 
 const settings = {
 	outputFileName: 'output/a11yjson',
@@ -20,10 +20,10 @@ interface PlaceInfoExtended extends a11y.PlaceInfo {
 	properties:PlacePropertiesExtended,
 }
 interface PlacePropertiesExtended extends a11y.PlaceProperties{
-  accessibility: AccessibilityExtended;
+  accessibility: AccessibilityExtended
 }
 interface AccessibilityExtended extends a11y.Accessibility{
-	floors?: Floor[] | undefined;
+	floors?: Floor[] | undefined
 }
 
 const inputSrc = 'kobodata/Testformulier_A11yJSON_-_all_versions_-_False_-_2021-11-26-15-59-37.csv'
@@ -111,7 +111,6 @@ function constructAccessibility(input:KoboResult){
 	return {
 	}
 }
-
 
 //Constructs a Parking interface
 function constructParking(input:KoboResult){
@@ -247,19 +246,7 @@ function validateAgainstSchema(input:object, index:number, validationContext:any
 	}
 }
 
-//Helper function to check if a value isn't an empty string
-//TODO move this to a helper module
-// function notEmpty(value:string){
-// 	return value !== ''
-// }
-
-/**
- * Deletes properties from an object where the value for the prop is null/undefined/''
- * @param item an object to clean
- * @returns the input object without empty fields
- * @todo for some reason ts wont allow me to type item as object because then item[prop]
- * throws an error
- */
+//Deletes properties from an object where the value for the prop is null/undefined/''
 function removeEmptyFields(item:any):KoboResult{
 	for (const prop in item){
 		if (item[prop] == '' || item[prop] == null || item[prop] == undefined){

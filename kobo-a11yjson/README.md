@@ -2,7 +2,6 @@
 Code to convert kobo data to a11yjson using the typescript interfaces provided by SozialHelden.
 
 ## Notes
-- Updating the lib file means rebuilding it by hand before the imported js is updated!
 
 ## Features
 - Loads and cleans raw Kobo csv data
