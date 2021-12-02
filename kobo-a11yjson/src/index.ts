@@ -43,7 +43,6 @@ function loadSurveyData(src:string):void{
 
 //Loads processes results and starts conversion to a11yjson
 function processResults(results:KoboResult[]){
-	//TODO: this should print an error because of survey_type but it doesnt
 	results = results.map(res => utils.cleanKeys(res) as KoboResult)
 	results = results.map(res => utils.cleanValues(res) as KoboResult)
 	console.log('ater clean', results[0])
