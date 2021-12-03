@@ -1,28 +1,44 @@
 # A11yjson diagram
 Figuring out the hierarchy of the A11yJSON interfaces was (and is) a bit of a struggle. So I'll try to visually reflect the nesting of the interfaces here.
 
-## Example mermaid diagram
+## TODO
+- Read up on mermaid diagram options and styling
+
+## Mermaid
+I'd like to use Mermaid for this. Looks like Github doesn't support it yet but [stackedit.io](https://stackedit.io/app#) can be used as a WYSIWYG editor.
+
+## A11yJSON Diagram
 ```mermaid
 classDiagram
-      Animal <|-- Duck
-      Animal <|-- Fish
-      Animal <|-- Zebra
-      Animal : +int age
-      Animal : +String gender
-      Animal: +isMammal()
-      Animal: +mate()
-      class Duck{
-          +String beakColor
-          +swim()
-          +quack()
+      PlaceInfo <|-- PlaceProperties
+      PlaceProperties <|-- Accessibility
+      Accessibility <|-- Entrance
+      Accessibility <|-- Parking
+      Accessibility <|-- Restroom
+      Accessibility <|-- Ground
+      Accessibility <|-- Floor
+      Entrance <|-- Door
+      Entrance <|-- Stairs
+      Restroom <|-- Entrance
+      Parking <|-- WheelchairParking
+      Floor <|-- Stairs
+      
+      class PlaceInfo{
+		properties: PlaceProperties          
       }
-      class Fish{
-          -int sizeInFeet
-          -canEat()
+      class PlaceProperties{
+		+accessibility: Accessibility
       }
-      class Zebra{
-          +bool is_wild
-          +run()
+      class Accessibility{
+		+entrances: Entrance[]
+		+restrooms: Restroom[]
+		+door: Door
+		+stairs: Stairs
+		+parking: Parking
+		?floors: Floor[]
+      }
+      class Entrance{
+	    +door: Door
       }
 ```
 
