@@ -10,18 +10,18 @@ I'd like to use Mermaid for this. Looks like Github doesn't support it yet but [
 ## A11yJSON Diagram
 ```mermaid
 classDiagram
-      PlaceInfo <|-- PlaceProperties
-      PlaceProperties <|-- Accessibility
-      Accessibility <|-- Entrance
-      Accessibility <|-- Parking
-      Accessibility <|-- Restroom
-      Accessibility <|-- Ground
-      Accessibility <|-- Floor
-      Entrance <|-- Door
-      Entrance <|-- Stairs
-      Restroom <|-- Entrance
-      Parking <|-- WheelchairParking
-      Floor <|-- Stairs
+      PlaceInfo <--  PlaceProperties
+      PlaceProperties <-- Accessibility
+      Accessibility <-- Entrance
+      Accessibility <-- Parking
+      Accessibility <-- Restroom
+      Accessibility <-- Ground
+      Accessibility <-- Floor
+      Entrance <-- Door
+      Entrance <-- Stairs
+      Restroom <-- Entrance
+      Parking <-- WheelchairParking
+      Floor <-- Stairs
       
       class PlaceInfo{
 		properties: PlaceProperties          
@@ -41,6 +41,7 @@ classDiagram
 	    +door: Door
       }
 ```
+
 
 [Mermaid docs](https://mermaid-js.github.io/mermaid/#/)
 Alternatively it's possible to [integrate draw.io](https://drawio.freshdesk.com/support/solutions/articles/16000042371-embed-a-diagram-in-github-markdown) in github

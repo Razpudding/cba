@@ -239,20 +239,11 @@ function constructFloor(input:KoboResult){
 function validateAgainstSchema(input:object, index:number, validationContext:any){
 	validationContext.validate(input)
 	if (!validationContext.isValid()) {
-	  const errors = validationContext.validationErrors();
+	  let errors = validationContext.validationErrors()
+	  errors = errors.filter( (e:any) => e.type !== "keyNotInSchema")
 	  // `errors` is a JSON object with detailled validation infos about each field in the input object.
 	  console.log("Error(s) for result number", index, errors);
 	}
-}
-
-//Deletes properties from an object where the value for the prop is null/undefined/''
-function removeEmptyFields(item:any):KoboResult{
-	for (const prop in item){
-		if (item[prop] == '' || item[prop] == null || item[prop] == undefined){
-			delete item[prop]
-		}
-	}
-	return item
 }
 
 //Write the data to a json file
