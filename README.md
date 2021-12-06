@@ -1,20 +1,18 @@
 # cba
-Useful code snippets to work with the CBA data. Anything that becomes to big will be put in a separate repo.
+This repo holds relevant work for [Cliëntenbelang Amsterdam](https://www.clientenbelangamsterdam.nl/), a dutch NGO working on making the city of Amsterdam more accessible.
 
-## Snippets
+## Projects
+
+### Kobo data to A11yJSON standard
+[kobo-a11yjson](/) Converts Kobo survey data to A11yJSON.
+It uses the typescript interfaces provided by SozialHelden and outputs A11yJSON data with some additional fields relevant to this project.
+
+### A11yJSON diagram
+[a11yjson-diagram](/a11yjson-diagram) A useful diagram which shows a visual nesting of A11yJSON interfaces. Currently only the interfaces I need are included.
 
 ### Extracting interfaces
-The current method to get an overview of the latest interfaces (to use in matching tables) is to extract them from the a11yjson npm package.
+[extracting-interfaces](/extracting-interfaces)A dirty hack to get all A11yJSON interfaces
 
-In the package there is a file called typedoc-output.json which has, among other things, all the interfaces with all their children listed. The code in 'extracting-interfaces' can be applied to get a cleaned list for matching tables.
-
-TODO:
-- Find out if there isn't a more direct way
-- Automate the process a bit more by having the code grab the file, run the extraction logic and then output the result
-
-### Kobo data to a11yjson standard
-'kobo-a11yjson' has some code on converting kobo data to a11yjson.
-It uses the typescript interfaces provided by SozialHelden.
-
-## Resources
-- [a11yjson interface](https://github.com/sozialhelden/a11yjson/blob/main/docs/3-interfaces.md)
+## Acknowledgements
+- The conversion was inspired by some work by [@Jurian](https://github.com/Jurian/)
+- The [A11yJSON standard](https://github.com/sozialhelden/a11yjson) and all the useful packages that helped me use it were developed by [Sozialhelden](https://github.com/sozialhelden)
