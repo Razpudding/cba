@@ -7,7 +7,12 @@ Figuring out the hierarchy of the A11yJSON interfaces was (and is) a bit of a st
 ## Mermaid
 I'd like to use Mermaid for this. Looks like Github doesn't support it yet but [stackedit.io](https://stackedit.io/app#) can be used as a WYSIWYG editor.
 
+I still want to look into [styling](https://mermaid-js.github.io/mermaid/#/flowchart?id=styling-and-classes) to get rid of the extra lines.
+
 ## A11yJSON Diagram
+
+![A11yJSON CBA Diagram](A11yJSON_CBA_Diagram.png)
+
 ```mermaid
 classDiagram
       PlaceInfo <--  PlaceProperties
