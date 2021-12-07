@@ -11,7 +11,7 @@ import { Floor } from '../types/Floor'
 
 const settings = {
 	outputFileName: 'output/a11yjson',
-	printResults: false,
+	printResults: true,
 	validate: true
 }
 
@@ -26,7 +26,7 @@ interface AccessibilityExtended extends a11y.Accessibility{
 	floors?: Floor[] | undefined
 }
 
-const inputSrc = 'kobodata/Testformulier_A11yJSON_-_all_versions_-_False_-_2021-11-26-15-59-37.csv'
+const inputSrc = 'kobodata/Testformulier_A11yJSON_-_all_versions_-_False_-_2021-12-07-09-28-39.csv'
 let results:KoboResult[] = []
 
 loadSurveyData(inputSrc)
@@ -43,7 +43,7 @@ function loadSurveyData(src:string):void{
 
 //Loads processes results and starts conversion to a11yjson
 function processResults(results:KoboResult[]){
-	results = results.map(res => utils.cleanKeys(res) as KoboResult)
+	// results = results.map(res => utils.cleanKeys(res) as KoboResult)
 	results = results.map(res => utils.cleanValues(res) as KoboResult)
 	console.log('ater clean', results[0])
 	let placeInfoStarter:PlaceInfoExtended = {
@@ -90,7 +90,10 @@ function transformToA11y(input:KoboResult, base:PlaceInfoExtended){
 	const parkingInterface:a11y.Parking = constructParking(input)
 	a11yResult.properties.accessibility.parking = parkingInterface
 
-	const entrancesInterface:a11y.Entrance[] = [constructEntrance(input)]
+	// const numberOfEntrances = parseValue(input, 'Entrances/count', 'int') as number
+	const numberOfEntrances = 2
+	//TODO: Test with mount 6
+	const entrancesInterface:a11y.Entrance[] = constructEntrances(input, numberOfEntrances)
 	// console.log(entrancesInterface)
 	a11yResult.properties.accessibility.entrances = entrancesInterface
 
@@ -150,21 +153,33 @@ function constructParking(input:KoboResult){
 	}
 }
 
+function constructEntrances(input:KoboResult, amount:number){
+	let entrances:a11y.Entrance[] = []
+
+	// Have a loop for either the number of entrances entered
+	for (let i = 1; i <= amount; i ++){
+		const cleanedResult = utils.cleanKeysStartingWith(input, 'Entrance_00'+i)
+		// Pass nesting '/Entrance_00'+index to constructEntrance in loop
+		entrances.push(constructEntrance(cleanedResult, 'Entrances/Entrance_00' + i))
+	}
+	return entrances	
+}
+
 //Constructs an Entrance interface
-function constructEntrance(input:KoboResult){
+function constructEntrance(input:KoboResult, nesting:string){
+	//TODO: The construct function should call the clean function so duplicate fields can be found
 	return {
-		// count: notEmpty(input['Entrances/count']) ? parseInt(input['Entrances/count']): undefined,
-		isMainEntrance: parseYesNo(input, 'Entrances/isMainEntrance'),
-		name: input['Entrances/name'],
-		isLevel: parseYesNo(input, 'Entrances/isLevel'),
-		hasFixedRamp:  parseYesNo(input, 'Entrances/hasFixedRamp'),
-		hasRemovableRamp:  parseYesNo(input, 'Entrances/hasRemovableRamp'),
-		rampExplanation: input['Entrances/Ramp/Explanation'],
-		hasElevator:  parseYesNo(input, 'Entrances/hasElevator'),
-		elevatorExplanation: input['Entrances/ElevatorEquipmentId/Explanation'],
-		stairs: parseYesNo(input, 'Entrances/hasStairs') ? constructStairs(input, 'Entrances/Stairs/') : undefined,
-		door: parseYesNo(input, 'Entrances/hasDoor') ? constructDoor(input, 'Entrances/door/') : null,
-		hasIntercom: parseYesNo(input, 'Entrances/hasIntercom')
+		isMainEntrance: parseYesNo(input, nesting + '/isMainEntrance'),
+		name: input[nesting + '/name'],
+		isLevel: parseYesNo(input, nesting + '/isLevel'),
+		hasFixedRamp:  parseYesNo(input, nesting + '/hasFixedRamp'),
+		hasRemovableRamp:  parseYesNo(input, nesting + '/hasRemovableRamp'),
+		rampExplanation: input[nesting + '/Ramp/Explanation'],
+		hasElevator:  parseYesNo(input, nesting + '/hasElevator'),
+		elevatorExplanation: input[nesting + '/ElevatorEquipmentId/Explanation'],
+		stairs: parseYesNo(input, nesting + '/hasStairs') ? constructStairs(input, nesting + '/Stairs/') : undefined,
+		door: parseYesNo(input, nesting + '/hasDoor') ? constructDoor(input, nesting + '/door/') : null,
+		hasIntercom: parseYesNo(input, nesting + '/hasIntercom')
 	}
 }
 

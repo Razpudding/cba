@@ -1,8 +1,6 @@
 # kobo-a11yjson
 Code to convert kobo data to a11yjson using the typescript interfaces provided by SozialHelden.
 
-## Notes
-
 ## Features
 - Loads and cleans raw Kobo csv data
   + Removes numerical suffixes from duplicate data column names
@@ -28,6 +26,13 @@ Code to convert kobo data to a11yjson using the typescript interfaces provided b
   + Last option is prob best. Suffixes still need to be removed from fields like 'count' or 'stairs' in order to find the relevant data. Right before an Interface is constructed, that part of the data should be cleaned of its suffixes. Everything starting with '/Parking' could be cleaned for instance. Or everything starting with /Entrances/Entrance001
 - Convert Sidewalkconditions from 1-4 to 0-1
 - Document usage instructions
+- Replace the PlaceInfo filler info with real data from survey
+
+## Notes
+Kobo adds numerical suffixes, starting with `_001` to duplicate field names. First I just removed all suffixes but that makes it impossible to distinguish multiple objects (e.g. several entrances) from one another. The current fix is to delete suffixes from a specific object when it is processed. So when an Entrance is processed, everything from Entrance_001/ is cleaned.
+**This solution doesn't work when an object has a field with an array of objects because you run into the same problem.**
+
+It might be a good idea to construct an object out of just the relevant Kobo fields for the current A11y interface being constructed and just pass that to the construction function.
 
 ## Data conversion
 My current strategy is to transform the Kobo data to PlaceInfo objects. Each object will have all of the kobo fields nested in it. Anything relevant to a11yjson will be transformed to properly match the relevant interface. The rest of the kobo data I'll probably yeet to a custom additional info interface nested in PlaceInfo.
