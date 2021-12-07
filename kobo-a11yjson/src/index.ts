@@ -11,7 +11,7 @@ import { Floor } from '../types/Floor'
 
 const settings = {
 	outputFileName: 'output/a11yjson',
-	printResults: true,
+	printResults: false,
 	validate: true
 }
 
@@ -88,11 +88,10 @@ function transformToA11y(input:KoboResult, base:PlaceInfoExtended){
 	// a11yResult.properties.accessibility = accessibilityInterface
 
 	const parkingInterface:a11y.Parking = constructParking(input)
-	a11yResult.properties.accessibility.parking = parkingInterface
+	a11yResult.properties.accessibility.parking = parkingInterface	
 
-	// const numberOfEntrances = parseValue(input, 'Entrances/count', 'int') as number
-	const numberOfEntrances = 6
-	//TODO: Test with mount 6
+	//TODO: Change to dynamic code that doesn't rely on the count suffix not changing! See notes.
+	const numberOfEntrances = parseValue(input, 'Entrances/count_002', 'int') as number
 	const entrancesInterface:a11y.Entrance[] = constructEntrances(input, numberOfEntrances)
 	// console.log(entrancesInterface)
 	a11yResult.properties.accessibility.entrances = entrancesInterface
@@ -153,35 +152,38 @@ function constructParking(input:KoboResult){
 	}
 }
 
+//Constructs multiple entrances based on amount parameter
 function constructEntrances(input:KoboResult, amount:number){
+	console.log("constructing entrances")
 	let entrances:a11y.Entrance[] = []
-
-	// Have a loop for either the number of entrances entered
+	// For each entrance in the survey, get the relevant data, clean it and use it to construct an Entrance
 	for (let i = 1; i <= amount; i ++){
-		const cleanedResult = utils.cleanKeysStartingWith(input, 'Entrance_00'+i)
-		// Pass nesting '/Entrance_00'+index to constructEntrance in loop
-		entrances.push(constructEntrance(cleanedResult, 'Entrances/Entrance_00' + i))
+		const a11yEntrance:a11y.Entrance = constructEntrance(input, 'Entrances/Entrance_00' + i + '/')
+		console.log(a11yEntrance)
+		entrances.push(a11yEntrance)
 	}
 	return entrances	
 }
 
 //Constructs an Entrance interface
 function constructEntrance(input:KoboResult, nesting:string){
-	//TODO: The construct function should call the clean function so duplicate fields can be found
+	const isolatedEntrance = utils.formIsolatedObject(input, nesting)
+	const cleanedEntrance = utils.cleanKeysOneLevel(isolatedEntrance)
+	console.log(cleanedEntrance)
 	return {
-		isMainEntrance: parseYesNo(input, nesting + '/isMainEntrance'),
-		name: input[nesting + '/name'],
-		isLevel: parseYesNo(input, nesting + '/isLevel'),
-		hasFixedRamp:  parseYesNo(input, nesting + '/hasFixedRamp'),
-		hasRemovableRamp:  parseYesNo(input, nesting + '/hasRemovableRamp'),
-		rampExplanation: input[nesting + '/Ramp/Explanation'],
-		hasElevator:  parseYesNo(input, nesting + '/hasElevator'),
-		elevatorExplanation: input[nesting + '/ElevatorEquipmentId/Explanation'],
-		stairs: parseYesNo(input, nesting + '/hasStairs') ? constructStairs(input, nesting + '/Stairs/') : undefined,
-		door: parseYesNo(input, nesting + '/hasDoor') === true ? constructDoor(input, nesting + '/door/') 
-			: parseYesNo(input, nesting + '/hasDoor') === false ? null 
+		isMainEntrance: parseYesNo(cleanedEntrance, 'isMainEntrance'),
+		name: cleanedEntrance['name'],
+		isLevel: parseYesNo(cleanedEntrance, 'isLevel'),
+		hasFixedRamp:  parseYesNo(cleanedEntrance, 'hasFixedRamp'),
+		hasRemovableRamp:  parseYesNo(cleanedEntrance, 'hasRemovableRamp'),
+		rampExplanation: cleanedEntrance['Ramp/Explanation'],
+		hasElevator:  parseYesNo(cleanedEntrance, 'hasElevator'),
+		elevatorExplanation: cleanedEntrance['ElevatorEquipmentId/Explanation'],
+		stairs: parseYesNo(cleanedEntrance, 'hasStairs') ? constructStairs(cleanedEntrance, 'Stairs/') : undefined,
+		door: parseYesNo(cleanedEntrance, 'hasDoor') === true ? constructDoor(cleanedEntrance, 'door/') 
+			: parseYesNo(cleanedEntrance, 'hasDoor') === false ? null 
 			: undefined,
-		hasIntercom: parseYesNo(input, nesting + '/hasIntercom')
+		hasIntercom: parseYesNo(cleanedEntrance, 'hasIntercom')
 	}
 }
 
