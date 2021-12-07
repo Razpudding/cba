@@ -17,12 +17,17 @@ Code to convert kobo data to a11yjson using the typescript interfaces provided b
 - Strings are not localizedstring yet. Can't figure out the format but it should look something like this `"nl": <string>input['Parking/WheelchairParking/neededParkingPermits']`
   + The language questions at the start of the survey can be used to determine the language tag of all localizedStrings
 - Maybe change fieldTypes to proper TS types so the parsevalue function can infer export type better
-- Make repo public
-- Calculate slope angle
+- Calculate slope angle (wait for data, then use calc previously used)
 - Update floors interface
 - Figure out what to do with all the description texts
-- Implement multiple entries
+- Implement multiple entrances
+  + Because num.suf. are stripped when the data is loaded, Entrances/Entrance_001 can no longer be distinguished from Entrance_002.
+  + To solve this, either split up the sourcedata by a unique field present in every Entrance like 'isMainEntrance' (And reapply a suffix)
+  + Or look at the total number of entrances and use that
+  + Or don't remove suffixes until an Interface's object(s) have been constructed.
+  + Last option is prob best. Suffixes still need to be removed from fields like 'count' or 'stairs' in order to find the relevant data. Right before an Interface is constructed, that part of the data should be cleaned of its suffixes. Everything starting with '/Parking' could be cleaned for instance. Or everything starting with /Entrances/Entrance001
 - Convert Sidewalkconditions from 1-4 to 0-1
+- Document usage instructions
 
 ## Data conversion
 My current strategy is to transform the Kobo data to PlaceInfo objects. Each object will have all of the kobo fields nested in it. Anything relevant to a11yjson will be transformed to properly match the relevant interface. The rest of the kobo data I'll probably yeet to a custom additional info interface nested in PlaceInfo.

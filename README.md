@@ -11,7 +11,7 @@ It uses the typescript interfaces provided by SozialHelden and outputs A11yJSON 
 [a11yjson-diagram](/a11yjson-diagram) A useful diagram which shows a visual nesting of A11yJSON interfaces. Currently only the interfaces I need are included.
 
 ### Extracting interfaces
-[extracting-interfaces](/extracting-interfaces)A dirty hack to get all A11yJSON interfaces
+[extracting-interfaces](/extracting-interfaces) A dirty hack to get all A11yJSON interfaces
 
 ## Acknowledgements
 - The conversion was inspired by some work by [@Jurian](https://github.com/Jurian/)
