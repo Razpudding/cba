@@ -91,7 +91,7 @@ function transformToA11y(input:KoboResult, base:PlaceInfoExtended){
 	a11yResult.properties.accessibility.parking = parkingInterface
 
 	// const numberOfEntrances = parseValue(input, 'Entrances/count', 'int') as number
-	const numberOfEntrances = 2
+	const numberOfEntrances = 6
 	//TODO: Test with mount 6
 	const entrancesInterface:a11y.Entrance[] = constructEntrances(input, numberOfEntrances)
 	// console.log(entrancesInterface)
@@ -178,7 +178,9 @@ function constructEntrance(input:KoboResult, nesting:string){
 		hasElevator:  parseYesNo(input, nesting + '/hasElevator'),
 		elevatorExplanation: input[nesting + '/ElevatorEquipmentId/Explanation'],
 		stairs: parseYesNo(input, nesting + '/hasStairs') ? constructStairs(input, nesting + '/Stairs/') : undefined,
-		door: parseYesNo(input, nesting + '/hasDoor') ? constructDoor(input, nesting + '/door/') : null,
+		door: parseYesNo(input, nesting + '/hasDoor') === true ? constructDoor(input, nesting + '/door/') 
+			: parseYesNo(input, nesting + '/hasDoor') === false ? null 
+			: undefined,
 		hasIntercom: parseYesNo(input, nesting + '/hasIntercom')
 	}
 }

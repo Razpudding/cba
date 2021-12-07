@@ -27,6 +27,8 @@ Code to convert kobo data to a11yjson using the typescript interfaces provided b
 - Convert Sidewalkconditions from 1-4 to 0-1
 - Document usage instructions
 - Replace the PlaceInfo filler info with real data from survey
+- Look at language question to determine language for localizedStrings
+- Resulting JSON can have empty object (for instance when no data is filled in for an entrance). Might be better to remove those before outputting (or change output settings)
 
 ## Notes
 Kobo adds numerical suffixes, starting with `_001` to duplicate field names. First I just removed all suffixes but that makes it impossible to distinguish multiple objects (e.g. several entrances) from one another. The current fix is to delete suffixes from a specific object when it is processed. So when an Entrance is processed, everything from Entrance_001/ is cleaned.
