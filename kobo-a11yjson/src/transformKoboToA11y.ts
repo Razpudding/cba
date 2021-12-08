@@ -80,7 +80,7 @@ export type KoboKey = keyof KoboResult;
 
 type FieldTypes = 'yesno' | 'float' | 'int';
 
-export const parseValue = (data: KoboResult, field: KoboKey, type: FieldTypes) => {
+export const parseValue = (data: any, field: KoboKey, type: FieldTypes) => {
   const rawValue = data[field];
   if(rawValue === null){
     console.log("Found a null value for", field)
@@ -111,7 +111,7 @@ export const parseValue = (data: KoboResult, field: KoboKey, type: FieldTypes) =
   return undefined;
 };
 
-export const parseYesNo = (data: KoboResult, field: KoboKey) => {
+export const parseYesNo = (data: any, field: KoboKey) => {
   if (data[field] === 'true') {
     return true;
   }

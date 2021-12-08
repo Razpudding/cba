@@ -87,8 +87,11 @@ function transformToA11y(input:KoboResult, base:PlaceInfoExtended){
 	// const accessibilityInterface = constructAccessibility(input)
 	// a11yResult.properties.accessibility = accessibilityInterface
 
-	const parkingInterface:a11y.Parking = constructParking(input)
+	console.log("Constructing parking")
+	const interfaceData = getInterfaceData(input, 'Parking/')
+	const parkingInterface:a11y.Parking = constructParking(interfaceData)
 	a11yResult.properties.accessibility.parking = parkingInterface	
+	console.log(parkingInterface)
 
 	//TODO: Change to dynamic code that doesn't rely on the count suffix not changing! See notes.
 	const numberOfEntrances = parseValue(input, 'Entrances/count_002', 'int') as number
@@ -158,57 +161,64 @@ function constructEntrances(input:KoboResult, amount:number){
 	let entrances:a11y.Entrance[] = []
 	// For each entrance in the survey, get the relevant data, clean it and use it to construct an Entrance
 	for (let i = 1; i <= amount; i ++){
-		const a11yEntrance:a11y.Entrance = constructEntrance(input, 'Entrances/Entrance_00' + i + '/')
+		const interfaceData = getInterfaceData(input, 'Entrances/Entrance_00' + i + '/')
+		const a11yEntrance:a11y.Entrance = constructEntrance(interfaceData)
 		console.log(a11yEntrance)
 		entrances.push(a11yEntrance)
 	}
 	return entrances	
 }
 
+function getInterfaceData(source:Object, nesting:string){
+	console.log("Isolating with", nesting)
+	const isolatedObject = utils.formIsolatedObject(source, nesting)
+	console.log("isolated", isolatedObject)
+	const cleanedObject = utils.cleanKeysOneLevel(isolatedObject)
+	console.log("cleaned", cleanedObject)
+	return cleanedObject
+}
+
 //Constructs an Entrance interface
-function constructEntrance(input:KoboResult, nesting:string){
-	const isolatedEntrance = utils.formIsolatedObject(input, nesting)
-	const cleanedEntrance = utils.cleanKeysOneLevel(isolatedEntrance)
-	console.log(cleanedEntrance)
+function constructEntrance(entranceData:any){
 	return {
-		isMainEntrance: parseYesNo(cleanedEntrance, 'isMainEntrance'),
-		name: cleanedEntrance['name'],
-		isLevel: parseYesNo(cleanedEntrance, 'isLevel'),
-		hasFixedRamp:  parseYesNo(cleanedEntrance, 'hasFixedRamp'),
-		hasRemovableRamp:  parseYesNo(cleanedEntrance, 'hasRemovableRamp'),
-		rampExplanation: cleanedEntrance['Ramp/Explanation'],
-		hasElevator:  parseYesNo(cleanedEntrance, 'hasElevator'),
-		elevatorExplanation: cleanedEntrance['ElevatorEquipmentId/Explanation'],
-		stairs: parseYesNo(cleanedEntrance, 'hasStairs') ? constructStairs(cleanedEntrance, 'Stairs/') : undefined,
-		door: parseYesNo(cleanedEntrance, 'hasDoor') === true ? constructDoor(cleanedEntrance, 'door/') 
-			: parseYesNo(cleanedEntrance, 'hasDoor') === false ? null 
+		isMainEntrance: parseYesNo(entranceData, 'isMainEntrance'),
+		name: entranceData['name'],
+		isLevel: parseYesNo(entranceData, 'isLevel'),
+		hasFixedRamp:  parseYesNo(entranceData, 'hasFixedRamp'),
+		hasRemovableRamp:  parseYesNo(entranceData, 'hasRemovableRamp'),
+		rampExplanation: entranceData['Ramp/Explanation'],
+		hasElevator:  parseYesNo(entranceData, 'hasElevator'),
+		elevatorExplanation: entranceData['ElevatorEquipmentId/Explanation'],
+		stairs: parseYesNo(entranceData, 'hasStairs') ? constructStairs( getInterfaceData( entranceData, 'Stairs/') ) : undefined,
+		door: parseYesNo(entranceData, 'hasDoor') === true ? constructDoor( getInterfaceData (entranceData, 'door/') ) 
+			: parseYesNo(entranceData, 'hasDoor') === false ? null 
 			: undefined,
-		hasIntercom: parseYesNo(cleanedEntrance, 'hasIntercom')
+		hasIntercom: parseYesNo(entranceData, 'hasIntercom')
 	}
 }
 
 //Constructs a Door interface
-function constructDoor(input:KoboResult, nesting:string){
+function constructDoor(input:any){
 	return {
-		width: input[nesting + 'width'] ? {
+		width: input['width'] ? {
 			unit: 'cm',
-			value: parseValue(input, nesting + 'width', 'int') as number
+			value: parseValue(input, 'width', 'int') as number
 		}: undefined,
-		isRevolving: parseYesNo(input, nesting + 'isRevolving'),
-		isSliding: parseYesNo(input, nesting + 'isSliding'),
-		isAutomaticOrAlwaysOpen: parseYesNo(input, nesting + 'isAutomaticOrAlwaysOpen'),
-		isEasyToHoldOpen: parseYesNo(input, nesting + 'isEasyToHoldOpen'),
-		hasErgonomicDoorHandle: parseYesNo(input, nesting + 'hasErgonomicDoorHandle'),
-		DoorOpensToOutside: parseYesNo(input, nesting + 'DoorOpensToOutside'),
-		turningSpaceInFront: input[nesting + 'turningSpaceInFront'] ? {
+		isRevolving: parseYesNo(input, 'isRevolving'),
+		isSliding: parseYesNo(input, 'isSliding'),
+		isAutomaticOrAlwaysOpen: parseYesNo(input, 'isAutomaticOrAlwaysOpen'),
+		isEasyToHoldOpen: parseYesNo(input, 'isEasyToHoldOpen'),
+		hasErgonomicDoorHandle: parseYesNo(input, 'hasErgonomicDoorHandle'),
+		DoorOpensToOutside: parseYesNo(input, 'DoorOpensToOutside'),
+		turningSpaceInFront: input['turningSpaceInFront'] ? {
 			unit: 'cm',
-			value: parseValue(input, nesting + 'turningSpaceInFront', 'int') as number
+			value: parseValue(input, 'turningSpaceInFront', 'int') as number
 		}: undefined,
 	}
 }
 
 //Constructs a Stairs interface
-function constructStairs(input:KoboResult, nesting:string){
+function constructStairs(input:any){
 	return {
 		// count: 8,
 		// explanation: notEmpty(input['Entrances/Stairs/Explanation']) ? input['Entrances/Stairs/Explanation'] : undefined,
@@ -243,7 +253,7 @@ function constructFloor(input:KoboResult){
 		escalatorExplanation: input['Floors/EscalatorEquipmentID/Explanation'],
 		hasFixedRamp: parseYesNo(input, 'Floors/fixedRamp'),
 		rampExplanation: input['Floors/Ramp/Explanation'],
-		stairs: parseYesNo(input, 'Floors/Stairs') ? constructStairs(input, 'Floors/Stairs') : undefined,
+		stairs: parseYesNo(input, 'Floors/Stairs') ? constructStairs( getInterfaceData( input, 'Stairs/') ) : undefined,
 		floorExplanation: input['Floors/notes'],
 		//TODO: Process the floors as separate objects or as one, either way the count needs to be included somewhere
 		// 'Floors/count': string,

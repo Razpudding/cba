@@ -22,7 +22,10 @@ export function formIsolatedObject(object:any, nesting:string){
 	const isolatedObject:any = {}
 	for (const [key, value] of Object.entries(object)) {
 	  if (key.startsWith(nesting)){
-	  	isolatedObject[key.split(nesting)[1]] = value
+	  	console.log(key, value)
+	  	//Couldn't use a simple split(nesting)[1] here because of repeating nesting strings
+	  	const newKey = key.substring(key.indexOf(nesting) + nesting.length);
+	  	isolatedObject[newKey] = value
 	  }
 	}
 	return isolatedObject
