@@ -12,19 +12,18 @@ Code to convert kobo data to a11yjson using the typescript interfaces provided b
 - All generated data is validated against the A11yJSON standard and deviations from the standard are logged.
 
 ## TODO
-- There are kobo fields with double suffixes because they have the same name in the survey 'Stairs_201/Explanation_201_002'.
-- Entrances are now created in a better way, the other interfaces need to be adapted to this method.
-- Strings are not localizedstring yet. Can't figure out the format but it should look something like this `"nl": <string>input['Parking/WheelchairParking/neededParkingPermits']`
-  + The language questions at the start of the survey can be used to determine the language tag of all localizedStrings
+- Differences between basic and extended survey need to be documented and handled. Right now the basic survey doesn't ask number of entrances which results in no entrances being processed. It looks like one entrance is standard for basic surveys so we'll need to change to code a bit or the survey logic needs to autocomplete this question to 1.
+- Can the same survey be filled in twice for different language entries for the same building? If so we need to handle that because the code will just output almost identical a11y objects that will need to be merged later.
 - Maybe change fieldTypes to proper TS types so the parsevalue function can infer export type better
+  + Now that interfaces are created dynamically, it's not possible anymore to predict the keys of objects passed to the parse functions. This should be fixed. Possible by creating types for each piece of interface data.
 - Calculate slope angle (wait for data, then use calc previously used)
 - Update floors interface
 - Figure out what to do with all the description texts
 - Convert Sidewalkconditions from 1-4 to 0-1
-- Document usage instructions
+- Document usage instructions of repo
 - Replace the PlaceInfo filler info with real data from survey
-- Look at language question to determine language for localizedStrings
 - Resulting JSON can have empty object (for instance when no data is filled in for an entrance). Might be better to remove those before outputting (or change output settings)
+-   'Floors/Stairs_001': 'false', 'Floors/Stairs_002/Explanation_007': undefined, first should prob be hasStairs?
 
 ## Notes
 Kobo adds numerical suffixes, starting with `_001` to duplicate field names. First I just removed all suffixes but that makes it impossible to distinguish multiple objects (e.g. several entrances) from one another. The current fix is to delete suffixes from a specific object when it is processed. So when an Entrance is processed, everything from Entrance_001/ is cleaned.

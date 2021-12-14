@@ -10,7 +10,7 @@ export interface Floor {
     /**
      * A text elaborating on the use of the elevator.
      */
-    elevatorExplanation?: ArrayLike<a11y.LocalizedString>;
+    elevatorExplanation?: a11y.LocalizedString;
     /**
      * `true` if the floor is reachable by escalator.
      */
@@ -18,7 +18,7 @@ export interface Floor {
     /**
      * A text elaborating on the use of the escalator.
      */
-    escalatorExplanation?: ArrayLike<a11y.LocalizedString>;
+    escalatorExplanation?: a11y.LocalizedString;
     /**
      * `true` if this floor has a fixed ramp, false if not, undefined if unknown.
      */
@@ -26,7 +26,7 @@ export interface Floor {
     /**
      * A text elaborating on the use of the ramp.
      */
-    rampExplanation?: ArrayLike<a11y.LocalizedString>;
+    rampExplanation?: a11y.LocalizedString;
     /**
      * Object that describes stairs that you have to take to get to this floor, undefined if unknown.
      */
@@ -34,5 +34,5 @@ export interface Floor {
     /**
      * A text elaborating on the function and or accessability of this floor
      */
-    floorExplanation?: ArrayLike<a11y.LocalizedString>;
+    floorExplanation?: a11y.LocalizedString;
 }
