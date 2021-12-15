@@ -12,14 +12,18 @@ Code to convert kobo data to a11yjson using the typescript interfaces provided b
 - All generated data is validated against the A11yJSON standard and deviations from the standard are logged.
 
 ## TODO
-- Differences between basic and extended survey need to be documented and handled. Right now the basic survey doesn't ask number of entrances which results in no entrances being processed. It looks like one entrance is standard for basic surveys so we'll need to change to code a bit or the survey logic needs to autocomplete this question to 1.
+- The restrooms and floors interface still have double numerical suffixes that need to be fixed.
+  + When fixing this, also fix the other issues in the kobo survey
 - Can the same survey be filled in twice for different language entries for the same building? If so we need to handle that because the code will just output almost identical a11y objects that will need to be merged later.
 - Maybe change fieldTypes to proper TS types so the parsevalue function can infer export type better
   + Now that interfaces are created dynamically, it's not possible anymore to predict the keys of objects passed to the parse functions. This should be fixed. Possible by creating types for each piece of interface data.
+  + Just use parseYesNo and parseInt inline, it makes the most sense. Create wrapper function for parseInt
+  + Check NANs
 - Calculate slope angle (wait for data, then use calc previously used)
 - Update floors interface
 - Figure out what to do with all the description texts
-- Convert Sidewalkconditions from 1-4 to 0-1
+- Convert Sidewalk conditions from 1-4 to 0-1
+  + Look into [OST-smoothness]
 - Document usage instructions of repo
 - Replace the PlaceInfo filler info with real data from survey
 - Resulting JSON can have empty object (for instance when no data is filled in for an entrance). Might be better to remove those before outputting (or change output settings)

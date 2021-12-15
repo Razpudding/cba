@@ -6,24 +6,14 @@ import * as utils from './utils'
 //Import typescript packages
 import * as a11y from '@sozialhelden/a11yjson'
 import { Accessibility } from '@sozialhelden/a11yjson'
-import { KoboResult, KoboKey, parseYesNo, parseValue, parseFloatUnit} from './transformKoboToA11y'
+import { KoboResult, KoboKey, parseYesNo, parseNumber} from './transformKoboToA11y'
 import { Floor } from '../types/Floor'
 
 const settings = {
 	outputFileName: 'output/a11yjson',
-	printResults: true,
+	printResults: false,
 	validate: true
 }
-
-interface LanguageTags {
-  [key: string]: string;
-}
-
-const languageTags:LanguageTags = {
-	'Dutch': 'nl',
-	'English': 'en',
-}
-let currentLanguage:string
 
 //I'm extending the some imported interfaces locally so I can safely ammend them
 interface PlaceInfoExtended extends a11y.PlaceInfo {
@@ -35,6 +25,15 @@ interface PlacePropertiesExtended extends a11y.PlaceProperties{
 interface AccessibilityExtended extends a11y.Accessibility{
 	floors?: Floor[] | undefined
 }
+interface LanguageTags {
+  [key: string]: string;
+}
+
+const languageTags:LanguageTags = {
+	'Dutch': 'nl',
+	'English': 'en',
+}
+let currentLanguage:string
 
 const inputSrc = 'kobodata/Testformulier_A11yJSON_-_latest_version_-_False_-_2021-12-14-12-00-02.csv'
 let results:KoboResult[] = []
@@ -100,25 +99,34 @@ function transformToA11y(input:KoboResult, base:PlaceInfoExtended){
 
 	const parkingData = getInterfaceData(input, 'Parking/')
 	const parkingInterface:a11y.Parking = constructParking(parkingData)
+	console.log("Parking", parkingInterface)
 	a11yResult.properties.accessibility.parking = parkingInterface
 
 	//TODO: Change to dynamic code that doesn't rely on the count suffix not changing! See notes.
-	const numberOfEntrances = parseValue(input, 'Entrances/count_002', 'int') as number
+	let numberOfEntrances = parseNumber(input['Entrances/count_002'])
+	if (input['Survey/Survey_Type'] === 'basic') { numberOfEntrances = 1 }
 	const entrancesInterface:a11y.Entrance[] = constructEntrances(input, numberOfEntrances)
 	// console.log(entrancesInterface)
 	a11yResult.properties.accessibility.entrances = entrancesInterface
 
 	const groundData = getInterfaceData(input, 'Ground/')
+	console.log("GroundData", groundData)
 	const groundInterface:a11y.Ground = constructGround(groundData)
 	// console.log(groundInterface)
 	a11yResult.properties.accessibility.ground = groundInterface
 
-	if (parseYesNo(input, 'Floors/HasFloors')){
+	if (parseYesNo(input['Floors/HasFloors'])){
 		const floorData = getInterfaceData(input, 'Floors/')
 		const floorInterface:Floor[] = [constructFloor(floorData)]
 		a11yResult.properties.accessibility.floors = floorInterface
 	}
 	return a11yResult
+}
+
+//Returns a clean object with only properties starting with the target string
+function getInterfaceData(source:Object, target:string){
+	const isolatedObject = utils.formIsolatedObject(source, target)
+	return utils.cleanKeysOneLevel(isolatedObject) 
 }
 
 //Constructs a Parking interface
@@ -130,28 +138,29 @@ function constructAccessibility(input:KoboResult){
 //Constructs a Parking interface
 function constructParking(input:KoboResult){
 	return {
-		count: parseValue(input, 'count', 'int') as number,
-		forWheelchairUsers: parseYesNo(input, 'forWheelchairUsers') ? {
-			count: parseValue(input, 'WheelchairParking/count', 'int') as number,
+		// count: parseValue(input, 'count', 'int') as number,
+		count: parseNumber(input['count']),
+		forWheelchairUsers: parseYesNo(input['forWheelchairUsers']) ? {
+			count: parseNumber(input['WheelchairParking/count']),
 			//location
 			distanceToEntrance: input['WheelchairParking/distance'] ? {
 				unit: 'meter',
-				value: parseValue(input, 'WheelchairParking/distance', 'int') as number
+				value: parseNumber(input['WheelchairParking/distance'])
 			}: undefined,
-			hasDedicatedSignage: parseYesNo(input, 'WheelchairParking/hasDedicatedSignage'),
+			hasDedicatedSignage: parseYesNo(input['WheelchairParking/hasDedicatedSignage']),
 			length: input['WheelchairParking/length'] ? {
 				unit: 'meter',
-				value: parseValue(input, 'WheelchairParking/length', 'int') as number
+				value: parseNumber(input['WheelchairParking/length'])
 			}: undefined,
 			width: input['WheelchairParking/width'] ? {
 				unit: 'meter',
-				value: parseValue(input, 'WheelchairParking/width', 'int') as number
+				value: parseNumber(input['WheelchairParking/width'])
 			}: undefined,
 			orientation: { [currentLanguage]: input['WheelchairParking/type'] },
-			isLocatedInside: parseYesNo(input, 'WheelchairParking/isLocatedInside'),
+			isLocatedInside: parseYesNo(input['WheelchairParking/isLocatedInside']),
 			maxVehicleHeight: input['WheelchairParking/maxVehicleHeight'] ? {
 				unit: 'cm',
-				value: parseValue(input, 'WheelchairParking/maxVehicleHeight', 'int') as number
+				value: parseNumber(input['WheelchairParking/maxVehicleHeight'])
 			}: undefined,
 			neededParkingPermits: input['WheelchairParking/neededParkingPermits'] ? 
 				// [input['WheelchairParking/neededParkingPermits']]
@@ -159,10 +168,10 @@ function constructParking(input:KoboResult){
 					{ [currentLanguage]: input['WheelchairParking/neededParkingPermits']}
 				]
 				: undefined,
-			paymentBySpace: parseYesNo(input, 'WheelchairParking/paymentBySpace'),
-			paymentByZone: parseYesNo(input, 'WheelchairParking/paymentByZone'),
+			paymentBySpace: parseYesNo(input['WheelchairParking/paymentBySpace']),
+			paymentByZone: parseYesNo(input['WheelchairParking/paymentByZone']),
 		} : null,
-		kissAndRide: parseYesNo(input, 'KissAndRide'),
+		kissAndRide: parseYesNo(input['KissAndRide']),
 		notes: input['notes'] ? { [currentLanguage]: input['notes'] } : undefined,
 	}
 }
@@ -181,47 +190,42 @@ function constructEntrances(input:KoboResult, amount:number){
 	return entrances	
 }
 
-//Returns a clean object with only properties starting with the target string
-function getInterfaceData(source:Object, target:string){
-	const isolatedObject = utils.formIsolatedObject(source, target)
-	return utils.cleanKeysOneLevel(isolatedObject) 
-}
-
 //Constructs an Entrance interface
 function constructEntrance(entranceData:any){
 	return {
-		isMainEntrance: parseYesNo(entranceData, 'isMainEntrance'),
+		isMainEntrance: parseYesNo(entranceData['isMainEntrance']),
 		name: { [currentLanguage]: entranceData['name'] },
-		isLevel: parseYesNo(entranceData, 'isLevel'),
-		hasFixedRamp:  parseYesNo(entranceData, 'hasFixedRamp'),
-		hasRemovableRamp:  parseYesNo(entranceData, 'hasRemovableRamp'),
+		isLevel: parseYesNo(entranceData['isLevel']),
+		hasFixedRamp:  parseYesNo(entranceData['hasFixedRamp']),
+		hasRemovableRamp:  parseYesNo(entranceData['hasRemovableRamp']),
 		rampExplanation: { [currentLanguage]: entranceData['Ramp/Explanation'] },
-		hasElevator:  parseYesNo(entranceData, 'hasElevator'),
+		hasElevator:  parseYesNo(entranceData['hasElevator']),
 		elevatorExplanation: { [currentLanguage]: entranceData['ElevatorEquipmentId/Explanation'] },
-		stairs: parseYesNo(entranceData, 'hasStairs') ? constructStairs( getInterfaceData( entranceData, 'Stairs/') ) : undefined,
-		door: parseYesNo(entranceData, 'hasDoor') === true ? constructDoor( getInterfaceData (entranceData, 'door/') ) 
-			: parseYesNo(entranceData, 'hasDoor') === false ? null 
+		stairs: parseYesNo(entranceData['hasStairs']) ? constructStairs( getInterfaceData( entranceData, 'Stairs/') ) : undefined,
+		door: parseYesNo(entranceData['hasDoor']) === true ? constructDoor( getInterfaceData (entranceData, 'door/') ) 
+			: parseYesNo(entranceData['hasDoor']) === false ? null 
 			: undefined,
-		hasIntercom: parseYesNo(entranceData, 'hasIntercom')
+		hasIntercom: parseYesNo(entranceData['hasIntercom'])
 	}
 }
 
 //Constructs a Door interface
 function constructDoor(input:any){
+	console.log("doorData", input)
 	return {
 		width: input['width'] ? {
 			unit: 'cm',
-			value: parseValue(input, 'width', 'int') as number
+			value: parseNumber(input['width'])
 		}: undefined,
-		isRevolving: parseYesNo(input, 'isRevolving'),
-		isSliding: parseYesNo(input, 'isSliding'),
-		isAutomaticOrAlwaysOpen: parseYesNo(input, 'isAutomaticOrAlwaysOpen'),
-		isEasyToHoldOpen: parseYesNo(input, 'isEasyToHoldOpen'),
-		hasErgonomicDoorHandle: parseYesNo(input, 'hasErgonomicDoorHandle'),
-		DoorOpensToOutside: parseYesNo(input, 'DoorOpensToOutside'),
+		isRevolving: parseYesNo(input['isRevolving']),
+		isSliding: parseYesNo(input['isSliding']),
+		isAutomaticOrAlwaysOpen: parseYesNo(input['isAutomaticOrAlwaysOpen']),
+		isEasyToHoldOpen: parseYesNo(input['isEasyToHoldOpen']),
+		hasErgonomicDoorHandle: parseYesNo(input['hasErgonomicDoorHandle']),
+		DoorOpensToOutside: parseYesNo(input['DoorOpensToOutside']),
 		turningSpaceInFront: input['turningSpaceInFront'] ? {
 			unit: 'cm',
-			value: parseValue(input, 'turningSpaceInFront', 'int') as number
+			value: parseNumber(input['turningSpaceInFront'])
 		}: undefined,
 	}
 }
@@ -239,15 +243,15 @@ function constructGround(input:KoboResult){
 	return {
 		distanceToDroppedCurb: input['distanceToDroppedCurb'] ? {
 			unit: 'meter',
-			value: parseValue(input, 'distanceToDroppedCurb', 'int') as number
+			value: parseNumber(input['distanceToDroppedCurb'])
 		}: undefined,
-		evenPavement: parseYesNo(input, 'evenPavement'),
-		isLevel: parseYesNo(input, 'isLevel'),
-		sidewalkConditions: parseValue(input, 'sidewalkConditions', 'int') as number,
-		slopeAngle: parseValue(input, 'slopeAngle', 'int') as number,
+		evenPavement: parseYesNo(input['evenPavement']),
+		isLevel: parseYesNo(input['isLevel']),
+		sidewalkConditions: parseNumber(input['sidewalkConditions']),
+		slopeAngle: parseNumber(input['slopeAngle']),
 		turningSpace: input['turningSpace'] ? {
 			unit: 'cm',
-			value: parseValue(input, 'turningSpace', 'int') as number
+			value: parseNumber(input['turningSpace']),
 		} : undefined,
 		notes: { [currentLanguage]: input['notes'] },
 	}
@@ -255,14 +259,16 @@ function constructGround(input:KoboResult){
 
 //Constructs a Floor interface
 function constructFloor(input:KoboResult){
+	console.log("constructing floor")
+	console.log(input)
 	return {
-		reachableByElevator: parseYesNo(input, 'elevator'),
+		reachableByElevator: parseYesNo(input['elevator']),
 		elevatorExplanation: { [currentLanguage]: input['ElevatorEquipmentId/Explanation'] },
-		reachableByEscalator: parseYesNo(input, 'escalator'),
+		reachableByEscalator: parseYesNo(input['escalator']),
 		escalatorExplanation: { [currentLanguage]: input['EscalatorEquipmentID/Explanation'] },
-		hasFixedRamp: parseYesNo(input, 'fixedRamp'),
+		hasFixedRamp: parseYesNo(input['fixedRamp']),
 		rampExplanation: { [currentLanguage]: input['Ramp/Explanation']},
-		stairs: parseYesNo(input, 'Stairs') ? constructStairs( getInterfaceData( input, 'Stairs/') ) : undefined,
+		stairs: parseYesNo(input['Stairs']) ? constructStairs( getInterfaceData( input, 'Stairs/') ) : undefined,
 		floorExplanation: { [currentLanguage]: input['notes'] },
 		//TODO: Process the floors as separate objects or as one, either way the count needs to be included somewhere
 		// 'Floors/count': string,

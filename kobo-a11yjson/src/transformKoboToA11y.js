@@ -1,7 +1,26 @@
 "use strict";
 exports.__esModule = true;
-exports.parseIntUnit = exports.parseFloatUnit = exports.parseYesNo = exports.parseValue = void 0;
+exports.parseIntUnit = exports.parseFloatUnit = exports.parseNumber = exports.parseYesNo = exports.parseValue = exports.parseString = void 0;
 var lodash_1 = require("lodash");
+var parseString = function (value, type) {
+    if (typeof value !== 'string') {
+        return undefined;
+    }
+    if (type === 'yesno') {
+        if (value === 'true') {
+            return true;
+        }
+        return value === 'false' ? false : undefined;
+    }
+    if (type === 'float') {
+        return parseFloat(value);
+    }
+    if (type === 'int') {
+        return parseInt(value, 10);
+    }
+    return undefined;
+};
+exports.parseString = parseString;
 var parseValue = function (data, field, type) {
     var rawValue = data[field];
     if (rawValue === null) {
@@ -28,13 +47,17 @@ var parseValue = function (data, field, type) {
     return undefined;
 };
 exports.parseValue = parseValue;
-var parseYesNo = function (data, field) {
-    if (data[field] === 'true') {
+var parseYesNo = function (value) {
+    if (value === 'true') {
         return true;
     }
-    return data[field] === 'false' ? false : undefined;
+    return value === 'false' ? false : undefined;
 };
 exports.parseYesNo = parseYesNo;
+var parseNumber = function (value) {
+    return parseInt(value, 10);
+};
+exports.parseNumber = parseNumber;
 var parseHasWithDefault = function (data, field, existsValue, doesNotExistValue) {
     var value = (0, exports.parseValue)(data, field, 'yesno');
     if (value === true) {

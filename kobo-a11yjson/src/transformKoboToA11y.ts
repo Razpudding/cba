@@ -74,11 +74,71 @@ export type KoboResult = {
   //The generic key below is necessary to allow dynamically looking up properties
   [key: string]: any,
 }
+/*
+export interface KoboDoorData {
+  'width': string,
+  'isRevolving': YesNoResult,
+  'isSliding': YesNoResult,
+  'isAutomaticOrAlwaysOpen': YesNoResult,
+  'isEasyToHoldOpen': YesNoResult,
+  'hasErgonomicDoorHandle': YesNoResult,
+  'DoorOpensToOutside': YesNoResult,
+  'turningSpaceInFront': string,
+}
+
+export interface KoboGroundData {
+  'distanceToDroppedCurb': string,
+  'evenPavement': YesNoResult,
+  'isLevel': YesNoResult,
+  'sidewalkConditions': string,
+  'slopeAngle': string,
+  'turningSpace': string,
+  [key: string]: FieldTypes
+}
+
+//Testing a TS setup
+// If each InterfaceInputData gets its own TS interface, can we make a general function
+//  which gets data from one of these objects.
+// Item.hasOwnProperty('name') is mss oplossing of generic types https://stackoverflow.com/questions/46100709/how-to-get-property-of-generic-type/46107617
+export const parseVal = (data: KoboDoorData | KoboGroundData, field: string, type: FieldTypes) => {
+  if (data.hasOwnProperty(field)){
+    const rawValue = data[field];
+  }
+
+  if (data typeof KoboDoorData){
+    let x = data as KoboDoorData;
+    return x[field]
+  }
+  
+}
+*/
 
 // make keys typesafe to prevent typos
 export type KoboKey = keyof KoboResult;
 
 type FieldTypes = 'yesno' | 'float' | 'int';
+
+export const parseString = (value:string, type: FieldTypes) => {
+  if (typeof value !== 'string') {
+    return undefined;
+  }
+
+  if (type === 'yesno') {
+    if (value === 'true') {
+      return true;
+    }
+    return value === 'false' ? false : undefined;
+  }
+
+  if (type === 'float') {
+    return parseFloat(value);
+  }
+
+  if (type === 'int') {
+    return parseInt(value, 10);
+  }
+  return undefined
+}
 
 export const parseValue = (data: any, field: KoboKey, type: FieldTypes) => {
   const rawValue = data[field];
@@ -111,12 +171,16 @@ export const parseValue = (data: any, field: KoboKey, type: FieldTypes) => {
   return undefined;
 };
 
-export const parseYesNo = (data: any, field: KoboKey) => {
-  if (data[field] === 'true') {
+export const parseYesNo = (value:string) => {
+  if (value === 'true') {
     return true;
   }
-  return data[field] === 'false' ? false : undefined;
+  return value === 'false' ? false : undefined;
 };
+
+export const parseNumber = (value:string) => {
+  return parseInt(value, 10);
+}
 
 const parseHasWithDefault = (
   data: KoboResult,
