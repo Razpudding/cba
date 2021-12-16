@@ -24,7 +24,12 @@ Code to convert kobo data to a11yjson using the typescript interfaces provided b
 - Replace the PlaceInfo filler info with real data from survey
 - Resulting JSON can have empty object (for instance when no data is filled in for an entrance). Might be better to remove those before outputting (or change output settings)
   + Maybe solve with a stringify replacer function, or just use lodash `_.isEmpty({}); // true` before printing to file
+  + Turns out none of the solution I found work reliably, tried everything [here](https://stackoverflow.com/questions/38275753/how-to-remove-empty-values-from-object-using-lodash)
+  + Might be better to leave them in (the a11yjson data platform might remove them?) or do a check when an object is constructed because there's no need for recursion then.
+  + Tried to use `return Object.values(result).every(el => el === undefined) ? undefined : result` which works well, however it messes up the return type of the construction functions because undefined is not a valid 'Parking' interface for instance. It's solvable but not in an elegant way. So for now I'll leave the mepty objects because the alternative is not typing the interfaces...
 -   'Floors/Stairs_001': 'false', 'Floors/Stairs_002/Explanation_007': undefined, first should prob be hasStairs?
+-   The transformer module doesn't fit its original purpose anymore. Makes more sense to set up a clean module with the type defs of the survey and perhaps move the parse getters to utils or another module.
+-   The nodemon-ts watcher doesn't always compile dependencies. I was previously using `// "dev": "nodemon --watch \"src/**\" --ext \"ts,json\" --ignore 'output/' src/index.ts"` and now I'm trying something else
 
 ## Notes
 Kobo adds numerical suffixes, starting with `_001` to duplicate field names. First I just removed all suffixes but that makes it impossible to distinguish multiple objects (e.g. several entrances) from one another. The current fix is to delete suffixes from a specific object when it is processed. So when an Entrance is processed, everything from Entrance_001/ is cleaned.

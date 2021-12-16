@@ -1,52 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.parseIntUnit = exports.parseFloatUnit = exports.parseNumber = exports.parseYesNo = exports.parseValue = exports.parseString = void 0;
-var lodash_1 = require("lodash");
-var parseString = function (value, type) {
-    if (typeof value !== 'string') {
-        return undefined;
-    }
-    if (type === 'yesno') {
-        if (value === 'true') {
-            return true;
-        }
-        return value === 'false' ? false : undefined;
-    }
-    if (type === 'float') {
-        return parseFloat(value);
-    }
-    if (type === 'int') {
-        return parseInt(value, 10);
-    }
-    return undefined;
-};
-exports.parseString = parseString;
-var parseValue = function (data, field, type) {
-    var rawValue = data[field];
-    if (rawValue === null) {
-        console.log("Found a null value for", field);
-    }
-    if (typeof rawValue === 'undefined') {
-        return rawValue;
-    }
-    if (typeof rawValue !== 'string') {
-        return undefined;
-    }
-    if (type === 'yesno') {
-        if (rawValue === 'true') {
-            return true;
-        }
-        return rawValue === 'false' ? false : undefined;
-    }
-    if (type === 'float') {
-        return parseFloat(rawValue);
-    }
-    if (type === 'int') {
-        return parseInt(rawValue, 10);
-    }
-    return undefined;
-};
-exports.parseValue = parseValue;
+exports.parseNumber = exports.parseYesNo = void 0;
 var parseYesNo = function (value) {
     if (value === 'true') {
         return true;
@@ -55,74 +9,82 @@ var parseYesNo = function (value) {
 };
 exports.parseYesNo = parseYesNo;
 var parseNumber = function (value) {
-    console.log("parsenumber with", value);
     if (typeof value !== 'string' || value === '') {
         return undefined;
     }
     return parseInt(value, 10);
 };
 exports.parseNumber = parseNumber;
-var parseHasWithDefault = function (data, field, existsValue, doesNotExistValue) {
-    var value = (0, exports.parseValue)(data, field, 'yesno');
-    if (value === true) {
-        return existsValue;
-    }
-    if (value === false) {
-        return doesNotExistValue;
-    }
-    return undefined;
-};
-var parseHasArray = function (data, field) {
-    return parseHasWithDefault(data, field, [], null);
-};
-var parseHasEntry = function (data, field) {
-    return parseHasWithDefault(data, field, {}, null);
-};
-var parseIsAnyOfWithDefault = function (data, field, list, existsValue, doesNotExistValue) {
-    var rawValue = data[field];
-    if (rawValue === null || typeof rawValue === 'undefined') {
-        return rawValue;
-    }
-    return (0, lodash_1.includes)(list, rawValue) ? existsValue : doesNotExistValue;
-};
-var parseIsAnyOf = function (data, field, list) {
-    return parseIsAnyOfWithDefault(data, field, list, true, false);
-};
-var parseIsAnyOfEntry = function (data, field, list) {
-    return parseIsAnyOfWithDefault(data, field, list, {}, undefined);
-};
-var parseFloatUnit = function (data, field, unit, operator) {
-    var value = (0, exports.parseValue)(data, field, 'float');
-    // remove undefined values
-    var unitValue = (0, lodash_1.pickBy)({
-        operator: operator,
-        unit: unit,
-        value: value
-    });
-    return value && !isNaN(value) ? unitValue : undefined;
-};
-exports.parseFloatUnit = parseFloatUnit;
-var parseIntUnit = function (data, field, unit, operator) {
-    var value = (0, exports.parseValue)(data, field, 'int');
-    // remove undefined values
-    var unitValue = (0, lodash_1.pickBy)({
-        operator: operator,
-        unit: unit,
-        value: value
-    });
-    return value && !isNaN(value) ? unitValue : undefined;
-};
-exports.parseIntUnit = parseIntUnit;
-var parseMultiSelect = function (data, field) {
-    var rawValue = data[field];
-    if (rawValue === null || typeof rawValue === 'undefined') {
-        return rawValue;
-    }
-    if (typeof rawValue !== 'string') {
-        return undefined;
-    }
-    return rawValue.split(' ');
-};
+// const parseHasWithDefault = (
+//   data: KoboResult,
+//   field: KoboKey,
+//   existsValue: any,
+//   doesNotExistValue: any
+// ) => {
+//   const value = parseValue(data, field, 'yesno');
+//   if (value === true) {
+//     return existsValue;
+//   }
+//   if (value === false) {
+//     return doesNotExistValue;
+//   }
+//   return undefined;
+// };
+// const parseHasArray = (data: KoboResult, field: KoboKey) => {
+//   return parseHasWithDefault(data, field, [], null);
+// };
+// const parseHasEntry = (data: KoboResult, field: KoboKey) => {
+//   return parseHasWithDefault(data, field, {}, null);
+// };
+// const parseIsAnyOfWithDefault = (
+//   data: KoboResult,
+//   field: KoboKey,
+//   list: string[],
+//   existsValue: any,
+//   doesNotExistValue: any
+// ) => {
+//   const rawValue = data[field];
+//   if (rawValue === null || typeof rawValue === 'undefined') {
+//     return rawValue;
+//   }
+//   return includes(list, rawValue) ? existsValue : doesNotExistValue;
+// };
+// const parseIsAnyOf = (data: KoboResult, field: KoboKey, list: string[]) => {
+//   return parseIsAnyOfWithDefault(data, field, list, true, false);
+// };
+// const parseIsAnyOfEntry = (data: KoboResult, field: KoboKey, list: string[]) => {
+//   return parseIsAnyOfWithDefault(data, field, list, {}, undefined);
+// };
+// export const parseFloatUnit = (data: KoboResult, field: KoboKey, unit: string, operator?: string) => {
+//   const value = parseValue(data, field, 'float') as number;
+//   // remove undefined values
+//   const unitValue = pickBy({
+//     operator,
+//     unit,
+//     value
+//   });
+//   return value && !isNaN(value) ? unitValue : undefined;
+// };
+// export const parseIntUnit = (data: KoboResult, field: KoboKey, unit: string, operator?: string) => {
+//   const value = parseValue(data, field, 'int') as number;
+//   // remove undefined values
+//   const unitValue = pickBy({
+//     operator,
+//     unit,
+//     value
+//   });
+//   return value && !isNaN(value) ? unitValue : undefined;
+// };
+// const parseMultiSelect = (data: KoboResult, field: KoboKey) => {
+//   const rawValue = data[field];
+//   if (rawValue === null || typeof rawValue === 'undefined') {
+//     return rawValue;
+//   }
+//   if (typeof rawValue !== 'string') {
+//     return undefined;
+//   }
+//   return rawValue.split(' ');
+// };
 // export const transformKoboToA11y = (data: KoboResult) => {
 //   const usedLengthUnit = data['user/user_measuring'] || 'cm';
 //   const mapping = {

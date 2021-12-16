@@ -74,102 +74,11 @@ export type KoboResult = {
   //The generic key below is necessary to allow dynamically looking up properties
   [key: string]: any,
 }
-/*
-export interface KoboDoorData {
-  'width': string,
-  'isRevolving': YesNoResult,
-  'isSliding': YesNoResult,
-  'isAutomaticOrAlwaysOpen': YesNoResult,
-  'isEasyToHoldOpen': YesNoResult,
-  'hasErgonomicDoorHandle': YesNoResult,
-  'DoorOpensToOutside': YesNoResult,
-  'turningSpaceInFront': string,
-}
-
-export interface KoboGroundData {
-  'distanceToDroppedCurb': string,
-  'evenPavement': YesNoResult,
-  'isLevel': YesNoResult,
-  'sidewalkConditions': string,
-  'slopeAngle': string,
-  'turningSpace': string,
-  [key: string]: FieldTypes
-}
-
-//Testing a TS setup
-// If each InterfaceInputData gets its own TS interface, can we make a general function
-//  which gets data from one of these objects.
-// Item.hasOwnProperty('name') is mss oplossing of generic types https://stackoverflow.com/questions/46100709/how-to-get-property-of-generic-type/46107617
-export const parseVal = (data: KoboDoorData | KoboGroundData, field: string, type: FieldTypes) => {
-  if (data.hasOwnProperty(field)){
-    const rawValue = data[field];
-  }
-
-  if (data typeof KoboDoorData){
-    let x = data as KoboDoorData;
-    return x[field]
-  }
-  
-}
-*/
 
 // make keys typesafe to prevent typos
 export type KoboKey = keyof KoboResult;
 
 type FieldTypes = 'yesno' | 'float' | 'int';
-
-export const parseString = (value:string, type: FieldTypes) => {
-  if (typeof value !== 'string') {
-    return undefined;
-  }
-
-  if (type === 'yesno') {
-    if (value === 'true') {
-      return true;
-    }
-    return value === 'false' ? false : undefined;
-  }
-
-  if (type === 'float') {
-    return parseFloat(value);
-  }
-
-  if (type === 'int') {
-    return parseInt(value, 10);
-  }
-  return undefined
-}
-
-export const parseValue = (data: any, field: KoboKey, type: FieldTypes) => {
-  const rawValue = data[field];
-  if(rawValue === null){
-    console.log("Found a null value for", field)
-  }
-  if (typeof rawValue === 'undefined') {
-    return rawValue;
-  }
-
-  if (typeof rawValue !== 'string') {
-    return undefined;
-  }
-
-  if (type === 'yesno') {
-    if (rawValue === 'true') {
-      return true;
-    }
-    return rawValue === 'false' ? false : undefined;
-  }
-
-  if (type === 'float') {
-    return parseFloat(rawValue);
-  }
-
-  if (type === 'int') {
-    return parseInt(rawValue, 10);
-  }
-
-  return undefined;
-};
 
 export const parseYesNo = (value:string) => {
   if (value === 'true') {
@@ -185,89 +94,89 @@ export const parseNumber = (value:string) => {
   return parseInt(value, 10);
 }
 
-const parseHasWithDefault = (
-  data: KoboResult,
-  field: KoboKey,
-  existsValue: any,
-  doesNotExistValue: any
-) => {
-  const value = parseValue(data, field, 'yesno');
+// const parseHasWithDefault = (
+//   data: KoboResult,
+//   field: KoboKey,
+//   existsValue: any,
+//   doesNotExistValue: any
+// ) => {
+//   const value = parseValue(data, field, 'yesno');
 
-  if (value === true) {
-    return existsValue;
-  }
+//   if (value === true) {
+//     return existsValue;
+//   }
 
-  if (value === false) {
-    return doesNotExistValue;
-  }
+//   if (value === false) {
+//     return doesNotExistValue;
+//   }
 
-  return undefined;
-};
+//   return undefined;
+// };
 
-const parseHasArray = (data: KoboResult, field: KoboKey) => {
-  return parseHasWithDefault(data, field, [], null);
-};
+// const parseHasArray = (data: KoboResult, field: KoboKey) => {
+//   return parseHasWithDefault(data, field, [], null);
+// };
 
-const parseHasEntry = (data: KoboResult, field: KoboKey) => {
-  return parseHasWithDefault(data, field, {}, null);
-};
+// const parseHasEntry = (data: KoboResult, field: KoboKey) => {
+//   return parseHasWithDefault(data, field, {}, null);
+// };
 
-const parseIsAnyOfWithDefault = (
-  data: KoboResult,
-  field: KoboKey,
-  list: string[],
-  existsValue: any,
-  doesNotExistValue: any
-) => {
-  const rawValue = data[field];
-  if (rawValue === null || typeof rawValue === 'undefined') {
-    return rawValue;
-  }
+// const parseIsAnyOfWithDefault = (
+//   data: KoboResult,
+//   field: KoboKey,
+//   list: string[],
+//   existsValue: any,
+//   doesNotExistValue: any
+// ) => {
+//   const rawValue = data[field];
+//   if (rawValue === null || typeof rawValue === 'undefined') {
+//     return rawValue;
+//   }
 
-  return includes(list, rawValue) ? existsValue : doesNotExistValue;
-};
+//   return includes(list, rawValue) ? existsValue : doesNotExistValue;
+// };
 
-const parseIsAnyOf = (data: KoboResult, field: KoboKey, list: string[]) => {
-  return parseIsAnyOfWithDefault(data, field, list, true, false);
-};
+// const parseIsAnyOf = (data: KoboResult, field: KoboKey, list: string[]) => {
+//   return parseIsAnyOfWithDefault(data, field, list, true, false);
+// };
 
-const parseIsAnyOfEntry = (data: KoboResult, field: KoboKey, list: string[]) => {
-  return parseIsAnyOfWithDefault(data, field, list, {}, undefined);
-};
+// const parseIsAnyOfEntry = (data: KoboResult, field: KoboKey, list: string[]) => {
+//   return parseIsAnyOfWithDefault(data, field, list, {}, undefined);
+// };
 
-export const parseFloatUnit = (data: KoboResult, field: KoboKey, unit: string, operator?: string) => {
-  const value = parseValue(data, field, 'float') as number;
-  // remove undefined values
-  const unitValue = pickBy({
-    operator,
-    unit,
-    value
-  });
-  return value && !isNaN(value) ? unitValue : undefined;
-};
+// export const parseFloatUnit = (data: KoboResult, field: KoboKey, unit: string, operator?: string) => {
+//   const value = parseValue(data, field, 'float') as number;
+//   // remove undefined values
+//   const unitValue = pickBy({
+//     operator,
+//     unit,
+//     value
+//   });
+//   return value && !isNaN(value) ? unitValue : undefined;
+// };
 
-export const parseIntUnit = (data: KoboResult, field: KoboKey, unit: string, operator?: string) => {
-  const value = parseValue(data, field, 'int') as number;
-  // remove undefined values
-  const unitValue = pickBy({
-    operator,
-    unit,
-    value
-  });
-  return value && !isNaN(value) ? unitValue : undefined;
-};
+// export const parseIntUnit = (data: KoboResult, field: KoboKey, unit: string, operator?: string) => {
+//   const value = parseValue(data, field, 'int') as number;
+//   // remove undefined values
+//   const unitValue = pickBy({
+//     operator,
+//     unit,
+//     value
+//   });
+//   return value && !isNaN(value) ? unitValue : undefined;
+// };
 
-const parseMultiSelect = (data: KoboResult, field: KoboKey) => {
-  const rawValue = data[field];
-  if (rawValue === null || typeof rawValue === 'undefined') {
-    return rawValue;
-  }
-  if (typeof rawValue !== 'string') {
-    return undefined;
-  }
+// const parseMultiSelect = (data: KoboResult, field: KoboKey) => {
+//   const rawValue = data[field];
+//   if (rawValue === null || typeof rawValue === 'undefined') {
+//     return rawValue;
+//   }
+//   if (typeof rawValue !== 'string') {
+//     return undefined;
+//   }
 
-  return rawValue.split(' ');
-};
+//   return rawValue.split(' ');
+// };
 
 // export const transformKoboToA11y = (data: KoboResult) => {
 //   const usedLengthUnit = data['user/user_measuring'] || 'cm';
