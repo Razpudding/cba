@@ -11,7 +11,7 @@ import { Floor } from '../types/Floor'
 
 const settings = {
 	outputFileName: 'output/a11yjson',
-	printResults: true,
+	printResults: false,
 	validate: true
 }
 

@@ -27,6 +27,17 @@ Code to convert kobo data to a11yjson using the typescript interfaces provided b
   + Turns out none of the solution I found work reliably, tried everything [here](https://stackoverflow.com/questions/38275753/how-to-remove-empty-values-from-object-using-lodash)
   + Might be better to leave them in (the a11yjson data platform might remove them?) or do a check when an object is constructed because there's no need for recursion then.
   + Tried to use `return Object.values(result).every(el => el === undefined) ? undefined : result` which works well, however it messes up the return type of the construction functions because undefined is not a valid 'Parking' interface for instance. It's solvable but not in an elegant way. So for now I'll leave the mepty objects because the alternative is not typing the interfaces...
+  + I also wrote a working snippet which recursively checks for empty objects, however it can cause objects to be empty and those will not be removed from the output ```var test = {
+  name: "Dan", t: {}, p: { a: { s: undefined} }
+};
+var testStringified = JSON.stringify(dude, (key, value) => {
+  if (value instanceof Object){
+      if (value && Object.keys(value).length === 0 && Object.getPrototypeOf(value) === Object.prototype){
+        return
+      }
+  }
+  return value
+})```
 -   'Floors/Stairs_001': 'false', 'Floors/Stairs_002/Explanation_007': undefined, first should prob be hasStairs?
 -   The transformer module doesn't fit its original purpose anymore. Makes more sense to set up a clean module with the type defs of the survey and perhaps move the parse getters to utils or another module.
 -   The nodemon-ts watcher doesn't always compile dependencies. I was previously using `// "dev": "nodemon --watch \"src/**\" --ext \"ts,json\" --ignore 'output/' src/index.ts"` and now I'm trying something else
