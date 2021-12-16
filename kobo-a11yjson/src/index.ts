@@ -11,7 +11,7 @@ import { Floor } from '../types/Floor'
 
 const settings = {
 	outputFileName: 'output/a11yjson',
-	printResults: false,
+	printResults: true,
 	validate: true
 }
 
@@ -102,8 +102,9 @@ function transformToA11y(input:KoboResult, base:PlaceInfoExtended){
 	console.log("Parking", parkingInterface)
 	a11yResult.properties.accessibility.parking = parkingInterface
 
-	//TODO: Change to dynamic code that doesn't rely on the count suffix not changing! See notes.
-	let numberOfEntrances = parseNumber(input['Entrances/count_002'])
+	//Note: The numberOfEntrances is parsed from the survey. If it was undefined it will be 0.
+	//			If the survey type is basic, the number is set to 1. This is a business rule
+	let numberOfEntrances = parseNumber(input['Entrances/count_002']) || 0
 	if (input['Survey/Survey_Type'] === 'basic') { numberOfEntrances = 1 }
 	const entrancesInterface:a11y.Entrance[] = constructEntrances(input, numberOfEntrances)
 	// console.log(entrancesInterface)
@@ -145,22 +146,22 @@ function constructParking(input:KoboResult){
 			//location
 			distanceToEntrance: input['WheelchairParking/distance'] ? {
 				unit: 'meter',
-				value: parseNumber(input['WheelchairParking/distance'])
+				value: parseNumber(input['WheelchairParking/distance']) as number
 			}: undefined,
 			hasDedicatedSignage: parseYesNo(input['WheelchairParking/hasDedicatedSignage']),
 			length: input['WheelchairParking/length'] ? {
 				unit: 'meter',
-				value: parseNumber(input['WheelchairParking/length'])
+				value: parseNumber(input['WheelchairParking/length']) as number
 			}: undefined,
 			width: input['WheelchairParking/width'] ? {
 				unit: 'meter',
-				value: parseNumber(input['WheelchairParking/width'])
+				value: parseNumber(input['WheelchairParking/width']) as number
 			}: undefined,
 			orientation: { [currentLanguage]: input['WheelchairParking/type'] },
 			isLocatedInside: parseYesNo(input['WheelchairParking/isLocatedInside']),
 			maxVehicleHeight: input['WheelchairParking/maxVehicleHeight'] ? {
 				unit: 'cm',
-				value: parseNumber(input['WheelchairParking/maxVehicleHeight'])
+				value: parseNumber(input['WheelchairParking/maxVehicleHeight']) as number
 			}: undefined,
 			neededParkingPermits: input['WheelchairParking/neededParkingPermits'] ? 
 				// [input['WheelchairParking/neededParkingPermits']]
@@ -215,7 +216,7 @@ function constructDoor(input:any){
 	return {
 		width: input['width'] ? {
 			unit: 'cm',
-			value: parseNumber(input['width'])
+			value: parseNumber(input['width']) as number
 		}: undefined,
 		isRevolving: parseYesNo(input['isRevolving']),
 		isSliding: parseYesNo(input['isSliding']),
@@ -225,7 +226,7 @@ function constructDoor(input:any){
 		DoorOpensToOutside: parseYesNo(input['DoorOpensToOutside']),
 		turningSpaceInFront: input['turningSpaceInFront'] ? {
 			unit: 'cm',
-			value: parseNumber(input['turningSpaceInFront'])
+			value: parseNumber(input['turningSpaceInFront']) as number
 		}: undefined,
 	}
 }
@@ -243,7 +244,7 @@ function constructGround(input:KoboResult){
 	return {
 		distanceToDroppedCurb: input['distanceToDroppedCurb'] ? {
 			unit: 'meter',
-			value: parseNumber(input['distanceToDroppedCurb'])
+			value: parseNumber(input['distanceToDroppedCurb']) as number
 		}: undefined,
 		evenPavement: parseYesNo(input['evenPavement']),
 		isLevel: parseYesNo(input['isLevel']),
@@ -251,7 +252,7 @@ function constructGround(input:KoboResult){
 		slopeAngle: parseNumber(input['slopeAngle']),
 		turningSpace: input['turningSpace'] ? {
 			unit: 'cm',
-			value: parseNumber(input['turningSpace']),
+			value: parseNumber(input['turningSpace']) as number,
 		} : undefined,
 		notes: { [currentLanguage]: input['notes'] },
 	}

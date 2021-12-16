@@ -55,6 +55,10 @@ var parseYesNo = function (value) {
 };
 exports.parseYesNo = parseYesNo;
 var parseNumber = function (value) {
+    console.log("parsenumber with", value);
+    if (typeof value !== 'string' || value === '') {
+        return undefined;
+    }
     return parseInt(value, 10);
 };
 exports.parseNumber = parseNumber;

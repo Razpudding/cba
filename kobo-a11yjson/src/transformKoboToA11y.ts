@@ -179,6 +179,9 @@ export const parseYesNo = (value:string) => {
 };
 
 export const parseNumber = (value:string) => {
+  if (typeof value !== 'string' || value === '') {
+    return undefined;
+  }
   return parseInt(value, 10);
 }
 
