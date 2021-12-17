@@ -28,7 +28,7 @@ Code to convert kobo data to a11yjson using the typescript interfaces provided b
   + Might be better to leave them in (the a11yjson data platform might remove them?) or do a check when an object is constructed because there's no need for recursion then.
   + Tried to use `return Object.values(result).every(el => el === undefined) ? undefined : result` which works well, however it messes up the return type of the construction functions because undefined is not a valid 'Parking' interface for instance. It's solvable but not in an elegant way. So for now I'll leave the mepty objects because the alternative is not typing the interfaces...
   + I also wrote a working snippet which recursively checks for empty objects, however it can cause objects to be empty and those will not be removed from the output ```var test = {
-  name: "Dan", t: {}, p: { a: { s: undefined} }
+  name: "brrt", t: {}, p: { a: { s: undefined} }
 };
 var testStringified = JSON.stringify(dude, (key, value) => {
   if (value instanceof Object){
@@ -40,16 +40,15 @@ var testStringified = JSON.stringify(dude, (key, value) => {
 })```
 -   'Floors/Stairs_001': 'false', 'Floors/Stairs_002/Explanation_007': undefined, first should prob be hasStairs?
 -   The transformer module doesn't fit its original purpose anymore. Makes more sense to set up a clean module with the type defs of the survey and perhaps move the parse getters to utils or another module.
--   The nodemon-ts watcher doesn't always compile dependencies. I was previously using `// "dev": "nodemon --watch \"src/**\" --ext \"ts,json\" --ignore 'output/' src/index.ts"` and now I'm trying something else
 
 ## Notes
-Kobo adds numerical suffixes, starting with `_001` to duplicate field names. First I just removed all suffixes but that makes it impossible to distinguish multiple objects (e.g. several entrances) from one another. The current fix is to delete suffixes from a specific object when it is processed. So when an Entrance is processed, everything from Entrance_001/ is cleaned.
-**This solution doesn't work when an object has a field with an array of objects because you run into the same problem.**
-
-It might be a good idea to construct an object out of just the relevant Kobo fields for the current A11y interface being constructed and just pass that to the construction function.
+Kobo adds numerical suffixes, starting with `_001` to duplicate field names. First I just removed all suffixes but that makes it impossible to distinguish multiple objects (e.g. several entrances) from one another. The current fix is extract only the relevant fields from the kobo survey object, remove suffixes from this object and then turn it into a11y. So when an Entrance is processed, everything from Entrance_001/ is cleaned. When a Stairs object is constructed, the Entrance_001/Stairs object is cleaned.
 
 ## Data conversion
-My current strategy is to transform the Kobo data to PlaceInfo objects. Each object will have all of the kobo fields nested in it. Anything relevant to a11yjson will be transformed to properly match the relevant interface. The rest of the kobo data I'll probably yeet to a custom additional info interface nested in PlaceInfo.
+Raw survey data is loaded from a csv file and parsed into KoboResult describing a survey result each. The KoboResults are deconstructed into smaller objects describing fields relevant to a certain A11yJSON interface. These cleaned objects are fed into functions which return "valid" A11yJSON objects. These objects are mostly nested inside a PlaceInfo object for each survey result.
+
+Certain fields describing equipment, like an elevator, are instead used to construct EquipmentInfo A11yJSON objects. These objects have a 'originalPlaceInfoId' which references the building the equipment is found in. Practically this means that when a survey describing a building is processed, all info is stored inside one PlaceInfo object except for equipment which is constructed into separate objects referencing the building they are found in.
+Later when the data is imported into accessibility.cloud, the Places and Equipments are stored separately and linked using the 'originalPlaceInfoId'.
 
 Surveys can be either 'basic' or 'extended'. Because a11yjson is fine with undefined values for properties I've decided to process basic surveys the same as extended ones, for now. Might be cleaner in the future to not even output these properties so there is no irrelevant data. Ont he other hand it's nice to have uniform data.
 
