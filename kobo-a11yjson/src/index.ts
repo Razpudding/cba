@@ -6,7 +6,7 @@ import * as utils from './utils'
 //Import typescript packages
 import * as a11y from '@sozialhelden/a11yjson'
 import { Accessibility } from '@sozialhelden/a11yjson'
-import { KoboResult, parseYesNo, parseNumber} from './transformKoboToA11y'
+import { KoboResult, parseYesNo, parseNumber} from './KoboSurvey'
 import { Floor } from '../types/Floor'
 
 const settings = {
@@ -33,6 +33,9 @@ const languageTags:LanguageTags = {
 	'Dutch': 'nl',
 	'English': 'en',
 }
+
+//Global variable keeping track of the current language
+// TODO: Keep track of current building ID as well or find a better method without global vars
 let currentLanguage:string
 
 const inputSrc = 'kobodata/Testformulier_A11yJSON_-_latest_version_-_False_-_2021-12-14-12-00-02.csv'
@@ -52,11 +55,15 @@ function loadSurveyData(src:string):void{
 
 //Loads processes results and starts conversion to a11yjson
 function processResults(results:KoboResult[]){
-	// results = results.map(res => utils.cleanKeys(res) as KoboResult)
+	//Turn empty string answers into undefined values
 	results = results.map(res => utils.cleanValues(res) as KoboResult)
-	console.log('ater clean', results[1])
-	let placeInfoStarter:PlaceInfoExtended = {
-		formatVersion: '11.0.0',
+	console.log('after clean', results[1])
+	const a11yVersion = process.env.npm_package_devDependencies__sozialhelden_a11yjson ?
+										process.env.npm_package_devDependencies__sozialhelden_a11yjson.replace('^', '') :
+										''
+	
+	const placeInfoStarter:PlaceInfoExtended = {
+		formatVersion: a11yVersion,
 		geometry: {
 			coordinates: [0,0],
 			type: "Point",
@@ -64,6 +71,16 @@ function processResults(results:KoboResult[]){
 		properties: {
 			category: '',
 			accessibility: {}
+		}
+	}
+	const EquipmentInfoStarter:a11y.EquipmentInfo = {
+		formatVersion: a11yVersion,
+		geometry: {
+			coordinates: [0,0],
+			type: "Point",
+		},
+		properties: {
+			originalPlaceInfoId: ''
 		}
 	}
 	const a11yResults:PlaceInfoExtended[] = results.map((result, i) => {
@@ -85,13 +102,10 @@ function processResults(results:KoboResult[]){
 		a11yResults.forEach((result, i) => validateAgainstSchema(result, i, a11y.PlaceInfoSchema.newContext()))
 	}
 
-	//TODO: finish this
-	const cleanedA11yResults = a11yResults
-
 	if (settings.printResults){
-		writeDataFile(cleanedA11yResults)
+		writeDataFile(a11yResults)
 	} 
-	// console.log(a11yResults)
+	console.log(a11yResults.map(res => JSON.stringify(res.properties.accessibility, null, 4)))
 }
 
 //Transform a KoboResult to an a11y PlaceInfo interface with nested data
@@ -99,8 +113,6 @@ function transformToA11y(input:KoboResult, base:PlaceInfoExtended){
 	let a11yResult = cloneDeep(base)
 	currentLanguage = languageTags[input['Survey/Language']] || ''
 	if (currentLanguage === '') { console.log("ERROR: invalid survey language")} 
-	// const accessibilityInterface = constructAccessibility(input)
-	// a11yResult.properties.accessibility = accessibilityInterface
 
 	const parkingData = getInterfaceData(input, 'Parking/')
 	const parkingInterface = constructParking(parkingData)
@@ -111,13 +123,10 @@ function transformToA11y(input:KoboResult, base:PlaceInfoExtended){
 	let numberOfEntrances = parseNumber(input['Entrances/count_002']) || 0
 	if (input['Survey/Survey_Type'] === 'basic') { numberOfEntrances = 1 }
 	const entrancesInterface:a11y.Entrance[] = constructEntrances(input, numberOfEntrances)
-	// console.log(entrancesInterface)
 	a11yResult.properties.accessibility.entrances = entrancesInterface
 
 	const groundData = getInterfaceData(input, 'Ground/')
-	console.log("GroundData", groundData)
 	const groundInterface:a11y.Ground = constructGround(groundData)
-	// console.log(groundInterface)
 	a11yResult.properties.accessibility.ground = groundInterface
 
 	if (parseYesNo(input['Floors/HasFloors'])){
@@ -186,13 +195,11 @@ function constructParking(input:KoboResult){
 
 //Constructs multiple entrances based on amount parameter
 function constructEntrances(input:KoboResult, amount:number){
-	console.log("constructing entrances")
 	let entrances:a11y.Entrance[] = []
 	// For each entrance in the survey, get the relevant data, clean it and use it to construct an Entrance
 	for (let i = 1; i <= amount; i ++){
 		const interfaceData = getInterfaceData(input, 'Entrances/Entrance_00' + i + '/')
 		const a11yEntrance:a11y.Entrance = constructEntrance(interfaceData)
-		console.log(a11yEntrance)
 		entrances.push(a11yEntrance)
 	}
 	return entrances	
@@ -226,7 +233,6 @@ function constructEntrance(entranceData:any){
 
 //Constructs a Door interface
 function constructDoor(input:any){
-	console.log("doorData", input)
 	let result = {
 		width: input['width'] ? {
 			unit: 'cm',
@@ -277,8 +283,6 @@ function constructGround(input:KoboResult){
 
 //Constructs a Floor interface
 function constructFloor(input:KoboResult){
-	// console.log("constructing floor")
-	// console.log(input)
 	let result = {
 		reachableByElevator: parseYesNo(input['elevator']),
 		elevatorExplanation: input['ElevatorEquipmentId/Explanation'] ?
@@ -301,6 +305,14 @@ function constructFloor(input:KoboResult){
 		//TODO: Same goes for the stairs info
 		// 'Floors/Stairs': YesNoResult,
 		// 'Floors/Stairs/Explanation': string,
+	}
+	return result
+}
+
+//Constructs an Elevator
+function constructElevator(input:KoboResult, placeInfoId:string){
+	let result = {
+		originalPlaceInfoId: placeInfoId,
 	}
 	return result
 }

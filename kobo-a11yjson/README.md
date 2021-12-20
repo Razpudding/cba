@@ -12,6 +12,7 @@ Code to convert kobo data to a11yjson using the typescript interfaces provided b
 - All generated data is validated against the A11yJSON standard and deviations from the standard are logged.
 
 ## TODO
+- FormatVersion should be pulled from the package.json
 - The restrooms and floors interface still have double numerical suffixes that need to be fixed.
   + When fixing this, also fix the other issues in the kobo survey
 - Can the same survey be filled in twice for different language entries for the same building? If so we need to handle that because the code will just output almost identical a11y objects that will need to be merged later.
@@ -39,7 +40,12 @@ var testStringified = JSON.stringify(dude, (key, value) => {
   return value
 })```
 -   'Floors/Stairs_001': 'false', 'Floors/Stairs_002/Explanation_007': undefined, first should prob be hasStairs?
--   The transformer module doesn't fit its original purpose anymore. Makes more sense to set up a clean module with the type defs of the survey and perhaps move the parse getters to utils or another module.
+-   Feature: Add support for  'EquipmentInfo' objects. It could work like this
+  +   If data is found while parsing KoboResults that needs to be constructed into an EquipmentInfo, call a constructor function with the relevant fields and the building Id
+  +   The EquipmentInfo result should not be stored in a property on the current PlaceInfo object but instead be pushed to a EquipmentInfo array.
+  +   When the data is being printed to a file, the EquipmentInfo should be printed on the top level as PlaceInfo objects
+  +   EquipmentInfo is linked to a place using the primary key of 'originalPlaceInfoId'
+  +   When the data is imported in the accessibility.cloud platform, the 'originalPlaceInfoId's are used to generate 'placeInfoId's which reference the 'PlaceInfo' object the EquipmentInfo belongs to in the cloud. This should be documented under Data Conversion.
 
 ## Notes
 Kobo adds numerical suffixes, starting with `_001` to duplicate field names. First I just removed all suffixes but that makes it impossible to distinguish multiple objects (e.g. several entrances) from one another. The current fix is extract only the relevant fields from the kobo survey object, remove suffixes from this object and then turn it into a11y. So when an Entrance is processed, everything from Entrance_001/ is cleaned. When a Stairs object is constructed, the Entrance_001/Stairs object is cleaned.
