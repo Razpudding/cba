@@ -12,7 +12,6 @@ Code to convert kobo data to a11yjson using the typescript interfaces provided b
 - All generated data is validated against the A11yJSON standard and deviations from the standard are logged.
 
 ## TODO
-- FormatVersion should be pulled from the package.json
 - The restrooms and floors interface still have double numerical suffixes that need to be fixed.
   + When fixing this, also fix the other issues in the kobo survey
 - Can the same survey be filled in twice for different language entries for the same building? If so we need to handle that because the code will just output almost identical a11y objects that will need to be merged later.

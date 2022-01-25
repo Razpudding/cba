@@ -1,0 +1,14 @@
+{
+  "name": "data-cleanup",
+  "version": "1.0.0",
+  "description": "Small project to convert old a11yjson data to the correct format and clean up unused properties.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Laurens",
+  "license": "ISC",
+  "dependencies": {
+    "@sozialhelden/a11yjson": "^12.0.1"
+  }
+}
