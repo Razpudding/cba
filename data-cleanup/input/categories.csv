@@ -1,0 +1,55 @@
+typ_naam,categoryWheelmap,main_categoryWheelmap
+Toeristische attracties,attraction,tourism
+"Banken, Postkantoren",bank,culture
+Bibliotheken,library,culture
+Bioscopen,cinema,leisure
+Congres- en partyaccommodaties,community_centre,leisure
+Festival- en marktterreinen,market,shopping
+Galeries,gallery,culture
+Restaurants / eetgelegenheden,restaurant,food
+Informatiecentra,,don't_know
+Kerkgebouwen,religion,culture
+Luchthavens,airport_terminal,transport
+Musea,museum,culture
+Parkeergarages,parking,transport
+Politiebureaus,police,official
+Stadhuizen en deelgemeenten,town_hall,official
+Theaters en concertgebouwen,theater,culture
+Wijkcentra en buurthuizen,community_centre,leisure
+Winkels,,don't_know
+Ziekenhuizen (eerste hulp),hospital,health
+Molens en ambachtelijke bedrijven,theme_park,tourism
+"Parken, tuinen en kinderboerderijen",park,leisure
+Rondvaartboten,attraction,tourism
+Educatieve centra ,school,education
+Hotels,hotel,accomodation
+Parkeerwinkels van Stadstoezicht Rotterdam,town_hall,official
+Boekenwinkels,kiosk,shopping
+Cafe's,bar,food
+Zwembaden,swimming,sports
+Sportaccommodaties,sports,sports
+Sociale Dienst,employment_agency,official
+Bureaus Sociaal Raadslieden,legal_service,other
+Onderwijsinstellingen en scholen ,school,education
+Discotheken,record_store,shopping
+E-centra,electronics,shopping
+Educatieve tuinen,theme_park,tourism
+Verpleeg- en verzorgingshuizen,social_facility,health
+Revalidatiecentra,social_facility,health
+Uiterlijke verzorging,beauty,shopping
+Openbare gebouwen,office_building,official
+Stembureaus,,don't_know
+Begraafplaatsen,religion,culture
+Crematoria,religion,culture
+Gezondheidscentra,social_facility,health
+Huisartsenposten,social_facility,health
+Consultatiebureau's,social_facility,health
+Apotheken,pharmacy,health
+Huisartsen,social_facility,health
+Tandartsen,dentist,health
+Fysiotherapeuten,physiotherapist,health
+Warenhuizen,department_store,shopping
+Winkelcentra,mall,shopping
+Klinieken,hospital,health
+Supermarkten,supermarket,shopping
+Openbare toiletten,,toilets

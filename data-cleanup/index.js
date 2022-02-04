@@ -1,47 +1,72 @@
-const fs = require('fs')
-const a11y =  require('@sozialhelden/a11yjson')
+import { promises } from 'fs' //.promises
+import csv from 'neat-csv'
+import a11y from '@sozialhelden/a11yjson'
+
+const fs = promises
 
 //This settigns object controls the global settings for this programme
 const settings = {
 	inputFileName: 'input/CBA2016A11y.json',
 	outputFileName: 'output/CBA2016_cleaned',
-	printData: true,
-	selection: false,
+	categoriesFileName: 'input/categories.csv',
+	printData: false,
+	selection: true,
 	validation: false,
+	categorize: true,
 }
 
-loadFile()
+main()
+
+async function main(){
+	const inputDataFile = await loadFile()
+	const inputData = JSON.parse(inputDataFile)
+
+
+	// createReadStream(src)
+	//   .pipe(csv({ separator: ';' }))
+	//   .on('data', (data) => results.push(data))
+	//   .on('end', () => {
+	//   	processResults(results)
+	//   })
+
+	if (settings.categorize){
+		const catData = await csv(settings.categoriesFileName)
+		console.log("catdata", catData)
+		// categorizeData(inputData)
+		// createReadStream(src)
+		//   .pipe(csv())
+		//   .on('data', (data) => results.push(data))
+		//   .on('end', () => {
+		//   	processResults(results)
+		//   })
+	}
+
+	const a11yData = convertToA11y(inputData)
+
+	if (settings.validation){
+		a11yData.forEach((result, i) => validateAgainstSchema(result, i, a11y.PlaceInfoSchema.newContext()))
+	}
+	if (settings.printData){
+		writeDataFile(a11yData)
+	}
+}
 
 //Load a file using the fs package, then call parseData
-function loadFile(){
-	fs.readFile(settings.inputFileName, {encoding: 'utf-8'}, function(err,data){
-	    if (!err) {
-	        // console.log('received data items: ' + data.length);
-	        parseData(data)
-	    } else {
-	        console.log(err);
-	    }
-	})
+async function loadFile(){
+	return await fs.readFile(settings.inputFileName, {encoding: 'utf-8'})
+	// return [inputData, categoryData]
 }
 
 //Parsedata takes a source and manipulates it the way we want it
-function parseData(source){
-	const data = JSON.parse(source)
-	console.log("#Entries in data: ", data.length)
+function convertToA11y(inputData){
+	console.log("#Entries in data: ", inputData.length)
 
-	const selection = settings.selection ? data.slice(0,10) : data
-	
+	const selection = settings.selection ? inputData.slice(0,10) : inputData
 	const cleanedData = selection.map(item => cleanup(item))
 	cleanedData.forEach( (d, i) => d.properties.originalId = i.toString())
 	
-	console.log(cleanedData[1].properties.accessibility.restrooms[0])
-
-	if (settings.validation){
-		cleanedData.forEach((result, i) => validateAgainstSchema(result, i, a11y.PlaceInfoSchema.newContext()))
-	}
-	if (settings.printData){
-		writeDataFile(cleanedData)
-	}
+	console.log(cleanedData[0].properties.accessibility.restrooms[0])
+	return cleanedData
 }
 
 
