@@ -9,39 +9,25 @@ const settings = {
 	inputFileName: 'input/CBA2016A11y.json',
 	outputFileName: 'output/CBA2016_cleaned',
 	categoriesFileName: 'input/categories.csv',
-	printData: false,
-	selection: true,
+	printData: true,
+	selection: false,
 	validation: false,
 	categorize: true,
 }
 
 main()
-
+// Main run loop
 async function main(){
-	const inputDataFile = await loadFile()
-	const inputData = JSON.parse(inputDataFile)
-
-
-	// createReadStream(src)
-	//   .pipe(csv({ separator: ';' }))
-	//   .on('data', (data) => results.push(data))
-	//   .on('end', () => {
-	//   	processResults(results)
-	//   })
+	const inputDataFile = await fs.readFile(settings.inputFileName, {encoding: 'utf-8'})
+	let inputData = JSON.parse(inputDataFile)
+	let categories = null
 
 	if (settings.categorize){
-		const catData = await csv(settings.categoriesFileName)
-		console.log("catdata", catData)
-		// categorizeData(inputData)
-		// createReadStream(src)
-		//   .pipe(csv())
-		//   .on('data', (data) => results.push(data))
-		//   .on('end', () => {
-		//   	processResults(results)
-		//   })
+		const rawCSV = await fs.readFile(settings.categoriesFileName, {encoding: 'utf-8'})
+		categories = await csv(rawCSV)
 	}
 
-	const a11yData = convertToA11y(inputData)
+	const a11yData = convertToA11y(inputData, categories)
 
 	if (settings.validation){
 		a11yData.forEach((result, i) => validateAgainstSchema(result, i, a11y.PlaceInfoSchema.newContext()))
@@ -51,26 +37,26 @@ async function main(){
 	}
 }
 
-//Load a file using the fs package, then call parseData
-async function loadFile(){
-	return await fs.readFile(settings.inputFileName, {encoding: 'utf-8'})
-	// return [inputData, categoryData]
-}
-
 //Parsedata takes a source and manipulates it the way we want it
-function convertToA11y(inputData){
+function convertToA11y(inputData, categories){
 	console.log("#Entries in data: ", inputData.length)
 
 	const selection = settings.selection ? inputData.slice(0,10) : inputData
-	const cleanedData = selection.map(item => cleanup(item))
+	const cleanedData = selection.map(item => mapA11yProperties(item, categories))
 	cleanedData.forEach( (d, i) => d.properties.originalId = i.toString())
 	
 	console.log(cleanedData[0].properties.accessibility.restrooms[0])
 	return cleanedData
 }
 
-
-function cleanup(item){
+//Use the original data to create proper A11y data
+function mapA11yProperties(item, categories){
+	if (settings.categorize){
+		// console.log("Finding cat for", item.properties.originalData?.Functie)
+		// Find the relevant category for a given originalData.Functie value. If either doesn't exist, return undefined
+		item.properties.category = categories.find(cat => cat.typ_naam === item.properties.originalData?.Functie)?.categoryWheelmap
+		// console.log(item.properties.category)
+	}
 	//Put the phoneNumber info in the right place
 	item.properties.phoneNumber = item.properties.StructuredAddress?.phoneNumber ?? undefined
 	delete item.properties.StructuredAddress?.phoneNumber
@@ -134,17 +120,19 @@ function validateAgainstSchema(input, index, validationContext){
 //Write json data to a file with an index in the filename preventing duplicate filename errrors
 function writeDataFile(data, fileIndex = 0)
 {
-	fs.writeFile(settings.outputFileName +"_"+ fileIndex +".json",
-				JSON.stringify(data, null, 4),
-				{ encoding:'utf8', flag:'wx' },
-				function (err) {
-	    //Check if filename already exists, if it does, increase the number at the end by 1
-	    if (err && err.code == "EEXIST") {	
-	    	writeDataFile(data, ++fileIndex)
-	    } else if(err){
-	        return console.log(err)
-	    } else {
-	    	console.log("The file was saved!", (settings.outputFileName +"_"+ fileIndex +".json"))
-	    }
+	fs.writeFile(
+			settings.outputFileName +"_"+ fileIndex +".json",
+			JSON.stringify(data, null, 4),
+			{ encoding:'utf8', flag:'wx' }
+			)
+	.then(data => console.log("The file was saved!", (settings.outputFileName +"_"+ fileIndex +".json")))
+	.catch(err => {
+		//Check if filename already exists, if it does, increase the number at the end by 1
+		if (err.code == "EEXIST") {	
+			console.log("file already exists, trying with higher fileIndex")
+			writeDataFile(data, ++fileIndex)
+		} else {
+		    return console.log(err)
+		  }
 	})
 }
