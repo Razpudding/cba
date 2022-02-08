@@ -14,3 +14,4 @@ Small project to convert old a11yjson data to the correct format and clean up un
 ## Todos
 - Equipmentinfo is nested in 'properties.accessibility.equipment' in the sourceData but should become separate objects which are dded to the a11y cloud.
 - If we end up adding OSM and Wikidata Id's to the new data we should also add it to this dataset
+- Check why some category calues end up being "" (informatiecentra)

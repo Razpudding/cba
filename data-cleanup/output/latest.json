@@ -73,6 +73,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 462 33 53",
@@ -159,6 +162,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-4530191",
@@ -246,6 +252,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 6963262",
@@ -333,6 +342,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6714294",
@@ -426,6 +438,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 5980888",
@@ -519,6 +534,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 617 82 35",
@@ -606,6 +624,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 610 40 60",
@@ -699,6 +720,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 690 89 83",
@@ -792,6 +816,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-565 03 85",
@@ -885,6 +912,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 617 27 21",
@@ -978,6 +1008,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "placeWebsiteUrl": "https://www.nieuwreimerswaal.nl/buurthuis-osdorp",
@@ -1064,6 +1097,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": false
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6947165",
@@ -1151,6 +1187,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": false
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 4161785",
@@ -1238,6 +1277,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": false
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6880855",
@@ -1331,6 +1373,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "+ 31 (0)20 52 52 556",
@@ -1424,6 +1469,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 700 8400",
@@ -1517,6 +1565,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "+31 (0)20 - 5567100",
@@ -1610,6 +1661,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 671 3910",
@@ -1697,6 +1751,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 6621256",
@@ -1784,6 +1841,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": false
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 468 27 24 ",
@@ -1877,6 +1937,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 620 48 78",
@@ -1964,6 +2027,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 7539002",
@@ -2051,6 +2117,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 52 33 584",
@@ -2138,6 +2207,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6000472",
@@ -2231,6 +2303,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 6990221   ",
@@ -2318,6 +2393,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 682 7803",
@@ -2405,6 +2483,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6829827",
@@ -2492,6 +2573,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "0900 8844",
@@ -2579,6 +2663,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 694 89 58",
@@ -2666,6 +2753,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "placeWebsiteUrl": "www.basictouch.com",
@@ -2752,6 +2842,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6965752",
@@ -2839,6 +2932,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6906577",
@@ -2926,6 +3022,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-6967866",
@@ -3013,6 +3112,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-4528156",
@@ -3100,6 +3202,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6974522",
@@ -3187,6 +3292,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-4165195",
@@ -3274,6 +3382,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6967698",
@@ -3361,6 +3472,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-4167898",
@@ -3454,6 +3568,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 530 53 01",
@@ -3541,6 +3658,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6823247",
@@ -3634,6 +3754,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6623184",
@@ -3721,6 +3844,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 6902353",
@@ -3808,6 +3934,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 6952282 ",
@@ -3895,6 +4024,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-6314212",
@@ -3988,6 +4120,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 523 09 00",
@@ -4075,6 +4210,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 610 74 54",
@@ -4162,6 +4300,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-4961366",
@@ -4249,6 +4390,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 615 05 14",
@@ -4336,6 +4480,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 682 70 26",
@@ -4429,6 +4576,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 311 39 33 ",
@@ -4516,6 +4666,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-6997202",
@@ -4609,6 +4762,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 525 73 00",
@@ -4696,6 +4852,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": false
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 416 11 33",
@@ -4783,6 +4942,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-8463239",
@@ -4870,6 +5032,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6907360",
@@ -4957,6 +5122,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 662 02 54",
@@ -5044,6 +5212,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 6861532",
@@ -5130,6 +5301,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 679 1370",
@@ -5223,6 +5397,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 305 00 30",
@@ -5315,6 +5492,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 634 63 46",
@@ -5408,6 +5588,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-4700314",
@@ -5495,6 +5678,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 6250131",
@@ -5582,6 +5768,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 428 2222",
@@ -5675,6 +5864,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 624 83 53 ",
@@ -5768,6 +5960,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 626 40 02",
@@ -5855,6 +6050,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 636 10 57",
@@ -5948,6 +6146,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-6653320",
@@ -6035,6 +6236,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "placeWebsiteUrl": "www.abc-west.nl/algemeen-havelaar/",
@@ -6127,6 +6331,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-486 68 96",
@@ -6220,6 +6427,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 632 38 45",
@@ -6307,6 +6517,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 686 20 94",
@@ -6394,6 +6607,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "placeWebsiteUrl": "www.dehuizenvandewijk.nl",
@@ -6486,6 +6702,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 460 93 69",
@@ -6573,6 +6792,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 7995000",
@@ -6666,6 +6888,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 460 93 10",
@@ -6753,6 +6978,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": false
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6941762",
@@ -6840,6 +7068,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 682 26 66 ",
@@ -6932,6 +7163,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 520 8700",
@@ -7025,6 +7259,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-2535456",
@@ -7112,6 +7349,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "088-9208800",
@@ -7198,6 +7438,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-3315151 ",
@@ -7285,6 +7528,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "address": {
@@ -7370,6 +7616,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6335519",
@@ -7462,6 +7711,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-6965451",
@@ -7548,6 +7800,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "06-18489503",
@@ -7641,6 +7896,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 573 05 73",
@@ -7728,6 +7986,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-3053600",
@@ -7821,6 +8082,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-5251400",
@@ -7908,6 +8172,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6208045",
@@ -8001,6 +8268,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 553 51 00 ",
@@ -8094,6 +8364,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "0900 - 0919",
@@ -8187,6 +8460,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 6173656",
@@ -8274,6 +8550,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 622 78 60",
@@ -8367,6 +8646,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 3035008",
@@ -8454,6 +8736,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-230096",
@@ -8541,6 +8826,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6 97 35 10 ",
@@ -8634,6 +8922,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 555 26 27",
@@ -8727,6 +9018,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 410 77 00",
@@ -8820,6 +9114,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 252 4444",
@@ -8907,6 +9204,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-6961238",
@@ -8994,6 +9294,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-69 01 45 8",
@@ -9087,6 +9390,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6001897",
@@ -9174,6 +9480,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 636 88 17",
@@ -9261,6 +9570,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 6972176",
@@ -9348,6 +9660,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 625 75 00",
@@ -9435,6 +9750,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "06 – 52 33 19 98",
@@ -9521,6 +9839,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 – 623 74 60",
@@ -9608,6 +9929,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6445814",
@@ -9695,6 +10019,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 4167133",
@@ -9782,6 +10109,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 521 71 00 ",
@@ -9869,6 +10199,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 540 09 80 ",
@@ -9956,6 +10289,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 682 68 19 ",
@@ -10043,6 +10379,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": false
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 416 52 79",
@@ -10136,6 +10475,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-4620300",
@@ -10223,6 +10565,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 751 06 10 ",
@@ -10310,6 +10655,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-4031386",
@@ -10397,6 +10745,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-4197393",
@@ -10484,6 +10835,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 4161775",
@@ -10577,6 +10931,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "0900-4466880",
@@ -10664,6 +11021,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 49 52 200",
@@ -10757,6 +11117,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-6326281",
@@ -10850,6 +11213,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-6312222",
@@ -10942,6 +11308,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 5891400",
@@ -11029,6 +11398,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "address": {
@@ -11120,6 +11492,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 252 6000",
@@ -11213,6 +11588,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-6318333",
@@ -11300,6 +11678,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 692 50 30",
@@ -11392,6 +11773,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 662 34 88",
@@ -11479,6 +11863,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 751 64 81",
@@ -11566,6 +11953,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6751207",
@@ -11653,6 +12043,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-4636065",
@@ -11740,6 +12133,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6769210",
@@ -11827,6 +12223,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-679 33 94 ",
@@ -11920,6 +12319,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-6768002",
@@ -12013,6 +12415,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-6190265",
@@ -12100,6 +12505,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6620948",
@@ -12187,6 +12595,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6627462",
@@ -12273,6 +12684,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6220572",
@@ -12360,6 +12774,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 673 04 60",
@@ -12447,6 +12864,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6795353",
@@ -12534,6 +12954,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6760708",
@@ -12621,6 +13044,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6712291",
@@ -12708,6 +13134,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6652856",
@@ -12801,6 +13230,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 – 33 020 83",
@@ -12888,6 +13320,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": false
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 4650120",
@@ -12975,6 +13410,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-4161922",
@@ -13068,6 +13506,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 622 53 33",
@@ -13155,6 +13596,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 7220 980",
@@ -13242,6 +13686,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-4470093",
@@ -13335,6 +13782,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-4352120",
@@ -13422,6 +13872,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-5860710",
@@ -13515,6 +13968,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-6319157",
@@ -13608,6 +14064,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-6992932",
@@ -13695,6 +14154,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-6971941",
@@ -13782,6 +14244,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-3141900",
@@ -13869,6 +14334,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-4183097",
@@ -13956,6 +14424,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": false
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 7744945",
@@ -14043,6 +14514,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6170552",
@@ -14130,6 +14604,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6129674",
@@ -14217,6 +14694,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": false
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "0800-0075",
@@ -14304,6 +14784,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "06-20929452",
@@ -14397,6 +14880,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-5308755",
@@ -14490,6 +14976,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-4211656 ",
@@ -14577,6 +15066,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-696 20 20",
@@ -14664,6 +15156,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6950062",
@@ -14757,6 +15252,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 625 54 55",
@@ -14844,6 +15342,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-7564000",
@@ -14931,6 +15432,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-4952256",
@@ -15018,6 +15522,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": false
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 416 47 60",
@@ -15111,6 +15618,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 595 47 00",
@@ -15198,6 +15708,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-4531549",
@@ -15291,6 +15804,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 521 11 11 ",
@@ -15383,6 +15899,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6259021",
@@ -15475,6 +15994,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 684 00 90",
@@ -15568,6 +16090,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-8200928",
@@ -15661,6 +16186,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-530 08 00",
@@ -15748,6 +16276,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "(020) 63 60 367",
@@ -15835,6 +16366,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-4650924",
@@ -15922,6 +16456,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6645537",
@@ -16009,6 +16546,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6790109",
@@ -16096,6 +16636,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6158287",
@@ -16183,6 +16726,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6654961",
@@ -16276,6 +16822,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 631 59 41",
@@ -16363,6 +16912,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6828881",
@@ -16449,6 +17001,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-4193282",
@@ -16535,6 +17090,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "06 20252794",
@@ -16622,6 +17180,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-4227772",
@@ -16715,6 +17276,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-6685866",
@@ -16802,6 +17366,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "088-0030600",
@@ -16889,6 +17456,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "0294-450190",
@@ -16976,6 +17546,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6822453",
@@ -17063,6 +17636,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 331 52 80",
@@ -17150,6 +17726,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6849078",
@@ -17236,6 +17815,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 624 51 23",
@@ -17323,6 +17905,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6847181",
@@ -17410,6 +17995,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "placeWebsiteUrl": "http://www.zuidoost.nl/vinden/jong/jongerencentra",
@@ -17502,6 +18090,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "+31 (020) 5310310",
@@ -17589,6 +18180,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 6869057",
@@ -17682,6 +18276,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-5314000",
@@ -17769,6 +18366,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 6865815",
@@ -17856,6 +18456,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "placeWebsiteUrl": "http://www.deroode.keurslager.nl/",
@@ -17942,6 +18545,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-4118777",
@@ -18035,6 +18641,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 664 22 11",
@@ -18122,6 +18731,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-7791575 ",
@@ -18209,6 +18821,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 694 28 88",
@@ -18302,6 +18917,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 633 71 62",
@@ -18395,6 +19013,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-7507253",
@@ -18488,6 +19109,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 623 17 08",
@@ -18575,6 +19199,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": false
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "0900-57843828",
@@ -18662,6 +19289,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 686 4880",
@@ -18754,6 +19384,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-5400120",
@@ -18847,6 +19480,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-5613636",
@@ -18934,6 +19570,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-4186104",
@@ -19027,6 +19666,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": false
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "0900 - 235 45 32",
@@ -19114,6 +19756,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 301 27 27 ",
@@ -19207,6 +19852,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 694 96 52",
@@ -19300,6 +19948,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-5249494",
@@ -19393,6 +20044,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-4182020",
@@ -19486,6 +20140,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 512 72 72",
@@ -19579,6 +20236,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 669 04 12",
@@ -19672,6 +20332,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-7670392",
@@ -19759,6 +20422,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 586 07 10",
@@ -19852,6 +20518,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-5221010",
@@ -19945,6 +20614,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 626 91 99",
@@ -20032,6 +20704,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6408337",
@@ -20118,6 +20793,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6432468",
@@ -20211,6 +20889,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 589 33 00",
@@ -20304,6 +20985,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "0900-8844 ",
@@ -20391,6 +21075,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 624 4846",
@@ -20478,6 +21165,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": false
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-4000016",
@@ -20571,6 +21261,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 644 57 68",
@@ -20664,6 +21357,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 531 32 33",
@@ -20751,6 +21447,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6682518",
@@ -20838,6 +21537,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-4160176",
@@ -20931,6 +21633,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-233 15 22",
@@ -21018,6 +21723,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 – 692 54 21",
@@ -21105,6 +21813,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-6964563",
@@ -21189,6 +21900,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 612 69 63",
@@ -21276,6 +21990,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 6272280",
@@ -21363,6 +22080,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 6868 595",
@@ -21456,6 +22176,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 550 6060",
@@ -21543,6 +22266,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 624 52 55",
@@ -21636,6 +22362,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 788 20 00 ",
@@ -21729,6 +22458,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-6368654",
@@ -21816,6 +22548,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 – 3987755",
@@ -21909,6 +22644,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 6272830",
@@ -22002,6 +22740,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-638 69 09",
@@ -22089,6 +22830,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-4636912",
@@ -22176,6 +22920,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 – 6981078",
@@ -22263,6 +23010,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 697 26 85 ",
@@ -22356,6 +23106,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 678 71 11",
@@ -22443,6 +23196,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 624 66 04",
@@ -22536,6 +23292,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 420 33 81",
@@ -22629,6 +23388,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 690 90 50",
@@ -22716,6 +23478,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "address": {
@@ -22801,6 +23566,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "address": {
@@ -22886,6 +23654,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-4887778",
@@ -22973,6 +23744,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 311 86 86 ",
@@ -23060,6 +23834,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "0294-414370",
@@ -23153,6 +23930,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 639 2589",
@@ -23240,6 +24020,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 625 82 84",
@@ -23333,6 +24116,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 420 79 30",
@@ -23425,6 +24211,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "0900-1458",
@@ -23518,6 +24307,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-788 44 40 ",
@@ -23605,6 +24397,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 620 55 36",
@@ -23697,6 +24492,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "0900-1458 ",
@@ -23790,6 +24588,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 626 45 21",
@@ -23877,6 +24678,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6613288",
@@ -23964,6 +24768,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-4041255",
@@ -24057,6 +24864,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "0900-4466880",
@@ -24150,6 +24960,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "0900 - 44 66 880",
@@ -24237,6 +25050,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 470 08 88",
@@ -24330,6 +25146,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "0900-4466880",
@@ -24423,6 +25242,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "0900 - 446 68 80",
@@ -24516,6 +25338,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "placeWebsiteUrl": "http://www.amsterdam.nl/parkeergebouwen/onze_garages/amsterdam_centrum/stadhuisgarage/",
@@ -24608,6 +25433,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6385330",
@@ -24695,6 +25523,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 69 79 701",
@@ -24788,6 +25619,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-5896503",
@@ -24880,6 +25714,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "0900-1458",
@@ -24967,6 +25804,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 692 88 10",
@@ -25060,6 +25900,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "placeWebsiteUrl": "http://www.amsterdam.nl/parkeergebouwen/onze_garages/amsterdam_centrum/piet_heingarage/",
@@ -25152,6 +25995,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 682 13 11",
@@ -25239,6 +26085,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "placeWebsiteUrl": "http://www.praktijk-ijburg.nl",
@@ -25325,6 +26174,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6444085",
@@ -25412,6 +26264,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 6974506",
@@ -25499,6 +26354,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-3421919",
@@ -25586,6 +26444,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6169574",
@@ -25679,6 +26540,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6246207",
@@ -25771,6 +26635,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 509 10 00",
@@ -25864,6 +26731,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-6335510",
@@ -25957,6 +26827,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "+31 (0)20 5200 400",
@@ -26044,6 +26917,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 688 5548",
@@ -26137,6 +27013,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-5232222",
@@ -26230,6 +27109,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 6747 000",
@@ -26316,6 +27198,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-468 3241",
@@ -26403,6 +27288,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6206767 ",
@@ -26490,6 +27378,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 6812440",
@@ -26577,6 +27468,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6654521",
@@ -26664,6 +27558,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-6973735",
@@ -26757,6 +27654,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 – 506 35 06",
@@ -26844,6 +27744,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6157042",
@@ -26937,6 +27840,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 56 33 050",
@@ -27024,6 +27930,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": false
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6656951",
@@ -27111,6 +28020,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6978004",
@@ -27204,6 +28116,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 616 08 94",
@@ -27291,6 +28206,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-6950368",
@@ -27378,6 +28296,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 682 9902",
@@ -27470,6 +28391,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 697 72 22",
@@ -27557,6 +28481,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 620 67 67",
@@ -27644,6 +28571,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-5803430",
@@ -27731,6 +28661,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6829454",
@@ -27818,6 +28751,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6863441",
@@ -27911,6 +28847,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 645 9220",
@@ -28004,6 +28943,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 671 65 88",
@@ -28097,6 +29039,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 – 524 60 00",
@@ -28190,6 +29135,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6650811",
@@ -28277,6 +29225,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 774 41 17",
@@ -28369,6 +29320,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 6677346",
@@ -28456,6 +29410,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 632 27 56",
@@ -28543,6 +29500,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 637 13 51",
@@ -28630,6 +29590,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 665 69 47",
@@ -28723,6 +29686,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 305 83 05",
@@ -28816,6 +29782,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 693 6459",
@@ -28908,6 +29877,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "placeWebsiteUrl": "www.amsterdam.nl",
@@ -29000,6 +29972,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 – 251 15 11",
@@ -29092,6 +30067,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 634 99 11",
@@ -29185,6 +30163,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 – 618 89 11",
@@ -29272,6 +30253,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6941358",
@@ -29365,6 +30349,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6630903",
@@ -29451,6 +30438,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 253 5444",
@@ -29543,6 +30533,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 580 00 55",
@@ -29635,6 +30628,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "14 020",
@@ -29727,6 +30723,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 – 546 44 64",
@@ -29813,6 +30812,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 252 57 77",
@@ -29906,6 +30908,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 523 77 00",
@@ -29992,6 +30997,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 252 50 00",
@@ -30079,6 +31087,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 79 59 995",
@@ -30171,6 +31182,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "030 - 235 78 22",
@@ -30264,6 +31278,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 788 2090",
@@ -30356,6 +31373,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "030 - 235 78 22",
@@ -30448,6 +31468,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "030 - 235 78 22",
@@ -30539,6 +31562,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "030 - 235 78 22",
@@ -30631,6 +31657,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "030 - 235 78 22",
@@ -30716,6 +31745,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "030 - 235 78 22",
@@ -30808,6 +31840,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "030 - 235 78 22",
@@ -30900,6 +31935,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "030 - 235 78 22",
@@ -30991,6 +32029,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "030 - 235 78 22",
@@ -31083,6 +32124,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "030 - 235 78 22",
@@ -31169,6 +32213,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "030 - 235 78 22",
@@ -31261,6 +32308,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "030 - 235 78 22",
@@ -31354,6 +32404,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 5732 911",
@@ -31446,6 +32499,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "030 - 235 78 22",
@@ -31539,6 +32595,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6654230",
@@ -31626,6 +32685,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 – 4952250",
@@ -31713,6 +32775,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6003900",
@@ -31799,6 +32864,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 416 56 43",
@@ -31892,6 +32960,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-6920422",
@@ -31979,6 +33050,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": false
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-4165098",
@@ -32066,6 +33140,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6650905",
@@ -32153,6 +33230,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 618 47 68",
@@ -32240,6 +33320,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6658588",
@@ -32327,6 +33410,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-4198525",
@@ -32414,6 +33500,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 6752428",
@@ -32506,6 +33595,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 4196856",
@@ -32593,6 +33685,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-3983131",
@@ -32680,6 +33775,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 646 15 15",
@@ -32767,6 +33865,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "placeWebsiteUrl": "www.amstelring.nl/thuis-blijven/dagbesteding/ontmoetingscentra/tesla",
@@ -32859,6 +33960,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "31 (0) 20 571 15 11",
@@ -32945,6 +34049,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 624 57 90",
@@ -33032,6 +34139,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "placeWebsiteUrl": "www.vrijburcht.com",
@@ -33118,6 +34228,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "0592-881106",
@@ -33205,6 +34318,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 4860533",
@@ -33291,6 +34407,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 551 25 12",
@@ -33384,6 +34503,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "088 - 00 42 800",
@@ -33471,6 +34593,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-6676060",
@@ -33564,6 +34689,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 570 52 00",
@@ -33651,6 +34779,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 684 4260",
@@ -33744,6 +34875,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "placeWebsiteUrl": "http://nl.vapiano.com/nl/restaurants/",
@@ -33836,6 +34970,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 260 1293",
@@ -33923,6 +35060,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 416 02 65",
@@ -34010,6 +35150,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "06 -  26 41 60 85",
@@ -34097,6 +35240,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 398595",
@@ -34184,6 +35330,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6626909",
@@ -34277,6 +35426,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-3205579",
@@ -34364,6 +35516,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 569 87 77",
@@ -34451,6 +35606,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 528 77 78",
@@ -34538,6 +35696,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 681 4118",
@@ -34624,6 +35785,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 6848496",
@@ -34711,6 +35875,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-6848496",
@@ -34798,6 +35965,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 737 15 11",
@@ -34885,6 +36055,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "address": {
@@ -34970,6 +36143,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 344 64 06",
@@ -35057,6 +36233,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020-462 33 33",
@@ -35144,6 +36323,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": " 020-639 26 95 ",
@@ -35231,6 +36413,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": true
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "088-0070553",
@@ -35317,6 +36502,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020-617 58 39",
@@ -35404,6 +36592,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 678 13 90",
@@ -35497,6 +36688,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 - 552 79 87 ",
@@ -35584,6 +36778,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": false
                 }
             },
             "phoneNumber": "020 586 07 10  ",
@@ -35676,6 +36873,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 6247703",
@@ -35768,6 +36968,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "partiallyAccessibleWith": {
+                    "wheelchair": true
                 }
             },
             "phoneNumber": "020 - 75 25 100",
@@ -35855,6 +37058,9 @@
                 },
                 "payment": {
                     "hasPortablePaymentSystem": null
+                },
+                "accessibleWith": {
+                    "wheelchair": true
                 }
             },
             "address": {

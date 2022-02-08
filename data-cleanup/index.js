@@ -9,10 +9,12 @@ const settings = {
 	inputFileName: 'input/CBA2016A11y.json',
 	outputFileName: 'output/CBA2016_cleaned',
 	categoriesFileName: 'input/categories.csv',
+	wheelchairFileName: 'input/wheelchair.csv',
+	wheelchairToiletFileName: 'input/wheelchairToilet.csv',
 	printData: true,
 	selection: false,
 	validation: false,
-	categorize: true,
+	addFields: true,
 }
 
 main()
@@ -21,13 +23,17 @@ async function main(){
 	const inputDataFile = await fs.readFile(settings.inputFileName, {encoding: 'utf-8'})
 	let inputData = JSON.parse(inputDataFile)
 	let categories = null
+	let wheelChairMapping = null
 
-	if (settings.categorize){
-		const rawCSV = await fs.readFile(settings.categoriesFileName, {encoding: 'utf-8'})
-		categories = await csv(rawCSV)
+	//If addFields, add mappings for specific fields
+	if (settings.addFields){
+		const catFile = await fs.readFile(settings.categoriesFileName, {encoding: 'utf-8'})
+		categories = await csv(catFile)
+		const wheelchairFile = await fs.readFile(settings.wheelchairFileName, {encoding: 'utf-8'})
+		wheelChairMapping = await csv(wheelchairFile)
 	}
 
-	const a11yData = convertToA11y(inputData, categories)
+	const a11yData = convertToA11y(inputData, categories, wheelChairMapping)
 
 	if (settings.validation){
 		a11yData.forEach((result, i) => validateAgainstSchema(result, i, a11y.PlaceInfoSchema.newContext()))
@@ -38,11 +44,11 @@ async function main(){
 }
 
 //Parsedata takes a source and manipulates it the way we want it
-function convertToA11y(inputData, categories){
+function convertToA11y(inputData, categories, wheelChairMapping){
 	console.log("#Entries in data: ", inputData.length)
 
 	const selection = settings.selection ? inputData.slice(0,10) : inputData
-	const cleanedData = selection.map(item => mapA11yProperties(item, categories))
+	const cleanedData = selection.map(item => mapA11yProperties(item, categories, wheelChairMapping))
 	cleanedData.forEach( (d, i) => d.properties.originalId = i.toString())
 	
 	console.log(cleanedData[0].properties.accessibility.restrooms[0])
@@ -50,12 +56,31 @@ function convertToA11y(inputData, categories){
 }
 
 //Use the original data to create proper A11y data
-function mapA11yProperties(item, categories){
-	if (settings.categorize){
+function mapA11yProperties(item, categories, wheelchair){
+	if (settings.addFields){
 		// console.log("Finding cat for", item.properties.originalData?.Functie)
 		// Find the relevant category for a given originalData.Functie value. If either doesn't exist, return undefined
 		item.properties.category = categories.find(cat => cat.typ_naam === item.properties.originalData?.Functie)?.categoryWheelmap
 		// console.log(item.properties.category)
+		
+		//Find the relevant wheelchairStatus and use it to set the right a11y property
+		const wheelchairStatus = wheelchair.find(status => status.Totaalscore === item.properties.originalData?.Totaalscore)?.accessibleWithWheelchair
+		if (wheelchairStatus === 'accessibleWithWheelchairTrue'){
+			if (item.properties.accessibility.accessibleWith === undefined){
+				item.properties.accessibility.accessibleWith = {}
+			}
+			item.properties.accessibility.accessibleWith.wheelchair = true
+		} else if (wheelchairStatus === 'accessibleWithWheelchairFalse'){
+			if (item.properties.accessibility.accessibleWith === undefined){
+				item.properties.accessibility.accessibleWith = {}
+			}
+			item.properties.accessibility.accessibleWith.wheelchair = false
+		} else if (wheelchairStatus === 'partiallyAccessibleWithWheelchairTrue'){
+			if (item.properties.accessibility.accessibleWith === undefined){
+				item.properties.accessibility.partiallyAccessibleWith = {}
+			}
+			item.properties.accessibility.partiallyAccessibleWith.wheelchair = true
+		}
 	}
 	//Put the phoneNumber info in the right place
 	item.properties.phoneNumber = item.properties.StructuredAddress?.phoneNumber ?? undefined
