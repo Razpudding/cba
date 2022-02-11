@@ -13,9 +13,9 @@ Small project to convert old a11yjson data to the correct format and clean up un
 - properties.category was built from originalDat.functie using a mapping table (included in input folder)
 - Wheelchair a11y data was added using a wheelchair mapping table (included in input folder)
 
-## Todos
+## Notes
+- The original data source seems to use 'null' as a standard value for undefined fields. This is a bit tricky while undefined fields are deleted from the json output (making the file more efficient), null is kept in. I can't just convert all null fields to undefined either because in some cases in the a11ysjon standard, null has a different meaning than undefined. It usually means something isn't there while undefined means we simply don't know anything about it, it could still exist in real life.
 - Equipmentinfo is nested in 'properties.accessibility.equipment' in the sourceData but should become separate objects which are added to the a11y cloud.
 - If we end up adding OSM and Wikidata Id's to the new data we should also add it to this dataset
-- Check why some category values end up being "" (informatiecentra)
-	+ Category should never be an empty string as it causes issues with wheelmap. Instead make it "unknown":string or "undefined":string. Have this as default value for category instead of null in source data.
-- Remove unnecessary " ?? undefined" for property lookups
+
+## Todos
