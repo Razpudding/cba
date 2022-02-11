@@ -11,10 +11,10 @@ const settings = {
 	categoriesFileName: 'input/categories.csv',
 	wheelchairFileName: 'input/wheelchair.csv',
 	wheelchairToiletFileName: 'input/wheelchairToilet.csv',
+	addFields: true,
 	printData: true,
 	selection: false,
 	validation: false,
-	addFields: true,
 }
 
 main()
@@ -24,6 +24,7 @@ async function main(){
 	let inputData = JSON.parse(inputDataFile)
 	let categories = null
 	let wheelChairMapping = null
+	let wheelChairToiletMapping = null
 
 	//If addFields, add mappings for specific fields
 	if (settings.addFields){
@@ -31,9 +32,11 @@ async function main(){
 		categories = await csv(catFile)
 		const wheelchairFile = await fs.readFile(settings.wheelchairFileName, {encoding: 'utf-8'})
 		wheelChairMapping = await csv(wheelchairFile)
+		const wheelchairToiletFile = await fs.readFile(settings.wheelchairToiletFileName, {encoding: 'utf-8'})
+		wheelChairToiletMapping = await csv(wheelchairToiletFile)
 	}
 
-	const a11yData = convertToA11y(inputData, categories, wheelChairMapping)
+	const a11yData = convertToA11y(inputData, categories, wheelChairMapping, wheelChairToiletMapping)
 
 	if (settings.validation){
 		a11yData.forEach((result, i) => validateAgainstSchema(result, i, a11y.PlaceInfoSchema.newContext()))
@@ -44,11 +47,11 @@ async function main(){
 }
 
 //Parsedata takes a source and manipulates it the way we want it
-function convertToA11y(inputData, categories, wheelChairMapping){
+function convertToA11y(inputData, categories, wheelChairMapping, wheelChairToiletMapping){
 	console.log("#Entries in data: ", inputData.length)
 
 	const selection = settings.selection ? inputData.slice(0,10) : inputData
-	const cleanedData = selection.map(item => mapA11yProperties(item, categories, wheelChairMapping))
+	const cleanedData = selection.map(item => mapA11yProperties(item, categories, wheelChairMapping, wheelChairToiletMapping))
 	cleanedData.forEach( (d, i) => d.properties.originalId = i.toString())
 	
 	console.log(cleanedData[0].properties.accessibility.restrooms[0])
@@ -56,15 +59,12 @@ function convertToA11y(inputData, categories, wheelChairMapping){
 }
 
 //Use the original data to create proper A11y data
-function mapA11yProperties(item, categories, wheelchair){
+function mapA11yProperties(item, categories, wheelchair, wheelChairToilet){
 	if (settings.addFields){
-		// console.log("Finding cat for", item.properties.originalData?.Functie)
-		// Find the relevant category for a given originalData.Functie value. If either doesn't exist, return undefined
-		item.properties.category = categories.find(cat => cat.typ_naam === item.properties.originalData?.Functie)?.categoryWheelmap
-		// console.log(item.properties.category)
+		item.properties.category = categories.find(cat => cat.typ_naam === item.properties.originalData?.Functie?.trim())?.categoryWheelmap
 		
 		//Find the relevant wheelchairStatus and use it to set the right a11y property
-		const wheelchairStatus = wheelchair.find(status => status.Totaalscore === item.properties.originalData?.Totaalscore)?.accessibleWithWheelchair
+		const wheelchairStatus = wheelchair.find(status => status.Totaalscore === item.properties.originalData?.Totaalscore?.trim())?.accessibleWithWheelchair
 		if (wheelchairStatus === 'accessibleWithWheelchairTrue'){
 			if (item.properties.accessibility.accessibleWith === undefined){
 				item.properties.accessibility.accessibleWith = {}
@@ -81,6 +81,12 @@ function mapA11yProperties(item, categories, wheelchair){
 			}
 			item.properties.accessibility.partiallyAccessibleWith.wheelchair = true
 		}
+
+		//Determine isAccessibleWithWheelchair property
+		//Because current data source only has one restroom, that's the one we hardcode for
+		let wheelchairToiletStatus = wheelChairToilet.find(status => status.sanitair === item.properties.originalData?.["Bruikbaarheid sanitair"]?.trim())?.isAccessibleWithWheelchair
+		wheelchairToiletStatus = wheelchairToiletStatus === 'true' ? true : (wheelchairToiletStatus === 'false' ? false : undefined)
+		item.properties.accessibility.restrooms[0].isAccessibleWithWheelchair = wheelchairToiletStatus
 	}
 	//Put the phoneNumber info in the right place
 	item.properties.phoneNumber = item.properties.StructuredAddress?.phoneNumber ?? undefined
@@ -89,7 +95,7 @@ function mapA11yProperties(item, categories, wheelchair){
 	item.properties.placeWebsiteUrl = item.properties.StructuredAddress?.placeWebsiteUrl ?? undefined
 	delete item.properties.StructuredAddress?.placeWebsiteUrl
 	//Nest the StructuredAddress info inside the proper PlaceProperties.address property
-	item.properties.address = item.properties.StructuredAddress ?? undefined
+	item.properties.address = item.properties.StructuredAddress
 	delete item.properties.StructuredAddress
 
 	//Delete the CBS related properties dump
@@ -110,7 +116,7 @@ function mapA11yProperties(item, categories, wheelchair){
  			entrance.slopeAngle = typeof entrance.slopeAngle === 'string' ? parseInt(entrance.slopeAngle.replace('%', ''), 10) : entrance.slopeAngle	
  			
  			//The stairs property is incorrectly named Stairs, this fixes that
- 			entrance.stairs = entrance.Stairs ?? undefined
+ 			entrance.stairs = entrance.Stairs
  			delete entrance.Stairs
  		})
 	}
@@ -154,7 +160,7 @@ function writeDataFile(data, fileIndex = 0)
 	.catch(err => {
 		//Check if filename already exists, if it does, increase the number at the end by 1
 		if (err.code == "EEXIST") {	
-			console.log("file already exists, trying with higher fileIndex")
+			// console.log("file already exists, trying with higher fileIndex", fileIndex)
 			writeDataFile(data, ++fileIndex)
 		} else {
 		    return console.log(err)

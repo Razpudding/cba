@@ -10,8 +10,12 @@ Small project to convert old a11yjson data to the correct format and clean up un
 - The properties.address info was inside a StructuredAddress property
 - The properties.phoneNumber info was inside a StructuredAddress property
 - The properties.placeWebsiteUrl was inside a StructuredAddress property
+- properties.category was built from originalDat.functie using a mapping table (included in input folder)
+- Wheelchair a11y data was added using a wheelchair mapping table (included in input folder)
 
 ## Todos
-- Equipmentinfo is nested in 'properties.accessibility.equipment' in the sourceData but should become separate objects which are dded to the a11y cloud.
+- Equipmentinfo is nested in 'properties.accessibility.equipment' in the sourceData but should become separate objects which are added to the a11y cloud.
 - If we end up adding OSM and Wikidata Id's to the new data we should also add it to this dataset
-- Check why some category calues end up being "" (informatiecentra)
+- Check why some category values end up being "" (informatiecentra)
+	+ Category should never be an empty string as it causes issues with wheelmap. Instead make it "unknown":string or "undefined":string. Have this as default value for category instead of null in source data.
+- Remove unnecessary " ?? undefined" for property lookups

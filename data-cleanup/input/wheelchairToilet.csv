@@ -1,6 +1,6 @@
-properties/originalData/Bruikbaarheid sanitair;Wheelmap
-rolstoelgeschikt toilet;wheelchair accessible toilet
-toilet voor rolstoelers;wheelchair accessible toilet
-geen bezoekerstoilet;null
-bezoekerstoilet;null
-bezoekerstoilet via trap;null
+sanitair,isAccessibleWithWheelchair
+rolstoelgeschikt toilet,true
+toilet voor rolstoelers,true
+geen bezoekerstoilet,false
+bezoekerstoilet,undefined
+bezoekerstoilet via trap,undefined
