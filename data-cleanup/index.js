@@ -62,6 +62,7 @@ function convertToA11y(inputData, categories, wheelChairMapping, wheelChairToile
 function mapA11yProperties(item, categories, wheelchair, wheelChairToilet){
 	if (settings.addFields){
 		item.properties.category = categories.find(cat => cat.typ_naam === item.properties.originalData?.Functie?.trim())?.categoryWheelmap
+		item.properties.category = item.properties.category === '' ? 'unknown' : item.properties.category
 		
 		//Find the relevant wheelchairStatus and use it to set the right a11y property
 		const wheelchairStatus = wheelchair.find(status => status.Totaalscore === item.properties.originalData?.Totaalscore?.trim())?.accessibleWithWheelchair
