@@ -15,6 +15,7 @@ const settings = {
 	printData: true,
 	selection: false,
 	validation: false,
+	dedupingLocation: false,
 }
 
 main()
@@ -36,7 +37,19 @@ async function main(){
 		wheelChairToiletMapping = await csv(wheelchairToiletFile)
 	}
 
-	const a11yData = convertToA11y(inputData, categories, wheelChairMapping, wheelChairToiletMapping)
+	let a11yData = convertToA11y(inputData, categories, wheelChairMapping, wheelChairToiletMapping)
+	
+	//Add a negligible number to the lat and long so they're never identical for any two items 
+	//TODO: This is a workaround for a problem Wheelmap has with two items with identical geolocations and should
+	//			be removed when the bug is fixed as it can potentially cause issues. Ideally the real location of the placeInfo item would
+	//			be used. Which should not be the same as any other placeInfo item (I think).
+	if (settings.dedupingLocation){
+		console.log("Changing geolocs slightly to work around Wheelmap bug ")
+		a11yData.forEach( (item, i) => {
+			item.geometry.coordinates[0] =  Math.round( (item.geometry.coordinates[0] + Number("0.000000" + i)) * 1000000000) / 1000000000
+			item.geometry.coordinates[1] =  Math.round( (item.geometry.coordinates[1] + Number("0.000000" + i)) * 1000000000) / 1000000000
+		})
+	}
 
 	if (settings.validation){
 		a11yData.forEach((result, i) => validateAgainstSchema(result, i, a11y.PlaceInfoSchema.newContext()))
