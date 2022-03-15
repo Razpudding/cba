@@ -1,0 +1,404 @@
+properties/description,properties/name,properties/phoneNumber,properties/address/city,properties/address/house,properties/address/postalCode,properties/address/street,properties/originalId,actueel,gewijzigd,properties/placeWebsiteUrl
+Wijkcentra en buurthuizen,Wijkservicepunt Hoekhuis,020 - 462 33 53,AMSTERDAM,3,1097 SC,Fizeaustraat,0,Ja,NAW,https://www.zgao.nl/zorg-en-behandeling-thuis/wijkservicepunt-hoekhuis.html
+Gezondheidscentra,MOC 't Kabouterhuis Zuidoost,020-4530191,AMSTERDAM ZUIDOOST,28,1108 EL,Leksmondplein,1,Ja,NAW,www.kabouterhuis.nl
+Onderwijsinstellingen en scholen,"16e Montessorischool ""Gaasperdam""",020 6963262,AMSTERDAM ZUIDOOST,6,1106 DV,Vreeswijkpad,2,Ja,NAW,https://montessori.nl/school/16e-montessorischool-gaasperdam/
+Kantoorgebouwen,Initiatiefgroep Bouwwoede Oud-Zuid,,AMSTERDAM,42,1077 SM,Stadionweg,3,ja,NAW,https://www.bouwwoedeoudzuid.nl
+Tandartsen,ACTA,020 - 5980888,AMSTERDAM,3004,1081 LA,Gustav Mahlerlaan,4,Ja,NAW,www.acta.nl
+Wijkcentra en buurthuizen,Huis van de Wijk België,020 - 617 82 35,AMSTERDAM,117,1066 SB,Hageland,5,Ja,NAW,https://www.eigenwijks.nl/nieuw-sloten/
+Wijkcentra en buurthuizen,Buurthuis De Aker,020 - 610 40 60,AMSTERDAM,2,1069 PC,Noorderakerweg,6,Ja,NAW,https://www.eigenwijks.nl/
+Wijkcentra en buurthuizen,Buurthuis Bonte Kraai,020 240 66 55,AMSTERDAM ZUIDOOST,68,1104 CD,Kraaiennest,7,Ja,NAW,www.buurthuizenzuidoost.nl
+Wijkcentra en buurthuizen,Buurthuis Gein,020 240 66 44,AMSTERDAM ZUIDOOST,83,1107 NB,Wisseloord,8,Ja,NAW,www.buurthuizenzuidoost.nl
+Wijkcentra en buurthuizen,Huis van de wijk Het Anker,06-39717877,AMSTERDAM,427,1065 DC,Jacques Veltmanstraat,9,Ja,NAW,http://www.huisvandewijknieuwwest.nl/category/hetanker/
+Wijkcentra en buurthuizen,Buurthuis Osdorp,,AMSTERDAM,1,1069 AJ,Ouwerdingenpad,10,Nee,Verhuisd,https://www.nieuwreimerswaal.nl/buurthuis-osdorp
+Supermarkten,Albert Heijn Watergraafsmeer,020-6947165,AMSTERDAM,63,1098 LE,Helmholtzstraat,11,Ja,,http://www.ah.nl/winkel/albert-heijn/Amsterdam/Helmholtzstraat/1006
+Supermarkten,Albert Heijn IJburg,020 - 4161785,AMSTERDAM,715,1087 BS,IJburglaan,12,Ja,,http://www.ah.nl/winkel/albert-heijn/Amsterdam/IJburglaan/1493
+Supermarkten,Albert Heijn Spaarndammerstraat,020-6880855,AMSTERDAM,3,1013 ZM,Spaarndammerdijk,13,Ja,,http://www.ah.nl/winkel/albert-heijn/Amsterdam/Spaarndammerdijk/1338
+Musea,Allard Pierson Museum,+ 31 (0)20 52 52 556,AMSTERDAM,127,1012 GC,Oude Turfmarkt,14,Ja,NAW,https://allardpierson.nl/bezoek/toegankelijkheid/
+Hotels,Amsterdam Manor Hotel,020 700 8400,AMSTERDAM,89,1093 EK,Linnaeusstraat,15,Ja,,http://manor-amsterdam-hampshire.h-rzn.com/index_nl.htm?lbl=ggl
+Musea,Anne Frank Huis,+31 (0)20 - 5567100,AMSTERDAM,267,1016 GV,Prinsengracht,16,Ja,NAW,https://www.annefrank.org/nl/museum/praktische-informatie/toegankelijkheid/
+Sportaccommodaties,Apollohal,020 671 3910,AMSTERDAM,4,1077 RV,Apollolaan,17,Ja,,https://www.amsterdam.nl/sport/waar-sporten/sporthallen/apollohal/
+Apotheken,Apotheek Ferdinand Bol,020 6621256,AMSTERDAM,103,1072 LE,Ferdinand Bolstraat,18,Ja,,www.ferdinandbolapotheek.nl
+Apotheken,Apotheek Watergraafsmeer Van de Kamp,020 468 27 24,AMSTERDAM,57,1098 LE,Helmholtzstraat,19,Ja,NAW,https://www.apotheekwatergraafsmeer.nl/
+Musea,Arcam | Architectuurcentrum amsterdam,020 - 620 48 78,AMSTERDAM,600,1011 VX,Prins Hendrikkade,20,Ja,NAW,https://arcam.nl/
+Fysiotherapeuten,Fysiopraktijk De Meer,020 - 7539002,AMSTERDAM,134,1098 WP,Esplanade de Meer,21,ja,,http://www.fysiopraktijkdemeer.nl
+Congres- en partyaccommodaties,Artis Parkzalen: Congres en partycentrum,020 52 33 584,AMSTERDAM,41,1018 DC,Plantage Middenlaan,22,ja,NAW,https://www.artis.nl/nl/bezoek/zakelijk-feestelijk/
+Sportaccommodaties,ASSV Amsterdams Spoorweg Sportvereniging,020-6000472,DUIVENDRECHT,10,1115 NS,Ouderkerkerlaan,23,ja,,http://assv.deds.nl
+Onderwijsinstellingen en scholen,Bindelmeer College,020 6990221,AMSTERDAM ZUIDOOST,1,1102 AL,Dubbelink,24,ja,NAW,https://bindelmeercollege.nl/
+Winkels,Bagels en Beans Spaarndammerstraat,020 682 7803,AMSTERDAM,149,1013 TG,Spaarndammerstraat,25,ja,NAW,http://www.bagelsbeans.nl/winkel_amsterdam_spaarndammerstraat.shtml
+Winkels,Bakkerij Erol Specialiteiten,020-6829827,AMSTERDAM,67,1013 TA,Spaarndammerstraat,26,ja,NAW,http://www.spaarndammerstraat.nl/winkel/specialiteitenbakkerij-erol
+Politiebureaus,Politiebureau Balistraat,0900 8844,AMSTERDAM,104,1094 JT,Balistraat,27,ja,NAW,https://www.politie.nl/mijn-buurt/politiebureaus/05/zeeburg.html
+Sportaccommodaties,Balletstudio van den Ende,020 - 694 89 58,AMSTERDAM,231,1097 GA,Kruislaan,28,ja,NAW,https://balletstudiovandenende.nl
+Kantoorgebouwen,Kantoorgebouw Mirrorcentre,,AMSTERDAM,3,1093 JX,Ter Gouwstraat,29,ja,,
+Onderwijsinstellingen en scholen,Basisschool de Rozemarn,020-6965752,AMSTERDAM ZUIDOOST,16,1102 JA,Huntum,30,Ja,,www.derozemarn.nl
+Onderwijsinstellingen en scholen,Basisschool de Schakel,020-6906577,AMSTERDAM ZUIDOOST,9,1102 WD,Alexander Dumaslaan,31,Ja,,http://www.de-schakel.com/
+Onderwijsinstellingen en scholen,Basisschool de Ster,020-6967866,AMSTERDAM ZUIDOOST,8,1107 NG,Woudrichemstraat,32,Ja,,www.obsdester.nl
+Onderwijsinstellingen en scholen,Basisschool de Tamboerijn,020-4528156,AMSTERDAM ZUIDOOST,301,1107 EZ,Reigersbos,33,Ja,,www.detamboerijn.nl
+Onderwijsinstellingen en scholen,Basisschool het Gein,020-6974522,AMSTERDAM ZUIDOOST,80,1106 ZG,Cornelis Aarnoutsstraat,34,Ja,,www.hetgein.nl
+Onderwijsinstellingen en scholen,Basisschool Samenspel locatie Kantershof,020-4165195,AMSTERDAM ZUIDOOST,636,1104 HJ,Kantershof,35,Ja,,http://www.bssamenspel.nl
+Onderwijsinstellingen en scholen,Basisschool Mobiel locatie Mijehof,020-6967698,AMSTERDAM ZUIDOOST,406,1106 HW,Mijehof,36,ja,NAW,www.bsmobiel.nl
+Onderwijsinstellingen en scholen,Basisschool Samenspel locatie Geerdinkhof,020-4167898,AMSTERDAM ZUIDOOST,685,1103 RP,Geerdinkhof,37,Nee,Verhuisd,http://www.bssamenspel.nl/
+Theaters en concertgebouwen,Theater Bellevue,020 - 530 53 01,AMSTERDAM,90,1017 PN,Leidsekade,38,Ja,NAW,https://www.theaterbellevue.nl
+Winkels,Bert Verlaan Drogisterij,020-6823247,AMSTERDAM,63,1013 TA,Spaarndammerstraat,39,Ja,NAW,https://www.facebook.com/DrogisterijVerlaanAmsterdam/
+Onderwijsinstellingen en scholen,Studio K&Y Amsterdam,,AMSTERDAM,160,1074 VM,Tolstraat,40,ja,nieuwe gebruiker,https://www.studioky.nl/
+Bibliotheken,Bibliotheek Diemen,020 6902353,DIEMEN,126,1111 CP,Wilhelminaplantsoen,41,Ja,,http://www.oba.nl/openingstijden/detail.199295.html
+Bibliotheken,Bibliotheek Duivendrecht,020 - 6952282,DUIVENDRECHT,60,1115 CX,Dorpsplein,42,Ja,,http://www.oba.nl/openingstijden/detail.199296.html
+Bibliotheken,Bibliotheek Molenwijk,020-6314212,AMSTERDAM,21,1035 EG,Molenwijk,43,Ja,,http://www.oba.nl/openingstijden/detail.199278.html
+Bibliotheken,Centrale bibliotheek Oosterdokseiland,020 - 523 09 00,AMSTERDAM,143,1011 DL,Oosterdokskade,44,Ja,,http://www.oba.nl/openingstijden/detail.199270.html
+Bibliotheken,Bibliotheek Osdorp,020 - 610 74 54,AMSTERDAM,16,1068 EL,Osdorpplein,45,Ja,,http://www.oba.nl/openingstijden/detail.199281.html
+Bibliotheken,Bibliotheek Ouderkerk,020-4961366,OUDERKERK AAN DE AMSTEL,15,1191 CD,Koningin Julianalaan,46,Ja,,http://www.oba.nl/openingstijden/detail.199297.html
+Bibliotheken,Bibliotheek Slotervaart,020 - 615 05 14,AMSTERDAM,87,1065 KK,Pieter Calandlaan,47,Ja,,http://www.oba.nl/openingstijden/detail.1442060.html
+Bibliotheken,Bibliotheek Spaarndammerbuurt,020 - 682 70 26,AMSTERDAM,490,1013 SZ,Spaarndammerstraat,48,Ja,,http://www.oba.nl/openingstijden/detail.199287.html
+Theaters en concertgebouwen,Bijlmer Parktheater,020 - 311 39 33,AMSTERDAM ZUIDOOST,240,1102 DR,Anton de Komplein,49,Ja,,www.bijlmerparktheater.nl
+Onderwijsinstellingen en scholen,Basisschool Samenspel locatie 2,020 4167898,AMSTERDAM ZUIDOOST,641,1104 HJ,Kantershof,50,ja,NAW,http://www.bssamenspel.nl/
+Musea,Bijzondere Collecties UVA,020 - 525 73 00,AMSTERDAM,129,1012 GC,Oude Turfmarkt,51,Ja,,http://bijzonderecollecties.uva.nl/
+Winkels,Bikes & Boards,020 - 416 11 33,AMSTERDAM,50,1087 BP,Joris Ivensplein,52,Ja,,www.bikesandboards.nl
+Kerkgebouwen,Binnenwaai,020-8463239,AMSTERDAM,2,1087 EJ,Ed Pelsterpark,53,Ja,,www.kerkopijburg.nl
+Onderwijsinstellingen en scholen,Blauwe Lijn- Onze Wereld,020-6907360,AMSTERDAM ZUIDOOST,61,1104 NA,Kortvoort,54,Ja,NAW,https://www.deblauwelijn.nl
+Restaurants / eetgelegenheden,Blauwe Theehuis,020 - 662 02 54,AMSTERDAM,5,1071 AA,Vondelpark,55,Ja,,www.blauwetheehuis.nl
+Winkels,Kruidvat Spaarndammerstraat,0900 5784382,AMSTERDAM,99,1013 TC,Spaarndammerstraat,56,ja,nieuwe gebruiker,https://www.kruidvat.nl/
+Rondvaartboten,Blue Boat Company,020 - 679 1370,AMSTERDAM,30,1071 ZD,Stadhouderskade,57,Ja,,www.blueboat.nl
+Verpleeg- en verzorgingshuizen,De Vermeer - Valuas Zorggroep,020 8208203,AMSTERDAM,31,1071 DL,Johannes Vermeerstraat,58,ja,nieuwe gebruiker,http://www.devermeer.nl/
+Ziekenhuizen,Boven IJ ziekenhuis,020 - 634 63 46,AMSTERDAM,1,1034 CS,Statenjachtstraat,59,Ja,,www.bovenij.nl
+Verpleeg- en verzorgingshuizen,Brahmshof,020-4700314,AMSTERDAM,62,1077 HJ,Brahmsstraat,60,Nee,onbekend,www.zhga.nl
+Restaurants / eetgelegenheden,Grand Cafe Restaurant 1e klas,020 - 6250131,AMSTERDAM,15,1012 AB,Stationsplein,61,Ja,,www.restaurant1eklas.nl
+Restaurants / eetgelegenheden,Brasserie Harkema,020 428 2222,AMSTERDAM,67,1012 KD,Nes,62,Ja,,www.brasserieharkema.nl
+Wijkcentra en buurthuizen,Huis van de Buurt Claverhuis,020 - 624 83 53,AMSTERDAM,70,1016 TX,Elandsgracht,63,Ja,NAW,https://huisvdbuurtcentrum.amsterdam/contact/conctact-het-claverhuis/
+Wijkcentra en buurthuizen,Huis van de Buurt De Boomsspijker,020 - 626 40 02,AMSTERDAM,52,1011 EC,Recht Boomssloot,64,Ja,NAW,https://huisvdbuurtcentrum.amsterdam/contact/contact-de-boomsspijker/
+Wijkcentra en buurthuizen,Buurtcentrum de Driehoek,020 - 636 10 57,AMSTERDAM,116,1025 PX,Waddenweg,65,ja,,www.bcdedriehoek.nl
+Wijkcentra en buurthuizen,Buurtcentrum De Meevaart,020-6653320,AMSTERDAM,48,1094 JN,Balistraat,66,ja,,www.meevaart.nl
+Wijkcentra en buurthuizen,Huis van de Wijk De Havelaar,,AMSTERDAM,2,1053 SX,Douwes Dekkerstraat,67,ja,,https://www.combiwel.nl/locaties/huis-van-de-wijk-havelaar/
+Wijkcentra en buurthuizen,Huis van de Wijk De Horizon,020-486 68 96,AMSTERDAM,50,1013 ZD,Zaandammerplein,68,ja,,www.abc-west.nl/algemeen-horizon
+Wijkcentra en buurthuizen,Huis van de wijk De Meeuw,020 - 632 38 45,AMSTERDAM,300,1021 PH,Motorwal,69,ja,NAW,https://www.huisvandewijknoord.nl/contact/de-meeuw/
+Wijkcentra en buurthuizen,Impuls Het Groeiparadijs bso,020 4862201,AMSTERDAM,4,1055 KA,Krelis Louwenstraat,70,ja,nieuwe gebruiker,https://www.impulskinderopvang.nl/locatie/het-groe
+Wijkcentra en buurthuizen,Huis van de Wijk de Pijp,,AMSTERDAM,66,1072 PG,2e van der Helststraat,71,ja,NAW,https://www.combiwel.nl/locaties/buurtcentrum-de-pijp/
+Wijkcentra en buurthuizen,Het Parkhuis,020 - 460 93 69,AMSTERDAM,110,1098 WD,Anfieldroad,72,ja,NAW,https://www.dynamo-amsterdam.nl/locatie/het-parkhuis/
+Restaurants / eetgelegenheden,Restaurant Daalder,020 - 6248864,AMSTERDAM,1,1057 DT,Postjesweg,73,ja,NAW,http://www.daalderamsterdam.nl/
+Wijkcentra en buurthuizen,BOOST Amsterdam,,AMSTERDAM,2,1091 XX,Danie Theronstraat,74,ja,NAW,http://boostamsterdam.nl/
+Winkels,C'estbon,020-6941762,AMSTERDAM,1,1098 BT,Hogeweg,75,ja,,www.cestbon.nl
+Cafe's,Café-Restaurant Amsterdam,020 - 682 26 66,AMSTERDAM,6,1051 PA,Watertorenplein,76,ja,NAW,http://www.caferestaurantamsterdam.nl/
+Kantoorgebouwen,Artsen zonder Grenzen,020 - 520 8700,AMSTERDAM,14,1018 DD,Plantage Middenlaan,77,ja,,www.artsenzondergrenzen.nl/contact
+Galeries,Framer framed,020-7630973,AMSTERDAM,71,1093 KS,Oranje-Vrijstaatkade,78,ja,NAW,https://framerframed.nl/nl/
+Gezondheidscentra,Centrum NAH Heliomare,088-9208800,AMSTERDAM,35,1075 RV,Baarsstraat,79,ja,NAW,http://www.heliomare.nl/amsterdam
+Winkels,Chaplin Shoes,020-3315151,AMSTERDAM,119,1013 TE,Spaarndammerstraat,80,ja,,www.chaplinshoe.nl
+Restaurants / eetgelegenheden,Chung Wah Chinees eethuis,,AMSTERDAM,145,1013 TG,Spaarndammerstraat,81,ja,,
+Sportaccommodaties,Chung-Mu Taekwon-do,020-6335519,AMSTERDAM,25,1032 JZ,Papaverhoek,82,nee,Verhuisd,https://chungmu.nl/?page_id=129
+Verpleeg- en verzorgingshuizen,"De Drecht, wooncentrum voor ouderen",,AMSTERDAM ZUIDOOST,1,1106 SB,Niftrikhof,83,ja,,
+Restaurants / eetgelegenheden,’t Steakhouse,020 -671 5949,AMSTERDAM,170,1075 XP,Amstelveenseweg,84,ja,nieuw,https://www.steakhouse.nl/
+Theaters en concertgebouwen,Concertgebouw,020 - 573 05 73,AMSTERDAM,10,1071 LN,Concertgebouwplein,85,ja,,www.concertgebouw.nl
+Fysiotherapeuten,Corpus Vitae Fysio  therapie -VERHUISD,020-3053600,AMSTERDAM,25,1077 TJ,Minervaplein,86,ja,Verhuisd,www.corpus-vitae.nl
+Theaters en concertgebouwen,Crea,020-5251400,AMSTERDAM,170,1018 WV,Nieuwe Achtergracht,87,ja,,www.crea.uva.nl
+Wijkcentra en buurthuizen,Inloophuis Czaar 51,06-46182283,AMSTERDAM,51,1018 PB,Czaar Peterstraat,88,ja,NAW,http://czaar51.nl/contact/
+Theaters en concertgebouwen,De Balie,020 - 553 51 00,AMSTERDAM,10,1017 RR,Kleine-Gartmanplantsoen,89,ja,,www.debalie.nl
+Warenhuizen,De Bijenkorf,0900 - 0919,AMSTERDAM,1,1012 JS,Dam,90,ja,,www.bijenkorf.nl
+Onderwijsinstellingen en scholen,Brede school De Bockesprong / basisschool De Nautilus,020 6173656,AMSTERDAM,100,1058 VC,Theophile de Bockstraat,91,ja,,http://denautilus.net/School/-de-Bockesprong
+Theaters en concertgebouwen,De Brakke Grond,020 - 6229014,AMSTERDAM,45,1012 KD,Nes,92,ja,NAW,www.brakkegrond.nl
+Wijkcentra en buurthuizen,De Koperen Knoop,020 - 3035008,AMSTERDAM,119,1051 BA,Van Limburg Stirumstraat,93,Ja,NAW,https://www.combiwel.nl/locaties/huis-van-de-wijk-koperen-knoop/
+Winkels,Fietspiraat,020-230096,AMSTERDAM,83,1013 TB,Spaarndammerstraat,94,ja,NAW,http://www.fietspiraat.nl
+Onderwijsinstellingen en scholen,De Knotwilg,020-6 97 35 10,AMSTERDAM ZUIDOOST,5,1106 DV,Vreeswijkpad,95,ja,,www.knotwilg.nl
+Theaters en concertgebouwen,De La MarTheater,020 - 555 26 27,AMSTERDAM,402,1017 PL,Marnixstraat,96,ja,,www.delamar.nl
+Theaters en concertgebouwen,De Meervaart,020 - 410 77 00,AMSTERDAM,300,1068 LE,Meer en Vaart,97,ja,,www.meervaart.nl
+Zwembaden,De Mirandabad,020 252 4444,AMSTERDAM,9,1079 PA,De Mirandalaan,98,ja,website,https://www.amsterdam.nl/demirandabad/
+Onderwijsinstellingen en scholen,De Morgenster,020-6961238,AMSTERDAM ZUIDOOST,42,1106 LP,Holendrechtplein,99,ja,,www.ebsdemorgenster.nl
+Kerkgebouwen,De Nieuwe Stad,020 690 1458,AMSTERDAM ZUIDOOST,11,1103 TR,Luthuliplein,100,ja,NAW,https://denieuwestadzuidoost.wordpress.com/
+Theaters en concertgebouwen,De Omval,020-6001897,DIEMEN,104,1111 HL,Ouddiemerlaan,101,ja,,www.theaterdeomval.nl
+Rondvaartboten,De Pannenkoekenboot,020 - 636 88 17,AMSTERDAM,33,1033 RC,ms. van Riemsdijkweg,102,ja,,http://www.pannenkoekenboot.nl
+Onderwijsinstellingen en scholen,De Regenboog,020 6972176,AMSTERDAM ZUIDOOST,5,1107 NE,Woudrichemstraat,103,ja,,www.regenboogamsterdam.net
+Theaters en concertgebouwen,De Roode Bioscoop,020 - 625 75 00,AMSTERDAM,7,1013 HP,Haarlemmerplein,104,ja,,www.roodebioscoop.nl
+Wijkcentra en buurthuizen,Dynamo Steigerplek,020-4620366,AMSTERDAM,1,1086 ZR,William Barlowlaan,105,ja,NAW,http://www.dynamo-amsterdam.nl/
+Bioscopen en filmhuizen,Filmtheater De Uitkijk,020 223 2416,AMSTERDAM,452,1017 KE,Prinsengracht,106,ja,NAW,http://uitkijk.nl/contact/
+Restaurants / eetgelegenheden,De Veranda,020-6445814,AMSTERDAM,764,1081 JK,Amstelveenseweg,107,ja,,www.deveranda.nl
+Winkels,Vinny's Bakery,020-4167133,AMSTERDAM,653,1087 BS,IJburglaan,108,ja,,https://vinnysbakery.nl/
+Theaters en concertgebouwen,Desmet studio's,020 - 521 71 00,AMSTERDAM,4,1018 DD,Plantage Middenlaan,109,ja,,www.desmet.tv
+Wijkcentra en buurthuizen,Buurtteam Rivierenbuurt,020 - 2359 120,AMSTERDAM,13,1079 EK,Lekstraat,110,ja,NAW,www.puurzuid.nl
+Klinieken,Dierenkliniek Westerpark,020 682 68 19,AMSTERDAM,26,1013 SW,Spaarndammerstraat,111,ja,,http://www.dierenkliniekwesterpark.nl
+Winkels,Care & Beauty Piet,020 - 416 52 79,AMSTERDAM,723,1087 BS,IJburglaan,112,ja,NAW,https://debeteredrogist.nl/
+Wijkcentra en buurthuizen,Dienstencentrum Oosterpark,020-4620300,AMSTERDAM,19,1091 BB,s-Gravesandeplein,113,ja,NAW,http://www.dynamo-amsterdam.nl/
+Wijkcentra en buurthuizen,Buurtteam Volewijck,020 - 4354555,AMSTERDAM,1,1031 BV,Hagedoornplein,114,ja,NAW,https://www.buurtteamamsterdam.nl/vind-je-buurtteam/volewijck/
+Restaurants / eetgelegenheden,Restaurant Dijks,020 2801871,WATERGANG,119,1454 AE,Kanaaldijk,115,ja,nieuwe gebruiker,http://www.restaurantdijks.nl/
+Apotheken,Apotheek Zeeburg,020 4197393,AMSTERDAM,1025,1019 BW,Oostelijke Handelskade,116,ja,NAW,https://apotheekzeeburg.uwapothekeronline.nl/
+Winkels,Etos Haveneiland West,020 - 4161775,AMSTERDAM,657,1087 BS,IJburglaan,117,ja,,www.etos.nl
+Parkeergarages,Europarking Q-Park Amsterdam,0900-4466880,AMSTERDAM,250,1016 TL,Marnixstraat,118,ja,,https://www.q-park.nl/nl/parkeren-bij-q-park/per-stad/parkingid/608
+Verpleeg- en verzorgingshuizen,Evean Henriette Roland Holsthuis,020 49 52 200,AMSTERDAM ZUIDOOST,100,1104 NB,Kortvoort,119,ja,categorie,http://www.evean.nl/locatie/henriette-roland-holst
+Verpleeg- en verzorgingshuizen,Evean Korthagenhuis,020-6326281,AMSTERDAM,590,1025 ZZ,Amerbos,120,ja,,https://www.evean.nl/locatie/korthagenhuis
+Verpleeg- en verzorgingshuizen,Evean Twiskehuis,020-6312222,AMSTERDAM,2,1033 AN,Watermanstraat,121,ja,,http://www.evean.nl/locatie/twiskehuis
+Bioscopen en filmhuizen,EYE Film Instituut Nederland,020 5891400,AMSTERDAM,1,1031 KT,IJpromenade,122,ja,,www.eyefilm.nl
+Uiterlijke verzorging,The Hair Life,,AMSTERDAM,47,1013 ST,Spaarndammerstraat,123,ja,NAW,https://www.treatwell.nl/salon/hair-life/
+Sociale Dienst,"Werk, Participatie en inkomen; Terugvordering en Verhaal",020 252 6000,AMSTERDAM,323,1056 CH,Jan van Galenstraat,124,ja,,https://www.amsterdam.nl/werk-inkomen/
+Verpleeg- en verzorgingshuizen,Eduard Douwes Dekkerhuis,020-6318333,AMSTERDAM,11,1034 XZ,Schoenerstraat,125,ja,,http://www.evean.nl/locatie/eduard-douwes-dekker
+Zwembaden,Flevoparkbad Zeeburg,020 - 692 50 30,AMSTERDAM,1002,1095 DH,Insulindeweg,126,ja,,http://www.flevoparkbad.com
+Bioscopen en filmhuizen,Filmhuis Rialto,020 - 662 34 88,AMSTERDAM,338,1072 GN,Ceintuurbaan,127,ja,,www.rialtofilm.nl
+Theaters en concertgebouwen,Frascati,020 751 64 81,AMSTERDAM,63,1012 KD,Nes,128,ja,,https://www.frascatitheater.nl
+Sportaccommodaties,Fresh Fitness,020-6751207,AMSTERDAM,57,1073 RW,Tolstraat,129,ja,,www.fresh-fitness.nl
+Fysiotherapeuten,Fysio Novo,020-4636065,AMSTERDAM,151,1095 SV,Makassarstraat,130,ja,,www.fysionovo.nl
+Fysiotherapeuten,Fysio Punt Zuid,020-6769210,AMSTERDAM,63,1077 SC,Stadionweg,131,ja,NAW,https://www.fysiopuntzuid.nl/
+Fysiotherapeuten,Fysiotherapeuten Jonker en Van Rijn,020-679 33 94,AMSTERDAM,350,1074 CG,Govert Flinckstraat,132,ja,,www.jonkerenvanrijn.nl/
+Fysiotherapeuten,Fysiotherapie B. Bruinenberg,020-6768002,AMSTERDAM,35,1074 JK,Amsteldijk,133,ja,website,https://www.fysiotherapiebruinenberg.nl/
+Fysiotherapeuten,Fysiopraktijk de Koostraat,020-6190265,AMSTERDAM,34,1068 KR,J. de Koostraat,134,ja,NAW,www.fysio-osdorp.nl
+Fysiotherapeuten,Fysio de Pijp,020 6623020,AMSTERDAM,139,1073 HW,Willem Passtoorsstraat,135,ja,NAW,https://www.fysiodepijp.nl/
+Fysiotherapeuten,FysioXL Amsterdam,020-6627462,AMSTERDAM,263,1076 NZ,Stadionweg,136,ja,NAW,https://www.fysioxl.nl/fysiotherapie/amsterdam-zuid/
+Kantoorgebouwen,Kantoorgebouw,,AMSTERDAM,356,1013 CR,Van Diemenstraat,137,ja,,
+Fysiotherapeuten,Fysiotherapie Van Wou,020 - 673 04 60,AMSTERDAM,148,1073 GJ,Rustenburgerstraat,138,ja,,www.fysiotherapievanwou.nl
+Fysiotherapeuten,Fysiotherapiepraktijk Lomanstraat,020-6795353,AMSTERDAM,4,1075 RA,Lomanstraat,139,nee,onbekend,https://www.facebook.com/peterottensmanueeltherapeut/
+Kerkgebouwen,ISKCON Amsterdam,020 6751404,AMSTERDAM,80,1072 RD,Lizzy Ansinghstraat,140,ja,nieuwe gebruiker,http://www.iskconamsterdam.nl/
+Fysiotherapeuten,Fysiotherapiepraktijk Wellinghoff,020-6712291,AMSTERDAM,16,1073 RR,Toldwarsstraat,141,nee,Verhuisd,www.fysioxl.nl
+Fysiotherapeuten,Fysiotherapiepraktijk Zeeburg locatie Zeeburgerdijk,020-6652856,AMSTERDAM,31,1093 SL,Zeeburgerdijk,142,ja,,www.fysiotherapie-zeeburg.nl
+Galeries,Galerie Outsider Art,020 - 33 020 83,AMSTERDAM,1,1018 DR,Nieuwe Keizersgracht,143,nee,Verhuisd,www.amsterdam-outsider-art.nl
+Winkels,Gall en Gall Haveneiland West,020 - 4650120,AMSTERDAM,659,1087 BS,IJburglaan,144,ja,,www.gall.nl
+Sportaccommodaties,Fitnessclub Life and Kicking,020-4161922,AMSTERDAM,11,1087 KR,Eva Besnyostraat,145,ja,,www.lifeandkicking.nl
+Toeristische attracties,Gassan Diamonds,020 - 622 53 33,AMSTERDAM,173,1011 LN,Nieuwe Uilenburgerstraat,146,ja,,https://www.gassan.com
+Winkels,Tony's Chocolonely Store & Office,020 2051200,AMSTERDAM,1,1014 DB,Pazzanistraat,147,ja,nieuwe gebruiker,http://www.tonyschocolonely.com/
+Fysiotherapeuten,Geuzenhoed: Praktijk voor Fysiotherapie A.H. Gerardhuis,020-4470093,AMSTERDAM,358,1067 KP,Nolensstraat,148,ja,,http://fysiotherapieahg.nl
+Zwembaden,Noorderparkbad,020-4352120,AMSTERDAM,5,1032 VS,Sneeuwbalweg,149,ja,website,https://www.amsterdam.nl/sport/sport-amsterdam/zwembaden/noorderparkbad/
+Congres- en partyaccommodaties,Gashouder,020-5860710,AMSTERDAM,1,1014 DD,Klonne plein,150,ja,,www.westergasfabriek.nl
+Gezondheidscentra,Gezondheidscentrum Banne Buiksloot,020-6319157,AMSTERDAM,7,1034 PX,Parlevinker,151,ja,,http://www.gzc-bannebuiksloot.nl/
+Gezondheidscentra,Gezondheidscentrum Klein Gooioord,020-6992932,AMSTERDAM ZUIDOOST,1001,1103 TW,Bijlmerdreef,152,ja,,https://kleingooioord.praktijkinfo.nl
+Gezondheidscentra,Gezondheidscentrum Gein,020-6971941,AMSTERDAM ZUIDOOST,50,1106 MH,Wisseloordplein,153,ja,NAW,http://gezondheidscentrum-gein.praktijkinfo.nl/
+Gezondheidscentra,Gezondheidscentrum Venserpolder,020-3141900,AMSTERDAM ZUIDOOST,54,1102 VL,Alfred Döblinstraat,154,nee,Verhuisd,https://gezondheidscentrumvenserpolder.praktijkinfo.nl
+Gezondheidscentra,Gezondheidscentrum Zeeburg,020-4183097,AMSTERDAM,313,1019 KT,C. van Eesterenlaan,155,ja,,http://www.gzc-zeeburg.nl
+Winkels,Westerpark Computers,020 7744945,AMSTERDAM,636,1013 TH,Spaarndammerstraat,156,ja,website,http://www.westerparktelecom.nl/
+Fysiotherapeuten,Groepspraktijk Hofmijster,020-6170552,AMSTERDAM,5,1058 GL,Surinameplein,157,ja,,www.fysiotherapiehofmijster.nl
+Congres- en partyaccommodaties,Groot Melkhuis,020-6129674,AMSTERDAM,2,1071 AA,Vondelpark,158,ja,,www.grootmelkhuis.nl
+Winkels,Hans Anders Middenweg,0800-0075,AMSTERDAM,26,1097 BN,Middenweg,159,ja,website,https://www.hansanders.nl/opticiens/amsterdam/middenweg-26/
+Klinieken,Olivier Termijtelen Energietherapie,06-20929452,AMSTERDAM,158,1087 BB,Cas Oorthuyskade,160,ja,,www.energietherapie.nl
+Musea,Hermitage Amsterdam,020-5308755,AMSTERDAM,51,1018 EJ,Amstel,161,ja,,www.hermitage.nl
+Musea,Het Grachtenhuis,020-4211656,AMSTERDAM,386,1016 CJ,Herengracht,162,ja,,www.hetgrachtenhuis.nl
+Gezondheidscentra,Gezondheidscentrum Nellestein,020-696 20 20,AMSTERDAM ZUIDOOST,114,1108 HE,Liendenhof,163,ja,,https://gc-nellestein.praktijkinfo.nl
+Onderwijsinstellingen en scholen,Praktijkcollege de Dreef,020 5195070,AMSTERDAM ZUIDOOST,7,1102 WD,Alexander Dumaslaan,164,ja,nieuwe gebruiker,http://www.dedreef.net/
+Theaters en concertgebouwen,Het Muziektheater,020 625 54 55,AMSTERDAM,3,1011 PN,Amstel,165,ja,,www.muziektheater.nl
+Wijkcentra en buurthuizen,Huis van de Buurt Het Schouw,020-7564000,AMSTERDAM,2,1025 XJ,Dollardplein,166,ja,NAW,https://www.amstelring.nl/huis-van-de-buurt-het-schouw
+Gezondheidscentra,Gezondheidscentrum Steigereiland,020-4952256,AMSTERDAM,2,1086 ZK,Cornelis Zillesenlaan,167,ja,,http://www.gzc-steigereiland.nl
+Uiterlijke verzorging,HiziHair - IJburg,020 - 416 47 60,AMSTERDAM,52,1087 BP,Joris Ivensplein,168,ja,,www.hizihair.nl
+Onderwijsinstellingen en scholen,Hogeschool van Amsterdam  - Benno Premselahuis (BPH),020 - 595 47 00,AMSTERDAM,1,1091 GC,Rhijnspoorplein,169,ja,,www.hva.nl/locaties
+Onderwijsinstellingen en scholen,Holendrechtschool,020-4531549,AMSTERDAM ZUIDOOST,39,1106 LP,Holendrechtplein,170,ja,,www.holendrechtschool.nl
+Toeristische attracties,Holland Casino Amsterdam,020 - 521 11 11,AMSTERDAM,62,1017 MB,Max Euweplein,171,ja,,https://vestigingen.hollandcasino.nl/vestigingen/amsterdam-centrum
+Musea,Hortus Botanicus Amsterdam,020-6259021,AMSTERDAM,2,1018 DD,Plantage Middenlaan,172,ja,,www.dehortus.nl
+Bioscopen en filmhuizen,Het Ketelhuis,020 - 684 00 90,AMSTERDAM,4,1014 DB,Pazzanistraat,173,ja,,www.ketelhuis.nl
+Congres- en partyaccommodaties,het Sieraad,020-8200928,AMSTERDAM,1,1057 DT,Postjesweg,174,ja,,www.het-sieraad.nl
+Hotels,Hotel Double Tree by Hilton,020-530 08 00,AMSTERDAM,4,1011 DK,Oosterdoksstraat,175,ja,,www.amsterdam.doubletree.com
+Huisartsen,Huisartsenpraktijk De Bankwerkerij,(020) 63 60 367,AMSTERDAM,89,1021 NT,Bankwerkerij,176,ja,NAW,https://huisartsenbankwerkerij.nl/contact/
+Huisartsen,Huisartsenpraktijk Frankendael,020 4650924,AMSTERDAM,68,1097 DM,James Wattstraat,177,ja,naam gewijzigd,https://huisartsenpraktijkfrankendael.nl/
+Huisartsen,Huisartsenpraktijk Kuipersstraat 151,020 6713389,AMSTERDAM,151,1073 ER,Kuipersstraat,178,ja,NAW,https://www.huisartsindepijp.amsterdam/
+Huisartsen,Huisartsenpraktijk Rustenburgerstraat,020-6790109,AMSTERDAM,144,1073 GJ,Rustenburgerstraat,179,ja,,https://huisartsenrustenburg.praktijkinfo.nl
+Huisartsen,Huisartsenpraktijk Westlandgracht,020-6158287,AMSTERDAM,91,1058 TR,Westlandgracht,180,ja,NAW,http://huisartsenwestlandgracht.uwartsonline.nl/
+Huisartsen,Huisartspraktijk Reuvekamp,020-6654961,AMSTERDAM,3,1094 RD,Halmaheirastraat,181,ja,NAW,http://www.huisartszeeburg.nl/
+Wijkcentra en buurthuizen,Huis van de wijk De Evenaar,020 - 631 59 41,AMSTERDAM,189,1033 BE,Kometensingel,182,ja,NAW,www.huisvandewijknoord.nl/
+Winkels,IJzerhandel Spaarndam,020-6828881,AMSTERDAM,135,1013 TE,Spaarndammerstraat,183,ja,,
+Huisartsen,"Huisartsen,- en psychologenpraktijk De Oostkaap",020-4193282,AMSTERDAM,140,1019 BP,Oostelijke Handelskade,184,ja,NAW,http://keblusek.home.xs4all.nl/
+Uiterlijke verzorging,Ilona's kapsalon,06 20252794,AMSTERDAM,117,1013 TD,Spaarndammerstraat,185,ja,,http://www.ilona-kapsalon.nl/
+Restaurants / eetgelegenheden,In de Waag,020-4227772,AMSTERDAM,4,1012 CR,Nieuwmarkt,186,ja,,www.indewaag.nl/
+Musea,Internationaal Instituut voor Sociale Geschiedenis,020-6685866,AMSTERDAM,31,1019 AT,Cruquiusweg,187,ja,,https://socialhistory.org/nl
+Huisartsenposten,Huisartsenpost Amsterdam-Noord,088-0030600,AMSTERDAM,1,1034 CS,Statenjachtstraat,188,ja,NAW,http://www.huisartsenpostenamsterdam.nl/home/
+Onderwijsinstellingen en scholen,Jan Woudsmaschool,0294-450190,AMSTERDAM ZUIDOOST,4,1109 AR,Jaargetijden,189,ja,,www.janwoudsmaschool.nl
+Winkels,Janan Fashion,020-6822453,AMSTERDAM,2,1013 TN,Knollendamstraat,190,ja,website,http://www.jananfashion.com
+Winkels,Jane Flowers,020 - 331 52 80,AMSTERDAM,663,1087 BS,IJburglaan,191,ja,,www.janeflowers.nl
+Restaurants / eetgelegenheden,Jelle Snacks en ijs,020-6849078,AMSTERDAM,87,1013 TC,Spaarndammerstraat,192,ja,NAW,https://www.facebook.com/Jelle.snacks.ijssalon
+Theaters en concertgebouwen,ASSITEJ NL,020 - 624 51 23,AMSTERDAM,1,1016 XP,Nieuwe Passeerdersstraat,193,ja,nieuwe gebruiker,http://assitej.nl/
+Restaurants / eetgelegenheden,Johnny's Pizza Express,020-6847181,AMSTERDAM,93,1013 TC,Spaarndammerstraat,194,ja,,http://www.johnnyspizzaamsterdam.nl/
+Kerkgebouwen,Deeper Life Bible Church Amsterdam,06-86093624,AMSTERDAM ZUIDOOST,12,1106 AT,Reewijkplein,195,ja,nieuwe gebruiker,https://dclm-nl.org/
+Musea,Joods Historisch Museum,+31 (020) 5310310,AMSTERDAM,1,1011 PL,Nieuwe Amstelstraat,196,ja,,www.jhm.nl
+Winkels,Kadoriënt,020 6869057,AMSTERDAM,95,1013 TC,Spaarndammerstraat,197,ja,,http://www.kadorient.nl
+Openbare gebouwen,Kamer van Koophandel,020-5314000,AMSTERDAM,5,1013 AA,De Ruyterkade,198,ja,NAW,http://www.kvk.nl
+Uiterlijke verzorging,Kapsalon Tina,020 6865815,AMSTERDAM,97,1013 TC,Spaarndammerstraat,199,ja,,
+Winkels,Doner Center kapadokya,020 7747611,AMSTERDAM,127,1013 TE,Spaarndammerstraat,200,ja,nieuwe gebruiker,
+Sportaccommodaties,KNHS HandboogSchutterij Concordia,020-4118777,AMSTERDAM,10,1067 MV,Abe Lenstralaan,201,ja,,www.knhs-concordia.org
+Congres- en partyaccommodaties,Knijn Bowling & restaurant,020 - 664 22 11,AMSTERDAM,3,1078 GR,Scheldeplein,202,ja,,www.knijnbowling.nl
+Restaurants / eetgelegenheden,Koffiehuis KHL,020-7791575,AMSTERDAM,44,1019 BN,Oostelijke Handelskade,203,ja,,www.khl.nl
+Kerkgebouwen,Koningskerk,020 - 694 28 88,AMSTERDAM,20,1097 EP,Van 't Hofflaan,204,ja,,www.ebga.nl
+Congres- en partyaccommodaties,IJkantine,020 - 633 71 62,AMSTERDAM,15,1033 RE,mt. Ondinaweg,205,ja,,www.ijkantine.nl
+Huisartsen,Huisartsenpraktijk Kraaienest,020-7507253,AMSTERDAM ZUIDOOST,69,1104 CE,Kraaiennest,206,ja,,https://huisartsenpraktijkkraaiennest.praktijkinfo.nl
+Bioscopen en filmhuizen,Kriterion,020 - 623 17 08,AMSTERDAM,170,1018 WE,Roetersstraat,207,ja,decription,www.kriterion.nl
+Winkels,Kruidvat Christiaan Huygensplein,0900-57843828,AMSTERDAM,34,1098 RC,Christiaan Huygensplein,208,ja,,www.kruidvat.nl
+Winkels,Vroom & Nobbe Opticiens,020 7729586,AMSTERDAM,143,1013 TG,Spaarndammerstraat,209,ja,nieuwe gebruiker,http://www.vroomennobbeopticiens.nl/
+Kerkgebouwen,Liberaal Joodse Gemeente,020-5400120,AMSTERDAM,41,1079 RK,Zuidelijke Wandelweg,210,ja,,www.ljgamsterdam.nl
+Hotels,Lloyd hotel en restaurant,020-5613636,AMSTERDAM,34,1019 BN,Oostelijke Handelskade,211,ja,,http://www.lloydhotel.com/contact/contact.htm
+Kantoorgebouwen,Verzamelgebouw Oostelijke Handelskade,,AMSTERDAM,12,1019 BM,Oostelijke Handelskade,212,ja,,
+Warenhuizen,Ikea Amsterdam Zuidoost,0900 - 235 45 32,AMSTERDAM ZUIDOOST,2,1101 BL,Hullenbergweg,213,ja,,https://www.ikea.com/nl/nl/stores/amsterdam/
+Wijkcentra en buurthuizen,Multifunctioneel Centrum  Binnenhof,020 6422835,AMSTERDAM,112,1082 LP,Arent Janszoon Ernststraat,214,ja,NAW,https://www.hvdwbuitenveldert.nl/organisaties.html
+Sportaccommodaties,Jaap Edenbaan,020 - 694 96 52,AMSTERDAM,64,1098 NJ,Radioweg,215,ja,,www.jaapeden.nl
+Theaters en concertgebouwen,Koninklijk Theater Carré,020-5249494,AMSTERDAM,115,1018 EM,Amstel,216,ja,,www.carre.nl
+Galeries,Loods 6,020-4182020,AMSTERDAM,143,1019 LB,Knsm-Laan,217,ja,,www.loods6.nl
+Informatiecentra,Mee Amstel Zaan,020 - 512 72 72,AMSTERDAM,10,1062 DB,Derkinderenstraat,218,ja,,www.meeaz.nl
+Toeristische attracties,Molen van Sloten; kuiperijmuseum,020 - 669 04 12,AMSTERDAM,10,1066 EZ,Akersluis,219,ja,,www.molenvansloten.nl
+Wijkcentra en buurthuizen,Multifunctioneel Centrum de Edelsteen,020-7670392,AMSTERDAM,3,1074 HA,Smaragdplein,220,ja,,www.combiwel.nl/locaties/multifunctioneel-centrum-de-edelsteen
+Restaurants / eetgelegenheden,Cantine de Caron,31202250059,AMSTERDAM,8,1014 DB,Pazzanistraat,221,ja,nieuwe gebruiker,http://www.cantinedecaron.nl/
+Toeristische attracties,Madame Tussauds Amsterdam,020-5221010,AMSTERDAM,20,1012 NP,Dam,222,ja,website,https://www.madametussauds.com/amsterdam/nl
+Warenhuizen,Magna Plaza Shopping Centre,020 - 626 91 99,AMSTERDAM,182,1012 SJ,Nieuwezijds Voorburgwal,223,ja,,www.magnaplaza.nl
+Gezondheidscentra,Mammae Mia,020-6408337,AMSTERDAM,136,1092 EC,Derde Oosterparkstraat,224,ja,,www.mammaemia.nl
+Sportaccommodaties,Manege Nieuw Amstelland,020-6432468,AMSTELVEEN,17,1182 AC,Jan Tooropplantsoen,225,ja,NAW,https://www.manegenieuwamstelland.nl/
+Wijkcentra en buurthuizen,Huis van de Wijk de Tagerijn,020 489 44 40,AMSTERDAM,20,1057 VW,Balboastraat,226,ja,NAW,https://www.combiwel.nl/locaties/huiskamer-van-de-buurt-de-tagerijn/
+Politiebureaus,Politiebureau Meer en Vaart,0900-8844,AMSTERDAM,284,1068 LE,Meer en Vaart,227,ja,NAW,https://www.politie.nl/mijn-buurt/politiebureaus/05/nieuw-west-zuid.html
+Restaurants / eetgelegenheden,Borrl Kitchen Deli,020 3542669,AMSTERDAM,41,1018 CV,Plantage Kerklaan,228,ja,nieuwe gebruiker,http://borrl.kitchen/
+Winkels,Miele Witgoedcenter,020-4000016,AMSTERDAM,26,1098 CC,Hogeweg,229,ja,,www.mieledealer.nl
+Restaurants / eetgelegenheden,Amstel Boathouse,020 2211505,AMSTERDAM,223,1079 LK,Amsteldijk,230,ja,nieuwe gebruiker,http://www.amstelboathouse.nl/
+Toeristische attracties,NEMO,020 - 531 32 33,AMSTERDAM,2,1011 VX,Oosterdok,231,ja,,www.e-NEMO.nl
+Kantoorgebouwen,Makelen en Advies,,AMSTERDAM,125,1097 EK,Hugo de Vrieslaan,232,ja,nieuwe gebruiker,https://www.makelenenadvies.nl/
+Tandartsen,Mondzorg Centrum IJburg,020-4160176,AMSTERDAM,393,1086 ZJ,IJburglaan,233,ja,website,http://www.mondzorgcentrumijburg.nl/
+Kerkgebouwen,Huis van Sant'Egidio (Mozes en Aaronkerk),020-233 15 22,AMSTERDAM,205,1011 PG,Waterlooplein,234,ja,,http://www.santegidio.nl/amsterdam/
+Theaters en concertgebouwen,Jungle Amsterdam,020-7373326,AMSTERDAM,26,1093 VS,Tweede van Swindenstraat,235,ja,nieuwe gebruiker,http://www.jungle.amsterdam/
+Onderwijsinstellingen en scholen,OBS Nellestein,020-6964563,AMSTERDAM ZUIDOOST,31,1108 EL,Leksmondplein,236,ja,,www.nellestein.nl
+Wijkcentra en buurthuizen,Akros kinderopvang en welzijn Chassé,020 – 261 05 00,AMSTERDAM,91,1057 JB,Chassestraat,237,ja,NAW,www.akros-amsterdam.nl/
+Kerkgebouwen,Oosterkerk,020 6272280,AMSTERDAM,1,1018 LS,Kleine Wittenburgerstraat,238,ja,,http://www.oosterkerk-amsterdam.nl
+Musea,Museum Het Schip,020 6868 595,AMSTERDAM,140,1013 XT,Spaarndammerplantsoen,239,ja,,http://www.hetschip.nl
+Kantoorgebouwen,Museum Plaza,,AMSTERDAM,85,1017 RZ,Weteringschans,240,ja,,
+Musea,Museum Van Loon,020 - 624 52 55,AMSTERDAM,672,1017 ET,Keizersgracht,241,ja,,www.museumvanloon.nl
+Theaters en concertgebouwen,Muziekgebouw aan 't IJ,020 - 788 20 00,AMSTERDAM,1,1019 BR,Piet Heinkade,242,ja,,www.muziekgebouw.nl
+Educatieve centra,Muziekschool Amsterdam Noord,020-6368654,AMSTERDAM,10,1024 TT,Alkmaarstraat,243,ja,,www.muziekcentrum-noord.nl
+Onderwijsinstellingen en scholen,Drostenburg (Mytyl tytylschool Orion colllege),020 - 3987755,AMSTERDAM ZUIDOOST,1,1102 AM,Drostenburg,244,ja,,https://sites.google.com/a/orion.nl/drostenburg-amsterdam/
+Restaurants / eetgelegenheden,Nieuwe Kafe,020 - 6272830,AMSTERDAM,8,1012 NN,Eggertstraat,245,ja,,www.nieuwe-kafe.nl
+Kerkgebouwen,Nieuwe Kerk,020-638 69 09,AMSTERDAM,17,1012 NL,Gravenstraat,246,ja,,http://www.nieuwekerk.nl
+Educatieve centra,Nowhere,020-4636912,AMSTERDAM,90,1094 GS,Madurastraat,247,ja,,www.nowhere.nl
+Onderwijsinstellingen en scholen,OBS Wereldwijs,020 - 6981078,AMSTERDAM ZUIDOOST,696,1103 RP,Geerdinkhof,248,ja,,http://www.obs-wereldwijs.nl/
+Onderwijsinstellingen en scholen,OBS De Brink,020 - 697 26 85,AMSTERDAM ZUIDOOST,302,1106 HW,Mijehof,249,ja,,www.debrink.com
+Hotels,Okura Hotel Amsterdam,020 - 678 71 11,AMSTERDAM,333,1072 LH,Ferdinand Bolstraat,250,ja,,www.okura.nl
+Musea,Ons' Lieve Heer op Solder,020 - 624 66 04,AMSTERDAM,40,1012 GE,Oudezijds Voorburgwal,251,ja,NAW,http://www.opsolder.nl
+Parkeergarages,Parking Centrum Oosterdok,020 420 33 81,AMSTERDAM,150,1011 DK,Oosterdoksstraat,252,ja,,www.parkingcentrumoosterdok.nl
+Onderwijsinstellingen en scholen,Open Schoolgemeenschap Bijlmer,020 - 690 90 50,AMSTERDAM ZUIDOOST,5,1103 BE,Gulden Kruis,253,ja,,www.openschoolgemeenschapbijlmer.nl
+Openbare toiletten,Openbaar toilet Leidseplein,,AMSTERDAM,31A,1017 PS,Leidseplein,254,ja,verplaatst,
+Openbare toiletten,Openbaar toilet Waterlooplein,,AMSTERDAM,165,1011 PG,Waterlooplein,255,ja,,
+Restaurants / eetgelegenheden,Pacific Parc,020-4887778,AMSTERDAM,23,1014 DA,Polonceaukade,256,ja,,www.pacificparc.nl
+Restaurants / eetgelegenheden,Panama,020 - 311 86 86,AMSTERDAM,4,1019 BM,Oostelijke Handelskade,257,ja,,www.panama.nl
+Onderwijsinstellingen en scholen,Openbare basisschool Cornelis Jetses,0294-414370,AMSTERDAM ZUIDOOST,6,1109 AR,Jaargetijden,258,ja,,www.cjetses.nl
+Restaurants / eetgelegenheden,Vondelpark3,020 639 2589,AMSTERDAM,3,1071 AA,Vondelpark,259,ja,,www.vondelpark3.nl
+Kerkgebouwen,Oude Kerk,020 - 625 82 84,AMSTERDAM,23,1012 GX,Oudekerksplein,260,ja,,www.oudekerk.nl
+Parkeergarages,Parkeergarage Markenhoven,020 - 420 79 30,AMSTERDAM,220,1011 MP,Anne Frankstraat,261,ja,NAW,https://www.amsterdam.nl/parkeren-verkeer/parkeergarages/overzicht/markenhoven/
+Bioscopen en filmhuizen,Pathé City,0900-1458,AMSTERDAM,15,1017 RP,Kleine-Gartmanplantsoen,262,ja,,https://www.pathe.nl/bioscoop/city
+Congres- en partyaccommodaties,Pakhuis De Zwijger,020-788 44 40,AMSTERDAM,179,1019 HC,Piet Heinkade,263,ja,,www.dezwijger.nl
+Restaurants / eetgelegenheden,Palladium,020 - 620 55 36,AMSTERDAM,7,1017 RP,Kleine-Gartmanplantsoen,264,ja,,www.palladiumamsterdam.nl
+Bioscopen en filmhuizen,Pathé De Munt,0900-1458,AMSTERDAM,15,1017 HD,Vijzelstraat,265,ja,,https://www.pathe.nl/bioscoop/demunt
+Theaters en concertgebouwen,Paradiso,020 - 626 45 21,AMSTERDAM,6,1017 SG,Weteringschans,266,ja,,www.paradiso.nl
+Gezondheidscentra,Paramedisch Centrum In de praktijk,020-6613288,AMSTERDAM,903,1087 EN,IJburglaan,267,ja,,www.indepraktijk.info
+Restaurants / eetgelegenheden,HOP 020,020 2480111,AMSTERDAM,12,1083 HZ,Amstelpark,268,ja,nieuwe gebruiker,http://www.hop020.nl/
+Parkeergarages,Parkeergarage De Bijenkorf,0900-4466880,AMSTERDAM,1,1012 JW,Beursplein,269,ja,,https://www.q-park.nl/nl/parkeren-bij-q-park/per-stad/parkingid/609
+Parkeergarages,Parkeergarage Nieuwendijk (De Kolk),0900 - 44 66 880,AMSTERDAM,18,1012 PV,Nieuwezijds Kolk,270,ja,,https://www.q-park.nl/nl/parkeren-bij-q-park/per-stad/parkingid/1691
+Parkeergarages,Parkeergarage Heinekenplein,020 - 470 08 88,AMSTERDAM,6,1072 NV,1e van der Helststraat,271,ja,,https://www.apcoa.nl/parkeerplaats/amsterdam/apcoa-parking-heinekenplein/
+Parkeergarages,Parkeergarage Q-Park Byzantium,0900-4466880,AMSTERDAM,1,1054 ET,Tesselschadestraat,272,ja,,https://www.q-park.nl/nl/parkeren-bij-q-park/per-stad/parkingid/605
+Parkeergarages,Parkeergarage Q-Park Museumplein,0900 - 446 68 80,AMSTERDAM,33,1071 AP,Van Baerlestraat,273,ja,,http://www.q-park.nl/nl/parkeren-bij-q-park/per-stad/amsterdam/museumplein
+Parkeergarages,Parkeergarage Stadhuis / Muziektheater,,AMSTERDAM,28,1011 PG,Waterlooplein,274,ja,NAW,https://www.amsterdam.nl/parkeren-verkeer/parkeergarages/overzicht/stadhuis/
+Parkeergarages,Parkeergarage Amsterdam Centraal,020-6385330,AMSTERDAM,20,1012 TL,Prins Hendrikkade,275,ja,NAW,https://www.q-park.nl/nl-nl/parkeren/amsterdam/amsterdam-centraal/
+Sportaccommodaties,Prins Willem Alexander manege,020 69 79 701,AMSTERDAM ZUIDOOST,9,1108 AZ,Loosdrechtdreef,276,ja,,www.pwamanege.nl
+Revalidatiecentra,Reade - locatie: Jan van Breemenstraat,020-5896503,AMSTERDAM,2,1056 AB,Dr. Jan van Breemenstraat,277,ja,,www.reade.nl
+Bioscopen en filmhuizen,Pathé Tuschinski,0900-1458,AMSTERDAM,26,1017 CN,Reguliersbreestraat,278,ja,,https://www.pathe.nl/bioscoop/tuschinski
+Musea,Internationaal Instituut voor Sociale Geschiedenis,020 6685866,AMSTERDAM,10,1019 HA,Zeeburgerkade,279,ja,nieuwe gebruiker,https://iisg.amsterdam/nl
+Parkeergarages,Piet Heingarage,,AMSTERDAM,59,1019 GM,Piet Heinkade,280,ja,NAW,https://www.amsterdam.nl/parkeren-verkeer/parkeergarages/overzicht/piet-heingarage/
+Theaters en concertgebouwen,Polanentheater,020 - 682 13 11,AMSTERDAM,174,1013 WC,Polanenstraat,281,ja,,www.polanentheater.nl
+Gezondheidscentra,Fysiotherapie IJburg,020 2297869,AMSTERDAM,140,1087 DJ,Daguerrestraat,282,ja,NAW,http://corpuscompany.nl/
+Restaurants / eetgelegenheden,Restaurant Rosarium,020-6444085,AMSTERDAM,1,1083 HZ,Amstelpark,283,ja,,www.rosarium.net
+Onderwijsinstellingen en scholen,Prof. Dr. I.C. van Houteschool,020 6974506,AMSTERDAM ZUIDOOST,27,1108 EL,Leksmondplein,284,ja,,www.vanhouteschool.nl
+Onderwijsinstellingen en scholen,Professor Dumontschool,020-3421919,AMSTERDAM ZUIDOOST,2,1107 NG,Woudrichemstraat,285,ja,NAW,https://www.sbo-dumont.nl/
+Gezondheidscentra,Psychotherapiepraktijk Annette Plümpe,020-6169574,AMSTERDAM,108,1019 AX,Panamakade,286,ja,,www.annetteplumpe.nl
+Gezondheidscentra,Psychotherapiepraktijk Vasterling,020-6246207,AMSTERDAM,1058,1019 BX,Veemkade,287,nee,onbekend,
+Congres- en partyaccommodaties,PTA (Passenger Terminal Amsterdam),020 - 509 10 00,AMSTERDAM,27,1019 BR,Piet Heinkade,288,ja,,www.ptamsterdam.nl
+Sportaccommodaties,Ronald McDonald Centre,020-6335510,AMSTERDAM,652,1027 ED,Beemsterstraat,289,ja,,http://www.kinderfonds.nl/centre/
+Musea,Rembrandthuis,+31 (0)20 5200 400,AMSTERDAM,4,1011 NK,Jodenbreestraat,290,ja,,www.rembrandthuis.nl
+Restaurants / eetgelegenheden,Restaurant Freud,020 688 5548,AMSTERDAM,424,1013 SZ,Spaarndammerstraat,291,ja,,www.restaurantfreud.nl
+Musea,Scheepvaartmuseum,020-5232222,AMSTERDAM,1,1018 KK,Kattenburgerplein,292,ja,,www.hetscheepvaartmuseum.nl
+Musea,Rijksmuseum,020 6747 000,AMSTERDAM,1,1071 XX,Museumstraat,293,ja,,www.rijksmuseum.nl
+Sportaccommodaties,Roeicentrum Berlagebrug,020-468 3241,AMSTERDAM,1094,1097 DS,Weesperzijde,294,ja,,http://www.roeicentrumberlagebrug.nl/
+Sportaccommodaties,Sportcentrum De Werf,020-6206767,AMSTERDAM,75,1033 PK,Klinkerweg,295,ja,NAW,https://www.cordaan.nl/locatie/de-werf
+Winkels,Vintage 2.0,06 18546144,AMSTERDAM,34,1013 SW,Spaarndammerstraat,296,ja,nieuwe gebruiker,https://www.vintage2-0.nl/
+Gezondheidscentra,Santulli Orthopedie,020-6654521,AMSTERDAM,2,1097 CE,Wakkerstraat,297,ja,,www.santulli.nl
+Onderwijsinstellingen en scholen,Baisschool Mobiel Reigersbos,020-6973735,AMSTERDAM ZUIDOOST,313,1107 EZ,Reigersbos,298,ja,,www.bsmobiel.nl
+Zwembaden,Sloterparkbad,020 ? 506 35 06,AMSTERDAM,2,1064 GW,President Allendelaan,299,ja,,www.optisport.nl/sloterparkbad
+Apotheken,Schinkel apotheek,020-6157042,AMSTERDAM,1,1059 CS,Hoofddorpweg,300,ja,NAW,https://www.serviceapotheek.nl/schinkel
+Onderwijsinstellingen en scholen,Ir. Lely Lyceum,020 56 33 050,AMSTERDAM ZUIDOOST,3,1106 AW,Ravenswaaipad,301,ja,NAW,https://www.lelylyceum.nl/
+Winkels,Schoonenberg Hoorcomfort Hogeweg,020-6656951,AMSTERDAM,11,1098 BV,Hogeweg,302,ja,,www.schoonenberg.nl
+Educatieve tuinen,Gaasperdam Schooltuin,020-6978004,AMSTERDAM ZUIDOOST,33,1106 GZ,Meerkerkdreef,303,ja,,https://www.amsterdam.nl/onderwijs-jeugd/basisonderwijs/schooltuinwerk/schooltuinwerk/schooltuin-gaasper/
+Sportaccommodaties,Sporthal Blauw-Wit,020 - 616 08 94,AMSTERDAM,18,1056 EP,Joos Banckersweg,304,ja,NAW,https://www.amsterdam.nl/sport/sporthallen/sporthal-blauw-wit/
+Onderwijsinstellingen en scholen,Shri Laksmi Basisschool,020-6950368,AMSTERDAM ZUIDOOST,73,1102 JR,Janusz Korczakstraat,305,ja,,www.shrilaksmi.nl
+Winkels,Slagerij Westerpark Halal,020 682 9902,AMSTERDAM,65,1013 TA,Spaarndammerstraat,306,ja,,
+Sportaccommodaties,Sporthal Gaasperdam,020 - 697 72 22,AMSTERDAM ZUIDOOST,5,1106 AW,Ravenswaaipad,307,ja,,www.sporthalgaasperdam.nl
+Sportaccommodaties,Sporthal Oostenburg,020 - 620 67 67,AMSTERDAM,151,1018 ND,Oostenburgergracht,308,ja,NAW,https://www.amsterdam.nl/sport/sporthallen/sporthal-oostenburg/
+Gezondheidscentra,Sociaal Medisch Centrum Spaarndammerhout,020-5803430,AMSTERDAM,73,1013 TB,Spaarndammerstraat,309,ja,,https://huisartsenspaarndammerbuurt.praktijkinfo.nl
+Apotheken,Spaarndammer Apotheek,020-6829454,AMSTERDAM,59,1013 TA,Spaarndammerstraat,310,ja,NAW,www.spaarndammer-apotheek.nl
+Supermarkten,Jumbo supermarkt,020 5818160,AMSTERDAM,544,1013 TH,Spaarndammerstraat,311,ja,nieuwe gebruiker,http://www.jumbo.com/winkels/jumbo-amsterdam-spaarndammerstraat
+Winkels,Lavertu Steenhouwers Amsterdam,020-6103086,AMSTERDAM,24,1069 CC,Jan Rebelstraat,312,ja,nieuwe gebruiker,https://www.lavertu-steenhouwers.nl/
+Sportaccommodaties,Sportcentrum de Pijp,020 - 671 65 88,AMSTERDAM,88,1072 RD,Lizzy Ansinghstraat,313,ja,NAW,https://www.amsterdam.nl/sport/sporthallen/sportcentrum-de-pijp/
+Zwembaden,Het Marnix,020 - 524 60 00,AMSTERDAM,1,1015 ZN,Marnixplein,314,ja,description,www.hetmarnix.nl
+Zwembaden,Sportfondsenbad Oost,020-6650811,AMSTERDAM,3,1093 KT,Fronemanstraat,315,ja,,http://www.sportfondsenbadamsterdamoost.nl/
+Sportaccommodaties,Sporthal Wibaut,020-6631909,AMSTERDAM,38,1091 DC,Van Musschenbroekstraat,316,ja,,
+Sportaccommodaties,Sporthal Caland Osdorp,020 6677346,AMSTERDAM,2,1068 RR,Eliza van Calcarstraat,317,ja,NAW,https://www.amsterdam.nl/sport/sporthallen/sportcentrum-caland/
+Sportaccommodaties,Sporthal De Weeren,020 - 632 27 56,AMSTERDAM,656,1027 ED,Beemsterstraat,318,ja,NAW,https://www.amsterdam.nl/sport/sporthallen/sporthal-de-weeren/
+Sportaccommodaties,Sporthal Elzenhagen,020 - 637 13 51,AMSTERDAM,1,1025 WK,J.H.Hisgenpad,319,ja,NAW,https://www.amsterdam.nl/sport/sporthallen/sporthal-elzenhagen/
+Sportaccommodaties,Sporthal Zeeburg,020 - 665 69 47,AMSTERDAM,1002,1095 DH,Insulindeweg,320,ja,NAW,https://www.amsterdam.nl/sport/sporthallen/sporthal-zeeburg/
+Sportaccommodaties,Sporthallen Zuid,020 - 305 83 05,AMSTERDAM,54,1076 EP,Burgerweeshuispad,321,ja,NAW,https://www.amsterdam.nl/sport/sporthallen/sporthallen-zuid/
+Sportaccommodaties,Sporthal Wethouder Verheij,020 693 6459,AMSTERDAM,300,1093 KP,Polderweg,322,ja,NAW,https://www.amsterdam.nl/sport/sporthallen/sporthal-wethouder/
+Stadhuizen en stadsdeelkantoren,Stadhuis / stadsloket Centrum,14 020,AMSTERDAM,1,1011 PN,Amstel,323,ja,NAW,https://www.amsterdam.nl/contact/stadsloket-centrum/
+Musea,Stadsarchief de Bazel,020 ? 251 15 11,AMSTERDAM,32,1017 HL,Vijzelstraat,324,ja,NAW,https://www.amsterdam.nl/stadsarchief/
+Stadhuizen en stadsdeelkantoren,Stadsdeehuis / stadsloket Noord,14 020,AMSTERDAM,2000,1025 XL,Buikslotermeerplein,325,ja,NAW,https://www.amsterdam.nl/contact/stadsloket-noord/
+Sportaccommodaties,Sportplaza Mercator,020 - 618 89 11,AMSTERDAM,315,1056 CB,Jan van Galenstraat,326,ja,,www.sportplazamercator.nl/
+Sportaccommodaties,Sportschool American Fitness,020-6941358,AMSTERDAM,144,1091 CZ,Blasiusstraat,327,ja,,www.americanfitness.nl
+Sportaccommodaties,TrainMore Amsterdam Oost Black Label,,AMSTERDAM,21,1093 KS,Oranje-Vrijstaatkade,328,ja,NAW,https://trainmore.nl/clubs/oost/
+Stadhuizen en stadsdeelkantoren,Stadsdeelkantoor / stadsloket Oost,14 020,AMSTERDAM,2,1093 NG,Oranje-Vrijstaatplein,329,ja,NAW,https://www.amsterdam.nl/contact/stadsloket-oost/
+Stadhuizen en stadsdeelkantoren,Stadsdeelkantoor Nieuw-West,14 020,AMSTERDAM,1000,1068 TG,Osdorpplein,330,ja,NB: GEO,https://www.amsterdam.nl/contact/stadsloket-nieuwwest/
+Stadhuizen en stadsdeelkantoren,Stadsdeelkantoor / stadsloket West,14 020,AMSTERDAM,250,1055 EK,Bos en Lommerplein,331,ja,NAW,https://www.amsterdam.nl/contact/stadsloket-west/
+Stadhuizen en stadsdeelkantoren,Stadsdeelkantoor / stadsloket Zuid,14 020,AMSTERDAM,923,1079 MZ,President Kennedylaan,332,ja,NAW,https://www.amsterdam.nl/contact/stadsloket-zuid/
+Stadhuizen en stadsdeelkantoren,Stadsdeelkantoor /stadsloket Zuidoost,14 020,AMSTERDAM ZUIDOOST,150,1102 CW,Anton de Komplein,333,ja,NAW,https://www.amsterdam.nl/contact/stadsloket-zuidoost/
+Theaters en concertgebouwen,Internationaal Theater Amsterdam,020 624 23 11,AMSTERDAM,26,1017 PT,Leidseplein,334,ja,NAW,https://ita.nl/nl/
+Stadhuizen en stadsdeelkantoren,Stadsdeelkantoor Zuidoost,14 020,AMSTERDAM ZUIDOOST,150,1102 CW,Anton de Komplein,335,nee,dubbel,www.zuidoost.amsterdam.nl
+Restaurants / eetgelegenheden,Café Brasserie Internationaal Theater Amsterdam,020 - 79 59 995,AMSTERDAM,26,1017 PT,Leidseplein,336,ja,NAW,https://ita.nl/nl/cafe-brasserie/
+Stations,Station Amsterdam Amstel,030 - 235 78 22,AMSTERDAM,1,1097 DN,Julianaplein,337,ja,,https://www.ns.nl/stationsinformatie/asa/amsterdam-amstel
+Restaurants / eetgelegenheden,4'33 grand café,020 - 788 2090,AMSTERDAM,1,1019 BR,Piet Heinkade,338,ja,NAW,http://www.433grandcafe.nl/
+Stations,Station Amsterdam Centraal,030 - 235 78 22,AMSTERDAM,15,1012 AA,De Ruyterkade,339,ja,,https://www.ns.nl/stationsinformatie/asd/amsterdam-centraal
+Stations,Station Amsterdam RAI,030 - 235 78 22,AMSTERDAM,10,1083 AD,Europaboulevard,340,ja,website,https://www.ns.nl/stationsinformatie/rai/amsterdam-rai
+Stations,Station Amsterdam Science Park,030 - 235 78 22,AMSTERDAM,261,1098 SM,Kruislaan,341,ja,website,https://www.ns.nl/stationsinformatie/assp/amsterdam-science-park
+Stations,Station Amsterdam Bijlmer ArenA,030 - 235 78 22,AMSTERDAM ZUIDOOST,1,1101 BH,De entree,342,ja,website,https://www.ns.nl/stationsinformatie/asb/amsterdam-bijlmer-arena
+Stations,Station Diemen,030 - 235 78 22,DIEMEN,1,1111 LZ,Dr A J J van Gemertplein,343,ja,website,https://www.ns.nl/stationsinformatie/dmn/diemen
+Stations,Station Amsterdam Sloterdijk,030 - 235 78 22,AMSTERDAM,105,1043 DT,Orlyplein,344,ja,website,https://www.ns.nl/stationsinformatie/ass/amsterdam-sloterdijk
+Stations,Station Duivendrecht,030 - 235 78 22,DUIVENDRECHT,1,1115 BZ,Stationsplein,345,ja,website,https://www.ns.nl/stationsinformatie/dvd/duivendrecht
+Stations,Station Amsterdam Holendrecht,030 - 235 78 22,AMSTERDAM ZUIDOOST,1,1105 AZ,Meibergdreef,346,ja,website,https://www.ns.nl/stationsinformatie/ashd/amsterdam-holendrecht
+Stations,Station Amsterdam Lelylaan,030 - 235 78 22,AMSTERDAM,31,1062 HD,Cornelis Lelylaan,347,ja,website,https://www.ns.nl/stationsinformatie/asdl/amsterdam-lelylaan
+Stations,Station Amsterdam Muiderpoort,030 - 235 78 22,AMSTERDAM,1,1093 JW,Oosterspoorplein,348,ja,website,https://www.ns.nl/stationsinformatie/asdm/amsterdam-muiderpoort
+Stations,Station Diemen-Zuid,030 - 235 78 22,DIEMEN,1,1112 CK,Diemerdreef,349,ja,website,https://www.ns.nl/stationsinformatie/dmnz/diemen-zuid
+Musea,Stedelijk Museum Amsterdam,020 5732 911,AMSTERDAM,10,1071 DJ,Museumplein,350,ja,,www.stedelijk.nl
+Stations,Station Amsterdam Zuid,030 - 235 78 22,AMSTERDAM,10,1077 XV,Zuidplein,351,ja,website,https://www.ns.nl/stationsinformatie/asdz/amsterdam-zuid
+Sportaccommodaties,Amsterdamse Stichting Mindervaliden Roeien,020-6654230,AMSTERDAM,8,1096 CN,Jan Vroegopsingel,352,ja,NAW,www.asmr.nl
+Gezondheidscentra,SAG Gezondheidscentrum Haveneiland,020 4165330,AMSTERDAM,727,1087 CH,IJburglaan,353,ja,NAW,https://www.gzc-haveneiland.nl/
+Wijkcentra en buurthuizen,Stichting Simud wijkcentrum Kormelink,020-6003900,AMSTERDAM ZUIDOOST,1,1104 NP,Kormelinkweg,354,ja,NAW,http://simud.nl/
+Restaurants / eetgelegenheden,Tokoh,020 2142132,AMSTERDAM,725,1087 BS,IJburglaan,355,ja,nieuwe gebruiker,https://www.to-koh.nl/
+Theaters en concertgebouwen,Studio K,020-6920422,AMSTERDAM,62,1094 CC,Timorplein,356,ja,,www.studio-k.nu
+Uiterlijke verzorging,MJ Amsterdam,020-4165098,AMSTERDAM,27,1087 HP,Pampuslaan,357,ja,,http://mjamsterdam.nl/
+Apotheken,Sumatra apotheek,020-6650905,AMSTERDAM,92,1094 NJ,Sumatrastraat,358,ja,NAW,www.sumatraapotheek.nl
+Theaters en concertgebouwen,cultureel centrum Het Fijnhout,,AMSTERDAM,39,1053 NJ,Lootsstraat,359,ja,,https://www.cultureelcentrumhetfijnhout.nl/
+Tandartsen,Tandartsenpraktijk Batavia,020-6658588,AMSTERDAM,301,1095 AD,Zeeburgerdijk,360,ja,,www.tpbatavia.nl
+Tandartsen,Tandartsenpunt Zeeburg,020-4198525,AMSTERDAM,10,1019 AZ,Panamalaan,361,ja,,http://www.tandartsenpunt.nl
+Tandartsen,"S.E. Kraan, tandarts",020 6752428,AMSTERDAM,12,1075 NX,Des Presstraat,362,ja,nieuwe gebruiker,http://www.kraantandarts.nl/
+Tandartsen,Tandartspraktijk C van Eesterenlaan,020 4196856,AMSTERDAM,303,1019 KT,C. van Eesterenlaan,363,ja,,www.tandartspraktijkcvaneesterenlaan.nl
+Tandartsen,Tandartsenpraktijk Amsterdam locatie IJburg,020-3983131,AMSTERDAM,388,1086 XT,IJburglaan,364,ja,,http://www.tpamsterdam.nl
+Sportaccommodaties,Tennis Vereniging Rivierenbuurt,020 646 15 15,AMSTERDAM,31,1079 GB,Kinderdijkstraat,365,ja,NAW,https://www.tvramsterdam.nl/
+Wijkcentra en buurthuizen,Tesla Ontmoetingscentrum,,AMSTERDAM,333,1098 AT,Middenweg,366,ja,NAW,
+Hotels,The College Hotel,31 (0) 20 571 15 11,AMSTERDAM,1,1071 VE,Roelof Hartstraat,367,ja,,http://thecollegehotel.com
+Bioscopen en filmhuizen,The Movies,020 - 624 57 90,AMSTERDAM,161,1013 KH,Haarlemmerdijk,368,ja,,www.themovies.nl
+Theaters en concertgebouwen,Theater Vrijburcht,,AMSTERDAM,161,1086 XZ,Jan Olphert Vaillantlaan,369,ja,website,https://theatervrijburcht.nl/
+Wijkcentra en buurthuizen,Timorplein 8,0592-881106,AMSTERDAM,8,1094 CB,Timorplein,370,ja,NAW,
+Supermarkten,Toko Welcome,020 4860533,AMSTERDAM,121,1013 TE,Spaarndammerstraat,371,ja,description,
+Informatiecentra,VVV I amsterdam Visitor Centre Stationsplein,020 - 551 25 12,AMSTERDAM,10,1012 AB,Stationsplein,372,ja,NAW,https://www.iamsterdam.com
+Musea,Tropenmuseum,088 - 00 42 800,AMSTERDAM,2,1092 CK,Linnaeusstraat,373,ja,,www.tropenmuseum.nl
+Warenhuizen,Tuincentrum Osdorp,020-6676060,AMSTERDAM,247,1069 LL,Osdorperweg,374,ja,,www.osdorp.nl
+Musea,Van Gogh Museum,020 - 570 52 00,AMSTERDAM,6,1071 DJ,Museumplein,375,ja,,www.vangoghmuseum.nl
+Sportaccommodaties,Van Hogendorphal,020 684 4260,AMSTERDAM,921,1051 CE,Van Hogendorpstraat,376,ja,NAW,https://www.amsterdam.nl/sport/sporthallen/hogendorp/
+Restaurants / eetgelegenheden,Vapiano Ode Amsterdam,,AMSTERDAM,145,1011 DL,Oosterdokskade,377,ja,NAW,https://vapianorestaurants.nl/pages/vapianoamsterdamoosterdokskade
+Sportaccommodaties,Velodrome,020 260 1293,AMSTERDAM,1045,1066 CD,Sloterweg,378,ja,NAW,https://www.amsterdam.nl/sport/velodrome-amsterdam/
+Winkels,Viswinkel IJburg,020 - 416 02 65,AMSTERDAM,655,1087 BS,IJburglaan,379,ja,description,http://viswinkel-ijburg.nl/
+Uiterlijke verzorging,Voetverzorging Bertine,06 -  26 41 60 85,AMSTERDAM,22,1076 VE,Turnerstraat,380,ja,,www.voetverzorgingbertine.nl
+Supermarkten,Vomar Haveneiland West,020 - 398595,AMSTERDAM,605,1087 BS,IJburglaan,381,ja,,http://www.vomar.nl/
+Kerkgebouwen,Vredeskerk,020-6626909,AMSTERDAM,9,1072 JS,Pijnackerstraat,382,ja,,www.amsterdam.vredeskerk.nl
+Wijkcentra en buurthuizen,Vrijwilligersacademie Amsterdam,020-3205579,AMSTERDAM,340,1016 EZ,Keizersgracht,383,ja,,www.vrijwilligersacademie.net
+Onderwijsinstellingen en scholen,W.B. Noteboomschool,020 569 87 77,AMSTERDAM ZUIDOOST,1,1102 AM,Drostenburg,384,ja,,https://www.notenboom.nl/
+Restaurants / eetgelegenheden,Wagamama Max Euweplein,020 - 528 77 78,AMSTERDAM,10,1017 MB,Max Euweplein,385,ja,NAW,http://www.wagamama.nl/restaurants/maxeuweplein
+Restaurants / eetgelegenheden,Papa John's Pizza,020 3031010,AMSTERDAM,68,1013 TA,Spaarndammerstraat,386,ja,nieuwe gebruiker,https://spaarndammerstraat.papajohns.co.nl/categories/deals?utm_source=google&utm_medium=maps
+Restaurants / eetgelegenheden,Westergas-terras,020 6848496,AMSTERDAM,2,1014 DD,Klonne plein,387,ja,,www.westergasterras.nl
+Congres- en partyaccommodaties,Westerliefde - Westergasterrein,020-6848496,AMSTERDAM,4,1014 DD,Klonne plein,388,ja,,www.westerliefde.nl
+Restaurants / eetgelegenheden,Sexyland World,06-83679737,AMSTERDAM,1,1021 PX,Noordwal,389,ja,nieuwe gebruiker,http://www.sexyland.world/
+Winkelcentra,Winkelstraat Spaarndammerstraat,,AMSTERDAM,59,1013 TA,Spaarndammerstraat,390,ja,,
+Restaurants / eetgelegenheden,Happyhappyjoyjoy,020 344 64 06,AMSTERDAM,256,1072 GH,Ceintuurbaan,391,ja,nieuwe gebruiker,https://happyhappyjoyjoy.asia/menu/food-menu-zuid/
+Verpleeg- en verzorgingshuizen,Woon- zorgcentrum De Open Hof,020-462 33 33,AMSTERDAM,115,1097 PP,Fahrenheitstraat,392,ja,,http://www.zgao.nl/de-open-hof.html
+Toeristische attracties,Wynand Fockink Proeflokaal,020-639 26 95,AMSTERDAM,31,1012 HH,Pijlsteeg,393,ja,,http://www.wynand-fockink.nl
+Winkels,Tabeya,020 3629214,AMSTERDAM,107,1013 TD,Spaarndammerstraat,394,ja,nieuwe gebruiker,http://www.tabeya.nl/
+Sportaccommodaties,Watersportcentrum Sloterplas,020-617 58 39,AMSTERDAM,4,1065 DA,C Plantijngracht,395,ja,NAW,http://www.watersportcentrumsloterplas.nl
+Zwembaden,Zuiderbad,020 - 678 13 90,AMSTERDAM,26,1071 ZC,Hobbemastraat,396,ja,website,https://www.amsterdam.nl/zuiderbad/
+Kerkgebouwen,Zuiderkerk,020 - 552 79 87,AMSTERDAM,72,1011 WB,Zuiderkerkhof,397,ja,,www.zuiderkerkamsterdam.nl
+Congres- en partyaccommodaties,Zuiveringshal West - Westergasterrein,020 586 07 10,AMSTERDAM,37,1014 DB,Pazzanistraat,398,ja,,www.westergasfabriek.nl
+Kantoorgebouwen,INIT Building,020 - 6247703,AMSTERDAM,9,1018 LL,Jacob Bontiusplaats,399,ja,,www.init.nl
+Kantoorgebouwen,Cliëntenbelang Amsterdam,020 - 75 25 100,AMSTERDAM,9,1018 LL,Jacob Bontiusplaats,400,ja,,www.clientenbelangamsterdam.nl
+Openbare toiletten,Openbaar toilet Sarphatipark,,AMSTERDAM,,1073 CZ,Sarphatipark,401,ja,,
+,,,,,,,402,,,

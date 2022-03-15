@@ -6,8 +6,8 @@ const fs = promises
 
 //This settigns object controls the global settings for this programme
 const settings = {
-	inputFileName: 'input/CBA2016A11y.json',
-	outputFileName: 'output/CBA2016_cleaned',
+	inputFileName: 'input/CBA2016_updated_0.json',
+	outputFileName: 'output/CBA2016_updated_cleaned',
 	categoriesFileName: 'input/categories.csv',
 	wheelchairFileName: 'input/wheelchair.csv',
 	wheelchairToiletFileName: 'input/wheelchairToilet.csv',
