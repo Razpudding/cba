@@ -133,6 +133,10 @@ function mapA11yProperties(item, categories, wheelchair, wheelChairToilet){
 	//As none of the wheelchairPlaces values is correct, set them to undefined
 	item.properties.accessibility.wheelchairPlaces = undefined
 
+	//Add a date stamp to show when the data was originally recorded
+	// As the current data was all recorded in 2016, the datestamp is set to that
+	item.properties.dateRecorded = new Date(2016, 1)
+
 	return item
 }
 
